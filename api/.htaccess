@@ -1,0 +1,104 @@
+# Disable directory browsing
+Options -Indexes
+
+# Block access to sensitive files
+<FilesMatch "(^\.htaccess|\.env|composer\.(json|lock)|artisan|server\.php|config\.php|routes\.php|.gitignore)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+
+# Prevent SQL Injection & XSS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block common SQL injection patterns
+    RewriteCond %{QUERY_STRING} union.*select.*(\[^\)]*) [NC,OR]
+    RewriteCond %{QUERY_STRING} cast.*\(.*as.* [NC,OR]
+    RewriteCond %{QUERY_STRING} sleep\([0-9]*\) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+
+    # Block XSS attacks
+    RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (<|%3C).*iframe.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (<|%3C).*object.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (<|%3C).*svg.*(>|%3E) [NC]
+    RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
+# Block Bad Bots & User Agents
+SetEnvIfNoCase User-Agent "MJ12bot|AhrefsBot|SemrushBot|DotBot|Baiduspider|YandexBot" bad_bot
+Deny from env=bad_bot
+
+
+# Limit Request Methods
+<LimitExcept GET POST PUT DELETE OPTIONS>
+    Deny from all
+</LimitExcept>
+
+
+
+# Enable XSS Protection
+Header always set X-XSS-Protection "1; mode=block"
+
+
+# Prevent MIME-type sniffing
+Header always set X-Content-Type-Options "nosniff"
+
+
+# Enhanced Security Headers with Flexibility
+
+<IfModule mod_headers.c>
+    # Content Security Policy (CSP)
+    Header set Content-Security-Policy "default-src 'self'; img-src 'self' https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+    
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # allow embed videos as a link
+    Header set Content-Security-Policy "default-src 'self'; media-src 'self' https://www.youtube.com https://vimeo.com;"
+    
+    # Permissions Policy (now known as Feature-Policy)
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+    # Allow headers to be flexible by not breaking the app for missing expected attributes
+    # Use default fallback behavior without rejecting requests outright
+</IfModule>
+
+
+
+<IfModule mod_headers.c>
+    # Allow multiple origins by dynamically setting the allowed Origin header
+    SetEnvIf Origin "http(s)?://(localhost:3000|everlytools\.com|www\.everlytools\.com|chrome-extension://[a-z0-9]+|web\.postman\.co)" AccessControlAllowOrigin=$0
+    # Apply the dynamically matched origin to the Access-Control-Allow-Origin header
+    Header always set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    # Allow all standard HTTP methods for preflight requests
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    # Allow common headers used in requests, such as Authorization
+    Header always set Access-Control-Allow-Headers "Origin, Content-Type, Accept, Authorization"
+    # Handle preflight requests without blocking
+    Header always set Vary "Origin"
+</IfModule>
+
+
+# Block files larger than 15MB
+<IfModule mod_security.c>
+    SecRule FILES_SIZES "@gt 15728640" "deny,status:413"
+</IfModule>
+
+# Allow only image file extensions
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|bmp|tiff|svg|ico|jfif|avif|heif)$">
+    Require all granted
+</FilesMatch>
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Block only suspicious file uploads and direct access
+    RewriteCond %{REQUEST_URI} \.(exe|bat|cmd|sh|php[3-8]?|pl|cgi|jsp|asp|aspx|ps1|phtml|scr|dll|jar|phar|py|rb|ini|env|config|inc|bak|sql|gz|tar|7z|rar|zip)$ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+
+
+
