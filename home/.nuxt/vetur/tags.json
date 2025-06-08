@@ -5,6 +5,24 @@
   "NavLink": {
     "description": "Auto imported from components/NavLink.vue"
   },
+  "BaseAccordion": {
+    "description": "Auto imported from components/base/Accordion.vue"
+  },
+  "BaseButton": {
+    "description": "Auto imported from components/base/Button.vue"
+  },
+  "BaseFooter": {
+    "description": "Auto imported from components/base/Footer.vue"
+  },
+  "BaseHeader": {
+    "description": "Auto imported from components/base/Header.vue"
+  },
+  "BaseNavbar": {
+    "description": "Auto imported from components/base/Navbar.vue"
+  },
+  "BaseSection": {
+    "description": "Auto imported from components/base/Section.vue"
+  },
   "LandingAiTrend": {
     "description": "Auto imported from components/landing/AiTrend.vue"
   },
@@ -34,23 +52,5 @@
   },
   "LandingTradingToolImage": {
     "description": "Auto imported from components/landing/TradingToolImage.vue"
-  },
-  "BaseAccordion": {
-    "description": "Auto imported from components/base/Accordion.vue"
-  },
-  "BaseButton": {
-    "description": "Auto imported from components/base/Button.vue"
-  },
-  "BaseFooter": {
-    "description": "Auto imported from components/base/Footer.vue"
-  },
-  "BaseHeader": {
-    "description": "Auto imported from components/base/Header.vue"
-  },
-  "BaseNavbar": {
-    "description": "Auto imported from components/base/Navbar.vue"
-  },
-  "BaseSection": {
-    "description": "Auto imported from components/base/Section.vue"
   }
 }

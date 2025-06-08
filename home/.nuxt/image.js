@@ -4,7 +4,6 @@ import NuxtImg from '~image/components/nuxt-img.vue'
 import NuxtPicture from '~image/components/nuxt-picture.vue'
 
 import * as staticRuntime$cfd1 from '/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/@nuxt/image/dist/runtime/providers/static.js'
-import * as ipxRuntime$10e8 from '/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/@nuxt/image/dist/runtime/providers/ipx.js'
 
 const imageOptions = {
   "screens": {
@@ -24,7 +23,7 @@ const imageOptions = {
       "placeholder": "blur"
     }
   },
-  "provider": "ipx",
+  "provider": "static",
   "domains": [
     "*"
   ],
@@ -32,8 +31,7 @@ const imageOptions = {
 }
 
 imageOptions.providers = {
-  ['static']: { provider: staticRuntime$cfd1, defaults: {} },
-  ['ipx']: { provider: ipxRuntime$10e8, defaults: {} }
+  ['static']: { provider: staticRuntime$cfd1, defaults: {} }
 }
 
 Vue.component(NuxtImg.name, NuxtImg)
