@@ -52,12 +52,7 @@ Use it for learn, but please don’t republish, redistribute, or resell the temp
 Code by [rsurya99](https://github.com/rsurya99)  
 UI/UX by [irvanmoses](https://www.facebook.com/irvan.moses)
 
-
-EVERLY AI
-        const MODEL_NAME = "gemini-1.0-pro";
-        const API_KEY = "AIzaSyChyDU7nswA0ySzJnZFV61dt0hiSrRhyHo"; 
-
-ß
+ 
 
 
 <!--Start of Tawk.to Script-->
