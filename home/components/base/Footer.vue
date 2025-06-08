@@ -89,7 +89,7 @@
       <div class="flex flex-col sm:flex-row items-center w-full sm:w-2/4 text-center sm:text-left">
       <!-- Left Section: Logo -->
       <div class="w-full sm:w-1/3 flex justify-center sm:justify-start">
-        <a href="/"><img src="~/assets/img/logo/logo.png" class="w-34 xl:w-58 object-contain h-34" alt="ChemChem Logo"/></a>
+        <a href="/"><img src="~/assets/img/logo/logo.png" class="w-34 xl:w-58 object-contain h-34" alt="Beat Expertise Logo"/></a>
       </div>
 
       <!-- Right Section: Text -->

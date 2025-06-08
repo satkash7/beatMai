@@ -121,7 +121,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
   <tr>
     <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
     <a href="https://beatexpertise.com" target="_blank">
-      <img align="center" border="0" src="https://storage.everlytools.com/chemchem.jpg" alt="Logo" title="Logo" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 29%;max-width: 160.2px;" width="160.2"/>
+      <img align="center" border="0" src="https://storage.everlytools.com/beatexpertise.jpg" alt="Logo" title="Logo" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 29%;max-width: 160.2px;" width="160.2"/>
       </a>
     </td>
   </tr>
@@ -477,7 +477,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
     <p style="font-size: 14px; line-height: 150%;"> 
     <span style="color: #3598db; line-height: 21px;">
     <span style="color: #000000; line-height: 21px;"> </span>
-    <a rel="noopener" href="https://beatexpertise.com/" target="_blank" style="color: #3598db;" data-saferedirecturl="https://google.com/url?q=https://everlytools.com&amp;source=gmail&amp;ust=1692894520604000&amp;usg=AOvVaw2Hc3Ll8Rw2dgVx6VOqzd_3">ChemChem Congo.</a></span>
+    <a rel="noopener" href="https://beatexpertise.com/" target="_blank" style="color: #3598db;" data-saferedirecturl="https://google.com/url?q=https://everlytools.com&amp;source=gmail&amp;ust=1692894520604000&amp;usg=AOvVaw2Hc3Ll8Rw2dgVx6VOqzd_3">Beat Expertise.</a></span>
     <span style="color: #000000; line-height: 21px;">Tous droits reservés. </span></p>
       <p style="font-size: 14px; line-height: 150%;"> </p>
     </div>

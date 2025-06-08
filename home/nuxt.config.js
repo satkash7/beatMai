@@ -3,7 +3,7 @@ const axios = require('axios');
 
 const APP_STATUS = "development" // production
 let baseURL = "https://api.beatexpertise.com/api"
-let storageUrl = "https://api.chemchemcongo.com/storage/"
+let storageUrl = "https://api.beatexpertise.com/storage/"
 
 if (APP_STATUS == "development") {
   baseURL = "http://127.0.0.1:8000/api"

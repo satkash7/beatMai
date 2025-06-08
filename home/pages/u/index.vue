@@ -223,7 +223,7 @@ export default {
           name: this.registerName,
           username: username,
           password: this.registerPassword,
-          accesshash: 'everlytools_user'
+          accesshash: 'beat_user'
         });
         if (response.data.status_code == 409) {
             this.loading = false; 

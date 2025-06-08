@@ -183,9 +183,9 @@ export default {
             : "",
           isLoading: false,
           metaTags: {
-            title: "ChemChem Congo",
-            keywords: + 'chem chem congo',
-            image: "https://storage.everlytools.com/chemchem.jpg",
+            title: "Beat Expertise",
+            keywords: + 'Beat Expertise',
+            image: "https://storage.everlytools.com/beatexpertise.jpg",
             url: "https://beatexpertise.com"
           }
         };
@@ -290,18 +290,18 @@ export default {
 
   head() {
       return {
-          title: "Chem Chem Congo",
+          title: "Beat Expertise",
           meta: [
-              { hid: 'description', content: 'Chem Chem Congo est une société congolaise spécialisées dans les études, la construction, la digitalisation et la gestion des réseaux d’eau potable et de l’assainissement, nous œuvrons à améliorer les conditions de vie des communautés en République Démocratique du Congo' },
-              { hid: 'keywords', name: 'Chem Chem Congo, Congo, RDC' },
+              { hid: 'description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
+              { hid: 'keywords', name: 'Beat Expertise' },
               { hid: 'robots', content: 'index, follow' },
               { hid: 'googlebot', content: 'index, follow' },
               { hid: 'bingbot', content: 'index, follow' },
               { hid: 'yandex', content: 'index, follow' },
               
               // Open Graph (Facebook, LinkedIn, etc.)
-              { hid: 'og:title', property: 'og:title', content: "Chem Chem Congo"},
-              { hid: 'og:description', property: 'og:description', content: 'Chem Chem Congo est une société congolaise spécialisées dans les études, la construction, la digitalisation et la gestion des réseaux d’eau potable et de l’assainissement, nous œuvrons à améliorer les conditions de vie des communautés en République Démocratique du Congo' },
+              { hid: 'og:title', property: 'og:title', content: "Beat Expertise"},
+              { hid: 'og:description', property: 'og:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
               { hid: 'og:image', property: 'og:image', content: this.metaTags.image },
               { hid: 'og:url', property: 'og:url', content: this.metaTags.url },
               { hid: 'og:locale', property: 'og:locale', content: 'fr_FR' }, // Primary language
@@ -312,8 +312,8 @@ export default {
               { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en_US' },
               { hid: 'og:type', property: 'og:type', content: 'website' },
               // Twitter Meta Tags
-              { hid: 'twitter:title', content: "Chem Chem Congo" },
-              { hid: 'twitter:description', content: 'Chem Chem Congo est une société congolaise spécialisées dans les études, la construction, la digitalisation et la gestion des réseaux d’eau potable et de l’assainissement, nous œuvrons à améliorer les conditions de vie des communautés en République Démocratique du Congo' },
+              { hid: 'twitter:title', content: "Beat Expertise" },
+              { hid: 'twitter:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
               { hid: 'twitter:image', content: this.metaTags.image },
               { hid: 'twitter:card', content: 'summary_large_image' },
               { hid: 'twitter:url', content: this.metaTags.url }

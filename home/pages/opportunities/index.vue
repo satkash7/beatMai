@@ -14,7 +14,7 @@
       <LandingSearch type="blog"/>
       <div class="w-full px-8 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
         <h2 class="text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold">
-          <span class="text-header-gradient-big">Opportunités | ChemChem Congo</span>
+          <span class="text-header-gradient-big">Opportunités | Beat Expertise</span>
         </h2>
         <div class="flex flex-wrap items-center justify-center">
           <LandingBlog v-for="blogItem in blogs" :key="blogItem.id" :blog="blogItem" @open-blog="showSingleBlog(blogItem)" />
@@ -60,18 +60,18 @@ export default {
 
   head() {
       return {
-          title: "Opportunités | Chem Chem Congo",
+          title: "Opportunités | Beat Expertise",
           meta: [
-              { hid: 'description', content: 'Chem Chem Congo est une société congolaise spécialisées dans les études, la construction, la digitalisation et la gestion des réseaux d’eau potable et de l’assainissement, nous œuvrons à améliorer les conditions de vie des communautés en République Démocratique du Congo' },
-              { hid: 'keywords', name: 'Chem Chem Congo, Congo, RDC' },{ hid: 'robots', content: 'index, follow' },
+              { hid: 'description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
+              { hid: 'keywords', name: 'Beat Expertise' },{ hid: 'robots', content: 'index, follow' },
               { hid: 'googlebot', content: 'index, follow' },
               { hid: 'bingbot', content: 'index, follow' },
               { hid: 'yandex', content: 'index, follow' },
               
               // Open Graph (Facebook, LinkedIn, etc.)
-              { hid: 'og:title', property: 'og:title', content: "Opportunités | Chem Chem Congo"},
-              { hid: 'og:description', property: 'og:description', content: 'Chem Chem Congo est une société congolaise spécialisées dans les études, la construction, la digitalisation et la gestion des réseaux d’eau potable et de l’assainissement, nous œuvrons à améliorer les conditions de vie des communautés en République Démocratique du Congo' },
-              { hid: 'og:image', property: 'og:image', content: "https://storage.everlytools.com/chemchem.jpg" },
+              { hid: 'og:title', property: 'og:title', content: "Opportunités | Beat Expertise"},
+              { hid: 'og:description', property: 'og:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
+              { hid: 'og:image', property: 'og:image', content: "https://storage.everlytools.com/beatexpertise.jpg" },
               { hid: 'og:url', property: 'og:url', content: "https://beatexpertise.com/blogs" },
               { hid: 'og:locale', property: 'og:locale', content: 'fr_FR' }, // Primary language
               { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en_GB' },
@@ -81,9 +81,9 @@ export default {
               { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en_US' },
               { hid: 'og:type', property: 'og:type', content: 'website' },
               // Twitter Meta Tags
-              { hid: 'twitter:title', content: "Opportunités | Chem Chem Congo"},
-              { hid: 'twitter:description', content: 'Chem Chem Congo est une société congolaise spécialisées dans les études, la construction, la digitalisation et la gestion des réseaux d’eau potable et de l’assainissement, nous œuvrons à améliorer les conditions de vie des communautés en République Démocratique du Congo' },
-              { hid: 'twitter:image', content: "https://storage.everlytools.com/chemchem.jpg" },
+              { hid: 'twitter:title', content: "Opportunités | Beat Expertise"},
+              { hid: 'twitter:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
+              { hid: 'twitter:image', content: "https://storage.everlytools.com/beatexpertise.jpg" },
               { hid: 'twitter:card', content: 'summary_large_image' },
               { hid: 'twitter:url', content: 'https://beatexpertise.com/blogs' }
             ]

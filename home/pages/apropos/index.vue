@@ -9,7 +9,7 @@
           <!-- Display all blogs -->
           <div class="w-full px-4 sm:px-0 my-0 py-0 flex flex-col items-start justify-center space-y-4 text-left">
             <div class="ml-4 mr-4 px-4 sm:px-0 my-0 py-0 flex flex-col items-start justify-center space-y-4 text-left">
-              <h1 data-aos="flip-down" class="text-4xl text-neutral-800 font-semibold" id="discover" style="color:#030a3c;">A propos de <span class="text-header-gradient"> ChemChem Congo</span></h1>
+              <h1 data-aos="flip-down" class="text-4xl text-neutral-800 font-semibold" id="discover" style="color:#030a3c;">A propos de <span class="text-header-gradient"> Beat Expertise</span></h1>
                  </div>
             <h2 class="ml-5 mr-5"> 
               BEAT est un cabinet basé à Goma, en République Démocratique du Congo, qui accompagne les institutions, entreprises et projets à fort impact grâce à des solutions techniques innovantes, un conseil stratégique, et un savoir-faire local ancré dans l'excellence.
