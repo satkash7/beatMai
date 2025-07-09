@@ -1,26 +1,28 @@
-import { loadNuxt } from 'nuxt';
-import express from 'express';
 
-const app = express();
+const express = require('express')
+const { loadNuxt, build } = require('nuxt')
 
-const start = async () => {
-    const nuxt = await loadNuxt('start');
+const isProd = process.env.NODE_ENV === 'production'
+const port = process.env.PORT || 3000
+const app = express()
 
-    // Utilise le middleware Nuxt pour rendre les pages
-    app.use(nuxt.render);
+async function start() {
+  try {
+    const nuxt = await loadNuxt(isProd ? 'start' : 'dev')
 
-    const port = process.env.PORT || 3000;
-
-    // Pour utiliser Passenger, ne lance pas le serveur avec app.listen()
-    if (process.env.PASSENGER_APP_ENV) {
-        // Exporter l'application pour Passenger
-        module.exports = app;
-    } else {
-        // Si tu veux tester en local, tu peux utiliser app.listen()
-        app.listen(port, '0.0.0.0', () => {
-            console.log(`🚀 Serveur Nuxt lancé sur http://localhost:${port}`);
-        });
+    if (!isProd) {
+      await build(nuxt)
     }
-};
 
-start();
+    app.use(nuxt.render)
+
+    app.listen(port, '0.0.0.0', () => {
+      console.log(`✅ Nuxt app is running at http://localhost:${port}`)
+    })
+  } catch (err) {
+    console.error('❌ Failed to start Nuxt server:', err)
+    process.exit(1)
+  }
+}
+
+start()

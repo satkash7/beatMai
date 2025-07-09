@@ -23,12 +23,12 @@
           A propos de Beat
           </base-button>
         </a>
-        <a href="/#services">
+        <a href="/#mission">
           <base-button class="px-2 xl:px-4 py-3 mt-2 bg-inherit text-gradient smallbtn">
           Services
           </base-button>
         </a>
-        <a href="/#projets">
+        <a href="/#domaines">
           <base-button class="px-2 xl:px-4 py-3 mt-2 bg-inherit text-gradient smallbtn">
           Projets
           </base-button>

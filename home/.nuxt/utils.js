@@ -202,7 +202,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"baseURL":"http://127.0.0.1:8000/api","storageUrl":"http://127.0.0.1:8000/storage/"}
+      env: {"baseURL":"https://api.beatexpertise.com/api","storageUrl":"https://api.beatexpertise.com/storage/"}
     }
     // Only set once
 

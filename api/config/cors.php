@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:3000', 'https://beatexpertise.com', 'http://beatexpertise.com', 'https://www.beatexpertise.com', 'http://www.beatexpertise.com', 'chrome-extension://[a-z0-9]+', 'https://web.postman.co',],
+    'allowed_origins' => ['http://localhost:3000', 'http://192.168.1.65:3000', 'http://192.168.1.65:3000/', 'http://192.168.1.65:3000', 'https://beatexpertise.com', 'http://beatexpertise.com', 'https://www.beatexpertise.com', 'http://www.beatexpertise.com', 'http://testing.beatexpertise.com','http://www.testing.beatexpertise.com', 'chrome-extension://[a-z0-9]+', 'https://web.postman.co',],
 
     'allowed_origins_patterns' => [],
 

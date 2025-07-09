@@ -1,14 +1,14 @@
 exports.ids = [18,2];
 exports.modules = {
 
-/***/ 139:
+/***/ 140:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=1c7fc888
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=5ba4fb7d
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -21,14 +21,12 @@ var render = function render() {
   }, [_c('div', {
     staticClass: "w-full px-6 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center",
     attrs: {
-      "id": "services"
+      "id": "mission"
     }
   }, [_c('h2', {
     staticClass: "text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold"
-  }, [_c('br'), _vm._v(" "), _c('span', {
-    staticClass: "text-header-gradient-big"
-  }, [_vm._v("Nos domaines d'intervention")])]), _vm._v(" "), _c('div', {
-    staticClass: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto"
+  }, [_c('br')]), _vm._v(" "), _c('div', {
+    staticClass: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mx-auto"
   }, _vm._l(_vm.services.slice(0, 7), function (service) {
     return _c('LandingAiTrend', {
       key: service.id,
@@ -43,13 +41,13 @@ var render = function render() {
   }), 1)]), _vm._v(" "), _c('div', {
     staticClass: "w-full px-6 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center",
     attrs: {
-      "id": "projets"
+      "id": "domaines"
     }
   }, [_c('h2', {
     staticClass: "text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold"
   }, [_c('br'), _vm._v(" "), _c('span', {
     staticClass: "text-header-gradient-big"
-  }, [_vm._v("Nos services")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Nos domaines d'intervention ")])]), _vm._v(" "), _c('div', {
     staticClass: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto"
   }, _vm._l(_vm.projects.slice(0, 7), function (project) {
     return _c('LandingAiTrend', {
@@ -61,11 +59,22 @@ var render = function render() {
         "link": project.link
       }
     });
-  }), 1)])])])])]);
+  }), 1)]), _vm._v(" "), _c('div', {
+    staticClass: "w-full px-6 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center",
+    attrs: {
+      "id": "domaines"
+    }
+  }, [_c('h2', {
+    staticClass: "text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold"
+  }, [_c('br'), _vm._v(" "), _c('span', {
+    staticClass: "text-header-gradient-big"
+  }, [_vm._v("Notre équipe ")])]), _vm._v(" "), _c('div', {
+    staticClass: "grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4 mx-auto"
+  }, [_c('br'), _vm._v("\n          Elle est composée d'experts certfiés et qualifiés dans nos domaines d'intervention. Sa grande passion est d'apporter des solutions concrètes aux problèmes locaux grace à son accompagnement technique. Les membres de l''équipe du BEAT travaillent ensemble pour offrir des services de qualité et obtenir un résultat durable. \n           \n        ")])])])])])]);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=1c7fc888
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=5ba4fb7d
 
 // EXTERNAL MODULE: ./mixins/aos.js
 var aos = __webpack_require__(12);
@@ -207,58 +216,52 @@ var aos = __webpack_require__(12);
   async mounted() {
     this.services = [{
       id: 1,
-      name: "Gestion de l’environnement & protection",
-      imageUrl: __webpack_require__(36),
-      descriptions: "Évaluations d’impact environnemental, Intégration de pratiques écologiques responsables, Formation en gestion environnementale et sociale",
+      name: "Notre mission",
+      imageUrl: __webpack_require__(35),
+      descriptions: "Founir un accompagnement technique personalisé, aux entreprises, organisations et/ou individus, pour les aider à mieux rendre les services leur sollicités, grace à des solutions techniques innovantes, pour developpement économique et social de la RDC",
       link: "/services"
     }, {
       id: 2,
-      name: "Accompagnement technique",
-      imageUrl: __webpack_require__(37),
-      descriptions: "Donnez vie à vos projets environnementaux avec notre accompagnement technique. Recevez des formations et Conseils d’experts pour renforcer la résilience de vos initiatives",
-      link: "/services"
-    }, {
-      id: 3,
-      name: "Réduction des risques de catastrophes",
-      imageUrl: __webpack_require__(38),
-      descriptions: "Prévoir, prévenir et se préparer efficacement. Surveillance et modélisation des aléas, Plans de contingence et continuité d’activité.",
+      name: "Notre approche",
+      imageUrl: __webpack_require__(36),
+      descriptions: "Transformer les défis en opportunité à travers la puissance de ta technologie et fournir des solutions techniques innovantes grace à un accolpagnement personnalisé, en vue du developpement économique de la RDC",
       link: "/services"
     }];
     this.projects = [{
       id: 1,
       name: "Entrepreunariat",
-      imageUrl: __webpack_require__(38),
-      descriptions: "Accompagnement dans l'élaboration des plans d'affaires, Proposition des méthodes de gestion innovante",
+      imageUrl: __webpack_require__(37),
+      descriptions: "Accompagnement dans l'élaboration des plans d'affaires; Proposition des méthodes de gestion innovante des entreprises; Appui à l'élaboration de plan de continuité des affaires; Accompagnement dans l'élaboration des stratégies et plans de sécurité et de communication des organisations et/ou entreprises",
       link: "/projects"
     }, {
       id: 2,
       name: "Gestion de l'environnement et protection des personnes",
-      imageUrl: __webpack_require__(39),
-      descriptions: "Évaluation de l'impact environnemental des projets et des affaires, Proposition des pratiques écologiques, Coaching et mentorat sur la gestion sensible à l'environnement",
+      imageUrl: __webpack_require__(38),
+      descriptions: "Evaluation de l'imapct environnemental des projets et des affaires; Proposition des pratiques écologiques; Coaching et mentorat sur la gestion sensible à l'environnement;",
       link: "/projects"
     }, {
       id: 3,
       name: "Réduction des risques de catastrophes",
-      imageUrl: __webpack_require__(80),
-      descriptions: "Accompagnement des organisations avec des solutions innovantes pour la gestion des risques, la planification de la continuité et la résilience face aux catastrophes.",
+      imageUrl: __webpack_require__(81),
+      descriptions: "Modélisation de la surveillance des aléas; Accompagnement des organisations dans la gestion sensible aux risques; Proposition des méthodes innovantes de gestion et de la protection de l'environnement; Formation sur la gestion des risques de catastrophes et des urgences; Développement des outils d'analyse de vulnérabilité des enjeux et risques de catastrophes; Elaboration des modules de gestion des risques adaptés aux besoins;",
       link: "/projects"
     }, {
       id: 4,
-      name: "Digitalisation du réseau de Durba avec mWater",
-      imageUrl: __webpack_require__(80),
-      descriptions: "Accompagnement technique des entreprises avec des solutions innovantes en intelligence artificielle, développement d’applications, suivi en temps réel et optimisation des processus numériques.",
+      name: "Innovation et technologie",
+      imageUrl: __webpack_require__(81),
+      descriptions: "Accompagnement dans la pensée design; Accompagnement dans l'utilisation éthique de l'Intelligence Artificielle; Développement des applications dans divers domaines;",
       link: "/projects"
     }, {
       id: 5,
       name: "Communication pour le changement de comportement",
-      imageUrl: __webpack_require__(37),
+      imageUrl: __webpack_require__(36),
       descriptions: "Développement des modules adaptés aux besoins des divers groupes, Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements, Coaching et mentorat dans la motivation des groupes",
       link: "/projects"
     }, {
       id: 6,
       name: "Accompagnement dans la collecte et analyse des données",
-      imageUrl: __webpack_require__(36),
-      descriptions: "Accompagnement technique des entreprises dans la collecte et l’analyse des données qualitatives et quantitatives pour une prise de décision stratégique optimisée.",
+      imageUrl: __webpack_require__(35),
+      descriptions: "Accompagnement technique des entreprises dans la collecte et l’analyse des données qualitatives et quantitatives pour une prise de décision stratégique.",
       link: "/projects"
     }];
   },
@@ -293,19 +296,19 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var pages = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {LandingAiTrend: __webpack_require__(91).default})
+installComponents(component, {LandingAiTrend: __webpack_require__(92).default})
 
 
 /***/ }),
 
-/***/ 80:
+/***/ 81:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/pic6.85b4998.jpg";
 
 /***/ }),
 
-/***/ 91:
+/***/ 92:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

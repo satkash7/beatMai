@@ -1,14 +1,14 @@
 exports.ids = [8];
 exports.modules = {
 
-/***/ 74:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/ai.d7a5f73.jpg";
 
 /***/ }),
 
-/***/ 77:
+/***/ 78:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42,7 +42,7 @@ var render = function render() {
   }) : _c('img', {
     staticClass: "w-full rounded-lg transition duration-300 transform hover:scale-105 cursor-pointer",
     attrs: {
-      "src": __webpack_require__(74),
+      "src": __webpack_require__(75),
       "alt": _vm.opportunity.title
     },
     on: {

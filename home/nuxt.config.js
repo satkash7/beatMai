@@ -1,7 +1,7 @@
 
 const axios = require('axios');
 
-const APP_STATUS = "development" // production
+const APP_STATUS = "production" // production
 let baseURL = "https://api.beatexpertise.com/api"
 let storageUrl = "https://api.beatexpertise.com/storage/"
 
@@ -56,7 +56,7 @@ module.exports = {
   css: ['@/assets/css/main.css', 'aos/dist/aos.css'],
   plugins: ['~/plugins/smooth-scroll.js', '~/plugins/mdi.js'],
   components: true,
-  buildModules: ['@nuxtjs/eslint-module', '@nuxt/postcss8', '@nuxtjs/axios'],
+  buildModules: ['@nuxt/postcss8', '@nuxtjs/axios'],
   publicRuntimeConfig: {
     baseURL: baseURL,
     storageUrl: storageUrl
@@ -86,7 +86,6 @@ module.exports = {
   },
   
   build: {
-    publicPath: '/_nuxt/', // Ensures assets are served from /_nuxt/
     filenames: {
       app: () => process.env.NODE_ENV === 'development' ? '[name].js' : '[contenthash].js',
       chunk: () => process.env.NODE_ENV === 'development' ? '[name].js' : '[contenthash].js',

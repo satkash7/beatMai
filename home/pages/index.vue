@@ -6,11 +6,10 @@
     <section class="bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl overflow-hidden">
      
  
-     <div id="services" class="w-full px-6 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
+     <div id="mission" class="w-full px-6 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
       <h2 class="text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold">
-        <br>
-        <span class="text-header-gradient-big">Nos domaines d'intervention</span></h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
+        <br> </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mx-auto">
 
           <LandingAiTrend
             v-for="service in services.slice(0, 7)"
@@ -24,10 +23,10 @@
         </div>
     </div> 
 
-    <div id="projets" class="w-full px-6 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
+    <div id="domaines" class="w-full px-6 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
       <h2 class="text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold">
         <br>
-        <span class="text-header-gradient-big">Nos services</span></h2>
+        <span class="text-header-gradient-big">Nos domaines d'intervention </span></h2>
         <!--class needs to be responsive-->
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
@@ -43,6 +42,18 @@
         </div>
     </div> 
 
+    <div id="domaines" class="w-full px-6 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
+      <h2 class="text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold">
+        <br>
+        <span class="text-header-gradient-big">Notre équipe </span></h2>
+        <!--class needs to be responsive-->
+        
+        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4 mx-auto"><br>
+          Elle est composée d'experts certfiés et qualifiés dans nos domaines d'intervention. Sa grande passion est d'apporter des solutions concrètes aux problèmes locaux grace à son accompagnement technique. Les membres de l''équipe du BEAT travaillent ensemble pour offrir des services de qualité et obtenir un résultat durable. 
+           
+        </div>
+    </div> 
+
 
     </section>
 
@@ -52,7 +63,7 @@
 </template>
 
 <script>
-import aosMixin from '@/mixins/aos';
+import aosMixin from '@/mixins/aos'
 
 export default {
   name: 'IndexPage',
@@ -111,25 +122,18 @@ export default {
         this.services = [
           {
             id: 1,
-            name: "Gestion de l’environnement & protection",
+            name: "Notre mission",
             imageUrl: require('~/assets/img/pic1.jpg'),
-            descriptions: "Évaluations d’impact environnemental, Intégration de pratiques écologiques responsables, Formation en gestion environnementale et sociale",
+            descriptions: "Founir un accompagnement technique personalisé, aux entreprises, organisations et/ou individus, pour les aider à mieux rendre les services leur sollicités, grace à des solutions techniques innovantes, pour developpement économique et social de la RDC",
             link: "/services"
           },
           {
             id: 2,
-            name: "Accompagnement technique",
+            name: "Notre approche",
             imageUrl: require('~/assets/img/pic2.jpg'),
-            descriptions: "Donnez vie à vos projets environnementaux avec notre accompagnement technique. Recevez des formations et Conseils d’experts pour renforcer la résilience de vos initiatives",
+            descriptions: "Transformer les défis en opportunité à travers la puissance de ta technologie et fournir des solutions techniques innovantes grace à un accolpagnement personnalisé, en vue du developpement économique de la RDC",
             link: "/services"
-          },
-          {
-            id: 3,
-            name: "Réduction des risques de catastrophes",
-            imageUrl: require('~/assets/img/pic3.jpg'),
-            descriptions: "Prévoir, prévenir et se préparer efficacement. Surveillance et modélisation des aléas, Plans de contingence et continuité d’activité.",
-            link: "/services"
-          },
+          }
         ];
 
         this.projects = [
@@ -137,28 +141,28 @@ export default {
             id: 1,
             name: "Entrepreunariat",
             imageUrl: require('~/assets/img/pic3.jpg'),
-            descriptions: "Accompagnement dans l'élaboration des plans d'affaires, Proposition des méthodes de gestion innovante",
+            descriptions: "Accompagnement dans l'élaboration des plans d'affaires; Proposition des méthodes de gestion innovante des entreprises; Appui à l'élaboration de plan de continuité des affaires; Accompagnement dans l'élaboration des stratégies et plans de sécurité et de communication des organisations et/ou entreprises",
             link: "/projects"
           },
           {
             id: 2,
             name: "Gestion de l'environnement et protection des personnes",
             imageUrl: require('~/assets/img/pic4.jpg'),
-            descriptions: "Évaluation de l'impact environnemental des projets et des affaires, Proposition des pratiques écologiques, Coaching et mentorat sur la gestion sensible à l'environnement",
+            descriptions: "Evaluation de l'imapct environnemental des projets et des affaires; Proposition des pratiques écologiques; Coaching et mentorat sur la gestion sensible à l'environnement;",
             link: "/projects"
           },
           {
             id: 3,
             name: "Réduction des risques de catastrophes",
             imageUrl: require('~/assets/img/pic6.jpg'),
-            descriptions: "Accompagnement des organisations avec des solutions innovantes pour la gestion des risques, la planification de la continuité et la résilience face aux catastrophes.",
+            descriptions: "Modélisation de la surveillance des aléas; Accompagnement des organisations dans la gestion sensible aux risques; Proposition des méthodes innovantes de gestion et de la protection de l'environnement; Formation sur la gestion des risques de catastrophes et des urgences; Développement des outils d'analyse de vulnérabilité des enjeux et risques de catastrophes; Elaboration des modules de gestion des risques adaptés aux besoins;",
             link: "/projects"
           },
           {
             id: 4,
-            name: "Digitalisation du réseau de Durba avec mWater",
+            name: "Innovation et technologie",
             imageUrl: require('~/assets/img/pic6.jpg'),
-            descriptions: "Accompagnement technique des entreprises avec des solutions innovantes en intelligence artificielle, développement d’applications, suivi en temps réel et optimisation des processus numériques.",
+            descriptions: "Accompagnement dans la pensée design; Accompagnement dans l'utilisation éthique de l'Intelligence Artificielle; Développement des applications dans divers domaines;",
             link: "/projects"
           },
           {
@@ -172,7 +176,7 @@ export default {
             id: 6,
             name: "Accompagnement dans la collecte et analyse des données",
             imageUrl: require('~/assets/img/pic1.jpg'),
-            descriptions: "Accompagnement technique des entreprises dans la collecte et l’analyse des données qualitatives et quantitatives pour une prise de décision stratégique optimisée.",
+            descriptions: "Accompagnement technique des entreprises dans la collecte et l’analyse des données qualitatives et quantitatives pour une prise de décision stratégique.",
             link: "/projects"
           }
         ];

@@ -23,8 +23,10 @@
                 -	Siege Social : Q.Les Volcans, Commune et Ville de Goma,<br>
                 📧 Email professionnel : direction@beatexpertise.com  📞 Numéro de téléphone : +243 995 277 023
               <br>
-            </span>
-
+            <br><br>
+            <h2><b>Voulez vous rejoindre notre équipe? <a href="/opportunities">Cliquez ici pour consulter nos offres</a></b></h2>
+          
+          </span>
             <br><br>
           </div>
         </div>

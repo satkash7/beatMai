@@ -99,7 +99,7 @@ class UserController extends Controller
         // first block all requests where referer is not everlytools.com
         $referer = $request->header('referer');
         if ($referer == "https://beatexpertise.com" || $referer == "http://beatexpertise.com" || $referer == "http://localhost:3000"
-            || $referer == "https://beatexpertise.com/" || $referer == "http://beatexpertise.com/" || $referer == "http://localhost:3000/") 
+            || $referer == "https://beatexpertise.com/" || $referer == "https://testing.beatexpertise.com/" || $referer == "http://testing.beatexpertise.com/" || $referer == "http://beatexpertise.com/" || $referer == "http://localhost:3000/") 
         {
 
             // Check if the user with the provided email exists
@@ -541,80 +541,39 @@ class UserController extends Controller
 
             public function getSitemapUrls() {
                 $static = [
-                    'https://everlytools.com/',
-                    'https://everlytools.com/ai',
-                    'https://everlytools.com/about',
-                    'https://everlytools.com/terms-and-conditions',
-                    'https://everlytools.com/terms-of-service',
-                    'https://everlytools.com/chat-or-conversational-ai-tools',
-                    'https://everlytools.com/code-generator-coding-assistance-ai-tools',
-                    'https://everlytools.com/digital-marketing-automation-and-social-media-ai-tools',
-                    'https://everlytools.com/medical-health-care-ai-tools',
-                    'https://everlytools.com/photo-editing-image-generator-ai-tools',
-                    'https://everlytools.com/translation-ai-tools',
-                    'https://everlytools.com/video-generator-and-video-editing-ai-tools',
-                    'https://everlytools.com/blogs',
-                    'https://everlytools.com/tips',
-                    'https://everlytools.com/trends',
-                    'https://everlytools.com/documentations',
-                    'https://everlytools.com/trainings',
-                    "https://everlytools.com/trainings/ai",
-                    "https://everlytools.com/trainings/iot",
-                    "https://everlytools.com/trainings/cyber",
-                    "https://everlytools.com/trainings/blockchain",
-                    "https://everlytools.com/trainings/cloud",
-                    "https://everlytools.com/trainings/devops",
-                    "https://everlytools.com/trainings/web",
-                    "https://everlytools.com/trainings/mobile",
-                    "https://everlytools.com/trainings/game",
-                    "https://everlytools.com/trainings/arvr",
-                    "https://everlytools.com/trainings/robotics",
-                    "https://everlytools.com/trainings/data",
-                    "https://everlytools.com/trainings/ml",
-                    "https://everlytools.com/trainings/nlp",
-                    "https://everlytools.com/trainings/arduino",
-                    "https://everlytools.com/trainings/telecom",
-                    "https://everlytools.com/trainings/networking",
-                    "https://everlytools.com/trainings/marketing",
-                    "https://everlytools.com/trainings/sales",
-                    "https://everlytools.com/trainings/projectmanagment",
-                    "https://everlytools.com/trainings/testing",
-                    "https://everlytools.com/trainings/statistics",
-                    "https://everlytools.com/trainings/leadership",
-                    "https://everlytools.com/trainings/entrepreneurship",
-                    "https://everlytools.com/trainings/other"
+                    'https://beatexpertise.com/',
                 ];
             //dynamic, get blogs urls, tips urls, trends urls, docs urls, trainings urls
             $blogs = Blog::all();
             // get blogRoute, and get blogCreator then convert blogCreator with getUserInfoFromId($item->blogCreator, 'username') then give /username/blogRoute
             $blogUrls = $blogs->map(function ($blog) {
-                return 'https://everlytools.com/' . $this->reuse->getUserInfoFromId($blog->blogCreator, 'username') . '/' . $blog->blogRoute;
+                return 'https://beatexpertise.com/' . $this->reuse->getUserInfoFromId($blog->blogCreator, 'username') . '/' . $blog->blogRoute;
             })->toArray();
             // get tips urls, get tipRoute, and tipCreator, convert tipCreator with getUserInfoFromId($item->tipCreator, 'username') then give /username/tipRoute
             $tips = Tip::all();
             $tipUrls = $tips->map(function ($tip) {
-                return 'https://everlytools.com/' . $this->reuse->getUserInfoFromId($tip->tipCreator, 'username') . '/' . $tip->tipRoute;
+                return 'https://beatexpertise.com/' . $this->reuse->getUserInfoFromId($tip->tipCreator, 'username') . '/' . $tip->tipRoute;
             })->toArray();
             // get trends urls, get trendRoute, and trendCreator, convert trendCreator with getUserInfoFromId($item->trendCreator, 'username') then give /username/trendRoute
             $trends = Trend::all();
             $trendUrls = $trends->map(function ($trend) {
-                return 'https://everlytools.com/' . $this->reuse->getUserInfoFromId($trend->trendCreator, 'username') . '/' . $trend->trendRoute;
+                return 'https://beatexpertise.com/' . $this->reuse->getUserInfoFromId($trend->trendCreator, 'username') . '/' . $trend->trendRoute;
             })->toArray();
             // get docs urls, get docRoute, and docCreator, convert docCreator with getUserInfoFromId($item->docCreator, 'username') then give /username/docRoute
             $docs = Doc::all();
             $docUrls = $docs->map(function ($doc) {
-                return 'https://everlytools.com/' . $this->reuse->getUserInfoFromId($doc->docCreator, 'username') . '/' . $doc->docRoute;
+                return 'https://beatexpertise.com/' . $this->reuse->getUserInfoFromId($doc->docCreator, 'username') . '/' . $doc->docRoute;
             })->toArray();
 
             // get trainings routes from column trainingRoute, get all of them in an array
             $trainings = Training::all();
             $trainingUrls = $trainings->map(function ($training) {
-                return 'https://everlytools.com/training/' . $training->trainingRoute;
+                return 'https://beatexpertise.com/training/' . $training->trainingRoute;
             })->toArray();
             // get user profiles too, get from user table, the value username
             $users = User::all();
             $userUrls = $users->map(function ($user) {
-                return 'https://everlytools.com/profile/' . $user->username;
+                return 'https://beatexpertise.com/profile/' . $user->username;
             })->toArray();
             // merge all urls
             $allUrls = array_merge($static, $blogUrls, $tipUrls, $trendUrls, $docUrls, $trainingUrls, $userUrls);

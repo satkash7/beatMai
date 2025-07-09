@@ -42,6 +42,9 @@
               Une erreur est survénue, veuillez réassayer plustard.
             </div>
           <h2 class="text-4xl font-semibold">Entrez en contact avec nous.</h2>
+          Adresse : Goma, Nord-Kivu, RDC<br>
+          Phone : +243 995 277 023<br>
+          Email : direction@beatexpertise.com<br>
           <br><input
               type="text"
               class="w-full px-2 py-4 sm:py-3 rounded-lg sm:rounded-md text-sm focus:outline-none border border-[#AAAAAA] placeholder-[#888]"
@@ -104,9 +107,9 @@
       <!-- Middle Section: Navigation Links -->
       <nav class="flex flex-col items-center sm:items-start w-full sm:w-1/4 space-y-2 sm:space-y-3 text-gray-700">
         <a href="/blogs" class="hover:text-blue-600">Actualités</a>
-        <a href="/#services" class="hover:text-blue-600">Services</a>
-        <a href="/#projets" class="hover:text-blue-600">projets</a> 
-        <a href="/opportunities" class="hover:text-blue-600">Appels & offre</a>
+        <a href="/#mission" class="hover:text-blue-600">Services</a>
+        <a href="/#domaines" class="hover:text-blue-600">projets</a> 
+        <a href="/opportunities" class="hover:text-blue-600">Offres & Opportunités</a>
         <a href="/apropos" class="hover:text-blue-600">A propos de nous</a>
       </nav>
 
@@ -189,9 +192,9 @@ export default {
       failedRequest: false,
       partners: [ 
         { name: "UniGom", logo: require('~/assets/img/unigom.png'), link: "https://unigom.ac.cd/" },
-        { name: "Cafod", logo: require('~/assets/img/cafod.webp'), link: "https://cafod.org.uk/" },
+        { name: "Caritas", logo: require('~/assets/img/caritasnew.png'), link: "https://www.caritas.org/" },
         { name: "Olame", logo: require('~/assets/img/olame.jpeg'), link: "https://olamerdc.org/" },
-        { name: "Cafod", logo: require('~/assets/img/cafod.webp'), link: "https://cafod.org.uk/" },
+        { name: "Cafodd", logo: require('~/assets/img/cafod.webp'), link: "https://cafod.org.uk/" },
       ]
     }
   },

@@ -73,12 +73,26 @@
             </a>
           </div>
 
-          </div>
-          <img :src="details.imageUrl" 
-            alt="Post Image" 
-            class="block max-w-[900px] max-h-[600px] w-auto h-auto object-contain float-left" />
+          </div> 
 
-            <div class="justify-left" v-html="rawContent"></div>
+           <!-- Display either PDF or Image -->
+          <div class="w-full flex justify-center mt-6">
+            <iframe
+              v-if="isPdf(details.imageUrl)"
+              :src="details.imageUrl"
+              class="w-full max-w-[900px] h-[1000px] border rounded"
+              frameborder="0"
+            ></iframe>
+
+            <img
+              v-else
+              :src="details.imageUrl"
+              alt="Post Image"
+              class="block max-w-[900px] max-h-[600px] w-auto h-auto object-contain float-left"
+            />
+          </div>
+
+          <div class="justify-left" v-html="details.blogData"></div>
       </div>
       <br>
           <LandingComment class="m-8" type="blog" :id="details.id" :route="details.blogRoute" :creator="details.creator"/>
@@ -162,6 +176,7 @@ export default {
       console.log("result from server : ", response);
       const blogData = response.data.blog[0];
       const blogTitle = blogData.blogTitle;
+      console.log('file ==>', blogData.imageUrl);
 
       // Update loading state to false
       return { details: blogData, rawContent: blogData.blogData, isLoading: false, username:blogData.username, blogRoute: blogRoute, blogTitle: blogTitle, 
@@ -178,6 +193,11 @@ export default {
       console.error('Error fetching data:', error);
       // Handle errors if needed
       return { details: null, isLoading: false };
+    }
+  },
+  methods: {
+    isPdf(url) {
+      return url?.toLowerCase().endsWith(".pdf");
     }
   },
   head() {

@@ -1,14 +1,14 @@
 exports.ids = [13];
 exports.modules = {
 
-/***/ 133:
+/***/ 134:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/apropos/index.vue?vue&type=template&id=14134246
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/apropos/index.vue?vue&type=template&id=6342ed1f
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -39,11 +39,15 @@ var render = function render() {
     staticClass: "ml-5 mr-5"
   }, [_vm._v(" \n            BEAT est un cabinet basé à Goma, en République Démocratique du Congo, qui accompagne les institutions, entreprises et projets à fort impact grâce à des solutions techniques innovantes, un conseil stratégique, et un savoir-faire local ancré dans l'excellence.\n          ")]), _vm._v(" "), _c('span', {
     staticClass: "ml-5 mr-5"
-  }, [_c('b', [_vm._v("Notre mission")]), _vm._v(" est de fournir des services de conseil et d'expertise technique de haute qualité, adaptés aux besoins spécifiques de nos clients, tout en contribuant au développement durable et à la prospérité de la région.\n            "), _c('br'), _c('br'), _vm._v(" "), _c('b', [_vm._v("📍 Adresse physique")]), _vm._v("\n              -\tSiege Social : Q.Les Volcans, Commune et Ville de Goma,"), _c('br'), _vm._v("\n              📧 Email professionnel : direction@beatexpertise.com  📞 Numéro de téléphone : +243 995 277 023\n            "), _c('br')]), _vm._v(" "), _c('br'), _c('br')])])])])])]);
+  }, [_c('b', [_vm._v("Notre mission")]), _vm._v(" est de fournir des services de conseil et d'expertise technique de haute qualité, adaptés aux besoins spécifiques de nos clients, tout en contribuant au développement durable et à la prospérité de la région.\n            "), _c('br'), _c('br'), _vm._v(" "), _c('b', [_vm._v("📍 Adresse physique")]), _vm._v("\n              -\tSiege Social : Q.Les Volcans, Commune et Ville de Goma,"), _c('br'), _vm._v("\n              📧 Email professionnel : direction@beatexpertise.com  📞 Numéro de téléphone : +243 995 277 023\n            "), _c('br'), _vm._v(" "), _c('br'), _c('br'), _vm._v(" "), _c('h2', [_c('b', [_vm._v("Voulez vous rejoindre notre équipe? "), _c('a', {
+    attrs: {
+      "href": "/opportunities"
+    }
+  }, [_vm._v("Cliquez ici pour consulter nos offres")])])])]), _vm._v(" "), _c('br'), _c('br')])])])])])]);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/apropos/index.vue?vue&type=template&id=14134246
+// CONCATENATED MODULE: ./pages/apropos/index.vue?vue&type=template&id=6342ed1f
 
 // EXTERNAL MODULE: ./mixins/aos.js
 var aos = __webpack_require__(12);

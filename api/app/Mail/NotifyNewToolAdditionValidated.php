@@ -40,7 +40,7 @@ class NotifyNewToolAdditionValidated extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('tech@everlytools.com', 'beatexpertise.com'),
+            from: new Address('tech@beatexpertise.com', 'beatexpertise.com'),
             subject: 'Beat Expertise',
         );
     }

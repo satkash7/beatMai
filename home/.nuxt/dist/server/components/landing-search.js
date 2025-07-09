@@ -1,21 +1,21 @@
 exports.ids = [9,4,8];
 exports.modules = {
 
-/***/ 74:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/ai.d7a5f73.jpg";
 
 /***/ }),
 
-/***/ 75:
+/***/ 76:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/landing/Blog.vue?vue&type=template&id=6e44fcf8
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/landing/Blog.vue?vue&type=template&id=2fa73ab8
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -29,14 +29,12 @@ var render = function render() {
   }, [_vm.blog.imageUrl != null && _vm.blog.imageUrl != '' ? _c('img', {
     staticClass: "max-w-[245px] mx-auto sm:rounded-2xl transition duration-300 transform hover:scale-105",
     attrs: {
-      "src": _vm.blog.imageUrl,
-      "alt": "Blog"
+      "src": _vm.blog.imageUrl
     }
   }) : _c('img', {
     staticClass: "max-w-[245px] mx-auto sm:rounded-2xl transition duration-300 transform hover:scale-105",
     attrs: {
-      "src": __webpack_require__(74),
-      "alt": "Blog"
+      "src": __webpack_require__(75)
     }
   }), _vm._v(" "), _c('div', {
     staticClass: "text-container max-w-[245px] mx-auto"
@@ -48,7 +46,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/landing/Blog.vue?vue&type=template&id=6e44fcf8
+// CONCATENATED MODULE: ./components/landing/Blog.vue?vue&type=template&id=2fa73ab8
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/landing/Blog.vue?vue&type=script&lang=js
 /* harmony default export */ var Blogvue_type_script_lang_js = ({
@@ -93,7 +91,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 77:
+/***/ 78:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127,7 +125,7 @@ var render = function render() {
   }) : _c('img', {
     staticClass: "w-full rounded-lg transition duration-300 transform hover:scale-105 cursor-pointer",
     attrs: {
-      "src": __webpack_require__(74),
+      "src": __webpack_require__(75),
       "alt": _vm.opportunity.title
     },
     on: {
@@ -186,7 +184,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 81:
+/***/ 82:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -403,7 +401,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var Search = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {BaseButton: __webpack_require__(11).default,LandingBlog: __webpack_require__(75).default,LandingOpportunity: __webpack_require__(77).default})
+installComponents(component, {BaseButton: __webpack_require__(11).default,LandingBlog: __webpack_require__(76).default,LandingOpportunity: __webpack_require__(78).default})
 
 
 /***/ })

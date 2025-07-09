@@ -139,7 +139,8 @@ class BlogController extends Controller
                 $blog->blogImage = $imageName;
             
                 // Generate the public URL for the image
-                $imageUrl = asset('storage/' . $imageName);
+                // $imageUrl = asset('storage/' . $imageName);
+                $imageUrl = rtrim(config('app.url'), '/') . '/storage/' . $imageName;
             }
             
             $blog->imageUrl = $imageUrl;

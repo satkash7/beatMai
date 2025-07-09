@@ -3,7 +3,8 @@
   <div class="col-span-12 lg:col-span-6" v-bind="$attrs">
     <div class="w-full sm:mt-20 xl:mt-0">
       <!-- <BaseToolsButtons />-->
-      <div class="flex flex-wrap"><br><br>
+       <br><br>
+      <div class="flex flex-wrap"> 
 
 
           <div class="w-full h-64 sm:h-96 rounded-lg overflow-hidden shadow-lg">
@@ -18,9 +19,7 @@
       </iframe>
     </div>
     <br>
-      Adresse : Goma, Nord-Kivu, RDC<br>
-          Phone : +243 995 277 023<br>
-          Email : direction@beatexpertise.com<br>
+       
         </div>
       <!-- <img :src="require('~/assets/img/aitools.png')" class="w-full" alt="" /> -->
     </div>

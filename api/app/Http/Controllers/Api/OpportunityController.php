@@ -119,13 +119,26 @@ class OpportunityController extends Controller
 
             $imageUrl = null;
             // Handle opportunity image upload
+
             if ($request->hasFile('imageUrl')) {
-                
                 $image = $request->file('imageUrl');
-                $imageName = time() . '_' . $image->getClientOriginalName();
+            
+                // Extract original name and extension
+                $originalName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+                $extension = $image->getClientOriginalExtension();
+            
+                // Sanitize the name
+                $sanitizedName = preg_replace('/\s+/', '_', $originalName); // Replace spaces with "_"
+                $sanitizedName = preg_replace('/[()]/', '-', $sanitizedName); // Replace "(" and ")" with "-"
+            
+                // Final formatted filename
+                $imageName = time() . '_' . $sanitizedName . '.' . $extension;
+            
+                // Store the file
                 $image->storeAs('public', $imageName);
-                $opportunity->opportunityImage = $imageName;
-                 // Generate the public URL for the image
+                $opportunity->blogImage = $imageName;
+            
+                // Generate the public URL for the image
                 $imageUrl = asset('storage/' . $imageName);
             }
             $opportunity->imageUrl = $imageUrl;

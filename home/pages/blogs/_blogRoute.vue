@@ -72,7 +72,7 @@
           <img :src="details.imageUrl" 
             alt="Post Image" 
             class="block max-w-[900px] max-h-[600px] w-auto h-auto object-contain float-left" />
-            <div class="justify-left" v-html="rawContent"></div>
+            <div class="justify-left" v-html="details.blogData"></div>
         </div>
         <br>
           <LandingComment class="m-8" type="blog" :id="details.id" :route="details.blogRoute" :creator="details.creator"/>
@@ -175,6 +175,7 @@ watch: {
     try {
       const response = await this.$axios.get(`/blog/getall?route=${this.blogRoute}`);
       this.details = response?.data?.blog?.[0] || {};
+      console.log('blog file ==========>', this.details.imageUrl);
       this.isLoading = false;
     } catch (error) {
       console.error(" API Error loading blog:", error);
