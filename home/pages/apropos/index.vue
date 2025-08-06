@@ -20,7 +20,7 @@
               <br><br>
               
               <b>📍 Adresse physique</b>
-                -	Siege Social : Q.Les Volcans, Commune et Ville de Goma,<br>
+                -	Siege Social : Q.Kyeshero, Commune et Ville de Goma,<br>
                 📧 Email professionnel : direction@beatexpertise.com  📞 Numéro de téléphone : +243 995 277 023
               <br>
             <br><br>

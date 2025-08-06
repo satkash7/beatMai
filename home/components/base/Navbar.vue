@@ -7,10 +7,6 @@
           <div class="logo">
             <a href="/"><img :src="require('~/assets/img/logo/logo.png')" class="w-24 xl:w-38 object-contain h-24" alt="Beat Logo"/></a>
           </div>
-          <button class="rounded-lg lg:hidden p-2 focus:outline-none focus:shadow-outline" @click="open = !open">
-            <SegmentIcon v-if="!open" :size="24" />
-            <CloseIcon v-else :size="24" />
-          </button>
         </div>
       </div>
       <div :class="{'block': open, 'hidden': !open, 'lg:flex': true}" class="lg:flex-row lg:items-center lg:space-x-3 last-buttons last-buttons">
@@ -22,15 +18,10 @@
           <base-button class="px-2 xl:px-4 py-3 mt-2 bg-inherit text-gradient smallbtn">
           A propos de Beat
           </base-button>
-        </a>
-        <a href="/#mission">
-          <base-button class="px-2 xl:px-4 py-3 mt-2 bg-inherit text-gradient smallbtn">
-          Services
-          </base-button>
-        </a>
+        </a> 
         <a href="/#domaines">
           <base-button class="px-2 xl:px-4 py-3 mt-2 bg-inherit text-gradient smallbtn">
-          Projets
+          Domaines
           </base-button>
         </a>
         <a href="/blogs">
@@ -42,7 +33,8 @@
           <base-button class="px-2 xl:px-4 py-3 mt-2 bg-inherit text-gradient smallbtn">
           Contact
           </base-button>
-        </a> 
+        </a>
+        <div class="gtranslate_wrapper z-10000"></div>
         <base-button v-if="!isMobile && userLogged == true" class="w-6 h-6 mt-2  rounded-full flex items-center justify-center relative smallbtn" @click="openModal" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
             <PlusIcon :size="12" />
         </base-button>
@@ -94,7 +86,7 @@
       </div>
     </div>
         <!-- ✅ REQUIRED for GTranslate to render -->
-        <div class="gtranslate_wrapper z-10000"></div>
+        
   </nav>
 </client-only>
 </template>
@@ -167,11 +159,19 @@ export default {
       switcher_horizontal_position: 'right',
       switcher_vertical_position: 'top',
       flag_style: '3d',
-      alt_flags: { en: 'usa' }
+      alt_flags: { en: 'usa' },
+      flag_size: 24,
+    }
+    // reduce the font size of the div to 10px
+    const gtranslateWrapper = document.querySelector('.gtranslate_wrapper');
+    if (gtranslateWrapper) { 
+      // important
+
+      gtranslateWrapper.style.fontSize = '10px'; // Adjust the font size as needed
     }
 
     const script = document.createElement('script')
-    script.src = 'https://cdn.gtranslate.net/widgets/latest/dwf.js'
+    script.src = 'https://cdn.gtranslate.net/widgets/latest/popup.js'
     script.defer = true
     document.body.appendChild(script)
  
@@ -186,9 +186,14 @@ export default {
     }
   }
 }
- 
+  
+
 </script>
 <style scoped>
+.gtranslate_wrapper {
+        font-family: inherit; /* Uses your default font */ 
+        font-size: 12px !important; /* Reduces font size */
+    }
 /* Style for navbar buttons container */
 .space-x-3 {
   display: flex;

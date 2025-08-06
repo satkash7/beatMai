@@ -1,15 +1,13 @@
 <template>
-  <client-only>
-     <!-- AI Top trend section -->
-     <div class="container mx-auto px-6">
-    <section class="bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl overflow-hidden">
+  <client-only> 
+    <section class="desktopview relative max-w-full sm:mx-2 my-0 shadow sm:rounded-2xl overflow-hidden">
 
       <!-- Display single blog post -->
       <div v-if="isLoading" class="w-full px-6 sm:px-0 py-4 flex flex-col space-y-4 text-center">
         <!-- Loading animation or text -->
         <p>Loading...</p>
       </div>
-      <div v-else class="px-6 mr-6 ml-6 sm:px-0 py-0 flex flex-col space-y-4">
+      <div v-else class="px-2 sm:px-0 py-0 h-1000 flex flex-col space-y-2">
         <br>
         <h6 class="text-xs sm:text-sm text-neutral-500 font-semibold">
           <span class="text-header-gradient-big">{{ titleMessage }}</span>
@@ -73,16 +71,16 @@
             </a>
           </div>
 
-          </div> 
-
+          </div>
            <!-- Display either PDF or Image -->
-          <div class="w-full flex justify-center mt-6">
+          <div class="w-full h-1000 flex justify-center mt-6">
+            <!-- ensure the iframe has big height-->
             <iframe
               v-if="isPdf(details.imageUrl)"
               :src="details.imageUrl"
-              class="w-full max-w-[900px] h-[1000px] border rounded"
+              class="w-full h-[1000px] border rounded"
               frameborder="0"
-            ></iframe>
+            ></iframe> 
 
             <img
               v-else
@@ -97,7 +95,6 @@
       <br>
           <LandingComment class="m-8" type="blog" :id="details.id" :route="details.blogRoute" :creator="details.creator"/>
     </section>
-     </div>
   </client-only>
 </template>
 
@@ -237,3 +234,13 @@ export default {
 }
 };
 </script>
+
+<style scoped>
+/* if it's desktop view, add some margins */
+
+.desktopview {
+  margin: 0 auto;
+  max-width: 1200px; /* Adjust as needed */
+}
+
+</style>

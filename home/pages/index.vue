@@ -140,35 +140,35 @@ export default {
           {
             id: 1,
             name: "Entrepreunariat",
-            imageUrl: require('~/assets/img/pic3.jpg'),
+            imageUrl: require('~/assets/img/dd.jpeg'),
             descriptions: "Accompagnement dans l'élaboration des plans d'affaires; Proposition des méthodes de gestion innovante des entreprises; Appui à l'élaboration de plan de continuité des affaires; Accompagnement dans l'élaboration des stratégies et plans de sécurité et de communication des organisations et/ou entreprises",
             link: "/projects"
           },
           {
             id: 2,
             name: "Gestion de l'environnement et protection des personnes",
-            imageUrl: require('~/assets/img/pic4.jpg'),
+            imageUrl: require('~/assets/img/cc.jpeg'),
             descriptions: "Evaluation de l'imapct environnemental des projets et des affaires; Proposition des pratiques écologiques; Coaching et mentorat sur la gestion sensible à l'environnement;",
             link: "/projects"
           },
           {
             id: 3,
             name: "Réduction des risques de catastrophes",
-            imageUrl: require('~/assets/img/pic6.jpg'),
+            imageUrl: require('~/assets/img/bb.jpeg'),
             descriptions: "Modélisation de la surveillance des aléas; Accompagnement des organisations dans la gestion sensible aux risques; Proposition des méthodes innovantes de gestion et de la protection de l'environnement; Formation sur la gestion des risques de catastrophes et des urgences; Développement des outils d'analyse de vulnérabilité des enjeux et risques de catastrophes; Elaboration des modules de gestion des risques adaptés aux besoins;",
             link: "/projects"
           },
           {
             id: 4,
             name: "Innovation et technologie",
-            imageUrl: require('~/assets/img/pic6.jpg'),
+            imageUrl: require('~/assets/img/bg1.jpg'),
             descriptions: "Accompagnement dans la pensée design; Accompagnement dans l'utilisation éthique de l'Intelligence Artificielle; Développement des applications dans divers domaines;",
             link: "/projects"
           },
           {
             id: 5,
-            name: "Communication pour le changement de comportement",
-            imageUrl: require('~/assets/img/pic2.jpg'),
+            name: "Renforcement des capacités, Communication pour le changement de comportement",
+            imageUrl: require('~/assets/img/aa.jpeg'),
             descriptions: "Développement des modules adaptés aux besoins des divers groupes, Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements, Coaching et mentorat dans la motivation des groupes",
             link: "/projects"
           },

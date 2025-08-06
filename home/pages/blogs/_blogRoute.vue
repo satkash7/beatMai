@@ -1,15 +1,14 @@
 <template>
   <client-only>
-     <!-- AI Top trend section -->
-    <div class="container mx-auto px-6">
+     <!-- AI Top trend section --> 
     <section v-if="isLoading">Loading...</section>
-    <section v-else class="bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl overflow-hidden">
+    <section v-else class="bg-partner desktopview relative max-w-full sm:mx-2 my-0 shadow sm:rounded-2xl overflow-hidden">
       <!-- Display single blog post -->
       <div v-if="isLoading" class="w-full px-6 sm:px-0 py-4 flex flex-col space-y-4 text-center">
         <!-- Loading animation or text -->
         <p>Loading...</p>
       </div>
-      <div v-else class="px-6 mr-6 ml-6 sm:px-0 py-0 flex flex-col space-y-4">
+      <div v-else class="px-2 sm:px-0 py-0 flex flex-col space-y-2">
         <br>
         <h6 class="text-xs sm:text-sm text-neutral-500 font-semibold">
           <span class="text-header-gradient-big">{{ titleMessage }}</span>
@@ -76,8 +75,7 @@
         </div>
         <br>
           <LandingComment class="m-8" type="blog" :id="details.id" :route="details.blogRoute" :creator="details.creator"/>
-    </section>
-     </div>
+    </section> 
   </client-only>
 </template>
 <script>
@@ -185,5 +183,15 @@ watch: {
   }, 
 };
 </script>
+
+<style scoped>
+/* if it's desktop view, add some margins */
+
+.desktopview {
+  margin: 0 auto;
+  max-width: 1200px; /* Adjust as needed */
+}
+
+</style>
 
  

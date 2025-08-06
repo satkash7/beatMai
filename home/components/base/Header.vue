@@ -178,8 +178,8 @@ export default {
 @keyframes heroFade {
     0% { background-image: url('~/assets/img/pic1.jpg'); opacity: 1; }
     33% { background-image: url('~/assets/img/pic2.jpg'); opacity: 1; }
-    66% { background-image: url('~/assets/img/pic3.jpg'); opacity: 1; }
-    100% { background-image: url('~/assets/img/pic4.jpg'); opacity: 1; }
+    66% { background-image: url('~/assets/img/aa.jpeg'); opacity: 1; }
+    100% { background-image: url('~/assets/img/cc.jpeg'); opacity: 1; }
 }
 
 @media screen and (max-width: 640px) {

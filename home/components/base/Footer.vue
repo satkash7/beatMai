@@ -19,11 +19,11 @@
 
   <section class="partners-grid py-8 bg-white">
   <h2 class="text-center text-2xl font-semibold mb-6">Nos partenaires</h2>
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full px-2 sm:px-4 mx-auto">
+  <div class="grid grid-cols-2 sm:grid-cols-9 gap-4 px-2 sm:px-4 mx-auto">
     <a v-for="partner in partners" :key="partner.name" :href="partner.link" target="_blank" rel="noopener noreferrer">
       <img 
         :src="partner.logo" 
-        class="h-20 sm:h-28 object-contain rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg" 
+        class="h-22 sm:h-28 object-contain rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg" 
         :alt="partner.name" 
       />
     </a>
@@ -42,9 +42,9 @@
               Une erreur est survénue, veuillez réassayer plustard.
             </div>
           <h2 class="text-4xl font-semibold">Entrez en contact avec nous.</h2>
-          Adresse : Goma, Nord-Kivu, RDC<br>
+          <p class="text-[0.9rem]">Adresse : Goma, Nord-Kivu, RDC<br>
           Phone : +243 995 277 023<br>
-          Email : direction@beatexpertise.com<br>
+          Email : direction@beatexpertise.com<br></p>
           <br><input
               type="text"
               class="w-full px-2 py-4 sm:py-3 rounded-lg sm:rounded-md text-sm focus:outline-none border border-[#AAAAAA] placeholder-[#888]"
@@ -92,7 +92,7 @@
       <div class="flex flex-col sm:flex-row items-center w-full sm:w-2/4 text-center sm:text-left">
       <!-- Left Section: Logo -->
       <div class="w-full sm:w-1/3 flex justify-center sm:justify-start">
-        <a href="/"><img src="~/assets/img/logo/logo.png" class="w-34 xl:w-58 object-contain h-34" alt="Beat Expertise Logo"/></a>
+        <a href="/"><img src="~/assets/img/logo/logo.png" class="w-28 xl:w-58 object-contain h-28 sm:h-24" alt="Beat Expertise Logo"/></a>
       </div>
 
       <!-- Right Section: Text -->
@@ -107,8 +107,8 @@
       <!-- Middle Section: Navigation Links -->
       <nav class="flex flex-col items-center sm:items-start w-full sm:w-1/4 space-y-2 sm:space-y-3 text-gray-700">
         <a href="/blogs" class="hover:text-blue-600">Actualités</a>
-        <a href="/#mission" class="hover:text-blue-600">Services</a>
-        <a href="/#domaines" class="hover:text-blue-600">projets</a> 
+        <a href="/#mission" class="hover:text-blue-600">Mission</a>
+        <a href="/#domaines" class="hover:text-blue-600">Domaines</a> 
         <a href="/opportunities" class="hover:text-blue-600">Offres & Opportunités</a>
         <a href="/apropos" class="hover:text-blue-600">A propos de nous</a>
       </nav>
@@ -117,7 +117,7 @@
       <form @submit.prevent="addToUsersList" class="flex flex-col items-center w-full sm:w-1/3 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md p-4">
         <span v-if="addedUser" class="bg-green-500 text-white px-4 py-2 rounded-md mb-2 text-sm sm:text-base">Merci d'avoir rejoins notre communauté, vous serez desormais informé de toute nos actualités.</span>
         <span v-if="userExists" class="bg-orange-500 text-white px-4 py-2 rounded-md mb-2 text-sm sm:text-base">Cette adresse mail est déjà enregistré.</span>
-        <div class="text-center text-gray-700 mb-2 text-sm sm:text-base">Ne jamais rien manquer de nous en souscrivant sur ce newsletter.</div>
+        <div class="text-center text-gray-700 mb-2 text-sm sm:text-base"><b>Rejoindre notre newsletter.</b></div>
         <input type="email" class="w-full px-3 py-2 rounded-md border border-[#AAAAAA] placeholder-[#888] text-sm sm:text-base" placeholder="Entrer votre adresse mail" v-model="email" />
         <button class="px-4 py-2 mt-2 rounded-md text-white hover:shadow-md transition duration-300 w-full sm:w-auto" type="submit" style="background-color:#030a3c;">
           <ArrowRightIcon :size="20" />
@@ -134,25 +134,25 @@
             </base-button>
         </a>
         <!-- Facebook share button -->
-        <a href="#" target="_blank" rel="noopener noreferrer" class="share-button">
+        <a href="https://www.facebook.com/profile.php?id=61578637741320" target="_blank" rel="noopener noreferrer" class="share-button">
             <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
             <Facebook :size="24" />
             </base-button>
         </a>
         <!-- Twitter share button -->
-        <a href="#" target="_blank" rel="noopener noreferrer" class="share-button">
+        <a href="https://x.com/beatexpertise" target="_blank" rel="noopener noreferrer" class="share-button">
             <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
             <Twitter :size="24" />
             </base-button>
         </a>
         <!-- Instagram share button -->
-        <a href="#" target="_blank" rel="noopener noreferrer" class="share-button">
+        <a href="mailto:direction@beatexpertise.com" target="_blank" rel="noopener noreferrer" class="share-button">
             <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
-            <Instagram :size="24" />
+            <EmailIcon :size="24" />
             </base-button>
         </a>
-        <!-- Instagram share button -->
-        <a href="#" target="_blank" rel="noopener noreferrer" class="share-button">
+        <!-- Linkedin share button -->
+        <a href="https://www.linkedin.com/company/beat-expertise/about/" target="_blank" rel="noopener noreferrer" class="share-button">
             <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
             <Linkedin :size="24" />
             </base-button>
@@ -191,10 +191,18 @@ export default {
       userExists: false,
       failedRequest: false,
       partners: [ 
+        { name: "Olame", logo: require('~/assets/img/olame.jpeg'), link: "https://olamerdc.org/" },
         { name: "UniGom", logo: require('~/assets/img/unigom.png'), link: "https://unigom.ac.cd/" },
         { name: "Caritas", logo: require('~/assets/img/caritasnew.png'), link: "https://www.caritas.org/" },
-        { name: "Olame", logo: require('~/assets/img/olame.jpeg'), link: "https://olamerdc.org/" },
+        { name: "Australia", logo: require('~/assets/img/australia.jpeg'), link: "https://www.caritas.org.au/" },
+        { name: "CaritasKindu", logo: require('~/assets/img/kindu.jpeg'), link: "https://www.caritas.org/" },
         { name: "Cafodd", logo: require('~/assets/img/cafod.webp'), link: "https://cafod.org.uk/" },
+        { name: "Start", logo: require('~/assets/img/start.jpeg'), link: "https://startnetwork.org/" },
+        { name: "Cajed", logo: require('~/assets/img/cajed.png'), link: "https://www.cajed.org/" },
+        { name: "Hub", logo: require('~/assets/img/hub.png'), link: "https://startnetwork.org/network/hubs/democratic-republic-congo-hub" },
+
+
+        
       ]
     }
   },
@@ -269,7 +277,7 @@ export default {
       try {
         const response = await this.$axios.post("/user/register", {
           email: this.email,
-          accesshash: 'everlytools_newsletter'
+          accesshash: 'beat_newsletter'
         });
         console.log(response);
         if (response.data.status_code === 200) {

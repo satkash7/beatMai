@@ -134,7 +134,7 @@ class UserController extends Controller
                     $user->accesshash = 'everlytools_user';
                 }
 
-                if ($request->password && $request->accesshash != 'everlytools_newsletter') {
+                if ($request->password && $request->accesshash != 'beat_newsletter') {
                     $user->password = Hash::make($request->password, [
                         'rounds' => 12,
                     ]);
