@@ -1,11 +1,11 @@
 <template>
   <client-only>
-  <nav id="navbar" :key="userLogged" class="navbar relative z-10 w-full text-neutral-800">
-    <div class="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row py-4">
+    <nav id="navbar" :key="userLogged" class="navbar fixed top-0 left-0 w-full z-50 bg-white shadow-md text-neutral-800">
+    <div class="flex flex-col max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row py-2">
       <div class="flex flex-col lg:flex-row items-center space-x-4 xl:space-x-8">
         <div class="w-full flex flex-row items-center justify-between py-6">
           <div class="logo">
-            <a href="/"><img :src="require('~/assets/img/logo/logo.png')" class="w-24 xl:w-38 object-contain h-24" alt="Beat Logo"/></a>
+            <a href="/"><img :src="require('~/assets/img/logo/logo.png')" class="w-16 xl:w-24 object-contain h-16" /></a>
           </div>
         </div>
       </div>
@@ -199,7 +199,7 @@ export default {
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap to the next line */
   justify-content: flex-start; 
-  margin-top: 10px; /* Add some space between rows of buttons */
+  margin-top: 2px; /* Add some space between rows of buttons */
   padding-left: 2px; /* Adjust padding to reduce spacing on the left */
   padding-right: 2px; 
   
@@ -251,7 +251,7 @@ export default {
 @media screen and (max-width: 640px) {
   /* Reduce button size */
   .space-x-3 a base-button {
-    padding: 4px 6px; /* Adjust padding for smaller buttons */
+    padding: 2px 3px; /* Adjust padding for smaller buttons */
     font-size: 8px; /* Reduce font size for smaller buttons */
     text-align:center;
 

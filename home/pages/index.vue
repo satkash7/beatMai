@@ -125,14 +125,14 @@ export default {
             name: "Notre mission",
             imageUrl: require('~/assets/img/pic1.jpg'),
             descriptions: "Founir un accompagnement technique personalisé, aux entreprises, organisations et/ou individus, pour les aider à mieux rendre les services leur sollicités, grace à des solutions techniques innovantes, pour developpement économique et social de la RDC",
-            link: "/services"
+            link: "#"
           },
           {
             id: 2,
             name: "Notre approche",
             imageUrl: require('~/assets/img/pic2.jpg'),
-            descriptions: "Transformer les défis en opportunité à travers la puissance de ta technologie et fournir des solutions techniques innovantes grace à un accolpagnement personnalisé, en vue du developpement économique de la RDC",
-            link: "/services"
+            descriptions: "Transformer les défis en opportunité à travers la puissance de ta technologie et fournir des solutions techniques innovantes grace à un accompagnement personnalisé, en vue du developpement économique de la RDC",
+            link: "#"
           }
         ];
 
@@ -142,21 +142,21 @@ export default {
             name: "Entrepreunariat",
             imageUrl: require('~/assets/img/dd.jpeg'),
             descriptions: "Accompagnement dans l'élaboration des plans d'affaires; Proposition des méthodes de gestion innovante des entreprises; Appui à l'élaboration de plan de continuité des affaires; Accompagnement dans l'élaboration des stratégies et plans de sécurité et de communication des organisations et/ou entreprises",
-            link: "/projects"
+            link: "#"
           },
           {
             id: 2,
             name: "Gestion de l'environnement et protection des personnes",
-            imageUrl: require('~/assets/img/cc.jpeg'),
+            imageUrl: require('~/assets/img/catas.png'),
             descriptions: "Evaluation de l'imapct environnemental des projets et des affaires; Proposition des pratiques écologiques; Coaching et mentorat sur la gestion sensible à l'environnement;",
-            link: "/projects"
+            link: "#"
           },
           {
             id: 3,
             name: "Réduction des risques de catastrophes",
             imageUrl: require('~/assets/img/bb.jpeg'),
             descriptions: "Modélisation de la surveillance des aléas; Accompagnement des organisations dans la gestion sensible aux risques; Proposition des méthodes innovantes de gestion et de la protection de l'environnement; Formation sur la gestion des risques de catastrophes et des urgences; Développement des outils d'analyse de vulnérabilité des enjeux et risques de catastrophes; Elaboration des modules de gestion des risques adaptés aux besoins;",
-            link: "/projects"
+            link: "#"
           },
           {
             id: 4,
@@ -170,14 +170,14 @@ export default {
             name: "Renforcement des capacités, Communication pour le changement de comportement",
             imageUrl: require('~/assets/img/aa.jpeg'),
             descriptions: "Développement des modules adaptés aux besoins des divers groupes, Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements, Coaching et mentorat dans la motivation des groupes",
-            link: "/projects"
+            link: "#"
           },
           {
             id: 6,
             name: "Accompagnement dans la collecte et analyse des données",
             imageUrl: require('~/assets/img/pic1.jpg'),
             descriptions: "Accompagnement technique des entreprises dans la collecte et l’analyse des données qualitatives et quantitatives pour une prise de décision stratégique.",
-            link: "/projects"
+            link: "#"
           }
         ];
       },

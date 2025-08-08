@@ -18,7 +18,7 @@
     </section>
 
   <section class="partners-grid py-8 bg-white">
-  <h2 class="text-center text-2xl font-semibold mb-6">Nos partenaires</h2>
+  <h1 class="text-center text-4xl mb-6">Nos partenaires</h1>
   <div class="grid grid-cols-2 sm:grid-cols-9 gap-4 px-2 sm:px-4 mx-auto">
     <a v-for="partner in partners" :key="partner.name" :href="partner.link" target="_blank" rel="noopener noreferrer">
       <img 
@@ -91,21 +91,20 @@
       <!-- Left Side: Image and Company Text -->
       <div class="flex flex-col sm:flex-row items-center w-full sm:w-2/4 text-center sm:text-left">
       <!-- Left Section: Logo -->
-      <div class="w-full sm:w-1/3 flex justify-center sm:justify-start">
-        <a href="/"><img src="~/assets/img/logo/logo.png" class="w-28 xl:w-58 object-contain h-28 sm:h-24" alt="Beat Expertise Logo"/></a>
-      </div>
+      
 
       <!-- Right Section: Text -->
-      <div class="w-full sm:w-3/4">
+      <div class="w-full sm:w-4/4">
         <span class="text-base sm:text-lg text-gray-800">
-          BEAT est un bureau d'expertise et d'accompagnement technique basé à Goma, dédié à offrir des solutions innovantes pour le développement technologique de la région.
+          <a href="/"><img src="~/assets/img/logo/logo.png" class="w-28 xl:w-58 object-contain h-28 sm:h-24" alt="Beat Expertise Logo"/></a>
+          BEAT est un bureau d'expertise et accompagnement technique basé à Goma, dédié à offrir des solutions innovantes pour le développement technologique de la région.
         </span>
       </div>
     </div>
 
 
       <!-- Middle Section: Navigation Links -->
-      <nav class="flex flex-col items-center sm:items-start w-full sm:w-1/4 space-y-2 sm:space-y-3 text-gray-700">
+      <nav class="flex flex-col items-center sm:items-start w-full sm:w-1/4 space-y-2 sm:space-y-3 text-gray-700"></br>
         <a href="/blogs" class="hover:text-blue-600">Actualités</a>
         <a href="/#mission" class="hover:text-blue-600">Mission</a>
         <a href="/#domaines" class="hover:text-blue-600">Domaines</a> 
@@ -129,32 +128,37 @@
     <div class="flex items-center justify-center">
         <!-- WhatsApp share button -->
         <a href="https://wa.me/+243995277023" target="_blank" rel="noopener noreferrer" class="share-button">
-            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
+            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="color: black;">
             <Whatsapp :size="24" />
             </base-button>
         </a>
         <!-- Facebook share button -->
         <a href="https://www.facebook.com/profile.php?id=61578637741320" target="_blank" rel="noopener noreferrer" class="share-button">
-            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
+            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="color: black;">
             <Facebook :size="24" />
             </base-button>
         </a>
         <!-- Twitter share button -->
         <a href="https://x.com/beatexpertise" target="_blank" rel="noopener noreferrer" class="share-button">
-            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
+            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="color: black;">
             <Twitter :size="24" />
             </base-button>
         </a>
         <!-- Instagram share button -->
         <a href="mailto:direction@beatexpertise.com" target="_blank" rel="noopener noreferrer" class="share-button">
-            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
+            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="color: black;">
             <EmailIcon :size="24" />
             </base-button>
         </a>
         <!-- Linkedin share button -->
         <a href="https://www.linkedin.com/company/beat-expertise/about/" target="_blank" rel="noopener noreferrer" class="share-button">
-            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
+            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="color: black;">
             <Linkedin :size="24" />
+            </base-button>
+        </a>
+        <a href="https://www.youtube.com/channel/UCcpAAfUJtM_sxZNb9LO94sQ" target="_blank" rel="noopener noreferrer" class="share-button">
+            <base-button class="w-10 h-10 mt-0 mr-1 ml-1  rounded-full flex items-center justify-center relative" style="color: black;">
+            <Youtube :size="24" />
             </base-button>
         </a>
     </div>

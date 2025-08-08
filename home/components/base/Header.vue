@@ -8,11 +8,11 @@
           data-aos-once="true"
           class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight sm:pr-8 xl:pr-10 mobile"
           style="color:white;"
-        >
-        Bienvenu au "Bureau d'Expertise et d'Accompagnement Technique" BEAT
+        > <br></br><br></br><br></br>
+        Bienvenu au "Bureau d'Expertise et Accompagnement Technique" BEAT
         </h1>
         <p data-aos-once="true" data-aos-delay="300" class="text-white extramobile">
-          BEAT est un bureau d'expertise et d'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.
+          BEAT est un bureau d'expertise et accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.
         </p>
         <div
           data-aos-once="true"

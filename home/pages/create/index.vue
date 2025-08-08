@@ -5,6 +5,7 @@
     <section class="bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl overflow-hidden">
       <!-- Display all blogs -->
       <div class="w-full px-8 sm:px-0 py-0 flex flex-col justify-end space-y-4">
+        <br></br><br></br><br></br>
         <h2 class="text-2xl text-neutral-800 font-semibold text-center">
           <span class="text-header-gradient-big">{{ title }}</span>
         </h2>

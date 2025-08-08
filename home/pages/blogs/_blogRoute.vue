@@ -4,12 +4,16 @@
     <section v-if="isLoading">Loading...</section>
     <section v-else class="bg-partner desktopview relative max-w-full sm:mx-2 my-0 shadow sm:rounded-2xl overflow-hidden">
       <!-- Display single blog post -->
+     
       <div v-if="isLoading" class="w-full px-6 sm:px-0 py-4 flex flex-col space-y-4 text-center">
         <!-- Loading animation or text -->
         <p>Loading...</p>
       </div>
-      <div v-else class="px-2 sm:px-0 py-0 flex flex-col space-y-2">
+      <div v-else class="px-2 sm:px-0 py-0 flex flex-col space-y-2 ml-3 mr-3">
         <br>
+         
+        <br></br><br></br><br></br>
+        
         <h6 class="text-xs sm:text-sm text-neutral-500 font-semibold">
           <span class="text-header-gradient-big">{{ titleMessage }}</span>
         </h6>
@@ -68,10 +72,24 @@
             </a>
           </div>
           </div>
-          <img :src="details.imageUrl" 
+          <img v-if="isYoutubeLink==false" :src="details.imageUrl" 
             alt="Post Image" 
             class="block max-w-[900px] max-h-[600px] w-auto h-auto object-contain float-left" />
-            <div class="justify-left" v-html="details.blogData"></div>
+          <!-- if isYoutubeLink is true then display details.blogData as url in a youtube video reader-->
+          <div v-if="isYoutubeLink == true" class="w-full">
+            <iframe 
+              width="100%" 
+              height="600"
+              :src="getYoutubeEmbedUrl(details.blogData)" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+
+
+          </div>
+            <div v-if="isYoutubeLink==false" class="justify-left" v-html="details.blogData"></div>
         </div>
         <br>
           <LandingComment class="m-8" type="blog" :id="details.id" :route="details.blogRoute" :creator="details.creator"/>
@@ -90,6 +108,7 @@ export default {
       shareRoute: null,
       shareTitle: null,
       sanitizedContent: '',
+      isYoutubeLink: false,
       blogRoute: null // Start as null, update in mounted()
     };
   },
@@ -165,6 +184,28 @@ watch: {
   }
 },
   methods: {
+    getYoutubeEmbedUrl(input) {
+      if (!input) return '';
+      let url = '';
+
+      // Case 1: Extract from iframe src
+      const iframeMatch = input.match(/<iframe[^>]+src="([^"]+)"/);
+      if (iframeMatch) {
+        url = iframeMatch[1];
+      } else {
+        // Case 2: Extract from anchor href
+        const anchorMatch = input.match(/href="([^"]+)"/);
+        url = anchorMatch ? anchorMatch[1] : input.trim();
+      }
+
+      // Case 3: Extract video ID from YouTube URL
+      const idMatch = url.match(/(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([^&?/]+)/);
+      const videoId = idMatch?.[1];
+
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+    },
+
+    
     async loadBlogData() {
     if (!this.blogRoute || this.blogRoute.length < 3) { // Prevents invalid routes
       console.error(" Error: Invalid blogRoute detected!");
@@ -174,6 +215,13 @@ watch: {
       const response = await this.$axios.get(`/blog/getall?route=${this.blogRoute}`);
       this.details = response?.data?.blog?.[0] || {};
       console.log('blog file ==========>', this.details.imageUrl);
+     
+      if (this.details.blogData && (this.details.blogData.includes('youtube') || this.details.blogData.includes('youtu.be')) && this.details.blogData.length < 999) {
+        this.isYoutubeLink = true;
+      } else {
+        this.isYoutubeLink = false;
+      }
+
       this.isLoading = false;
     } catch (error) {
       console.error(" API Error loading blog:", error);

@@ -6,7 +6,8 @@
     <section class="bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl overflow-hidden">
       <!-- Display login or register content based on user's choice -->
       <div class="w-full bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl px-8 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
-          <div v-if="loading" class="loader my-6"></div>  
+        <br></br><br></br><br></br>  
+        <div v-if="loading" class="loader my-6"></div>  
           <div v-if="successMessage  && !loading" class="bg-green-200 text-green-800 py-4 px-8 rounded my-6 text-center">
             <p v-html="successMessage"></p>  
           </div>

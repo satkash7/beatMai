@@ -11,18 +11,19 @@
       </div>
       
       <div v-else class="w-full px-6 mr-0 ml-0 sm:px-0 py-0 flex flex-col items-center justify-center space-y-4">
+        <br></br><br></br><br></br> 
         <!-- Display all blogs -->
         <div class="w-full px-8 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
           <div class="space-x-3">
           
           </div>
-          <div class="absolute top-0 right-0 whitespace-nowrap"> 
+          <div class="top-0 right-0 whitespace-nowrap"> 
               <a v-if="user.username == 'admin'" href="/profile/admin"  class="px-4 py-2 bg-blue-500 text-white rounded">Votre profile ( {{ user.username }})</a>  
               <a @click="logout"  class="px-4 py-2 bg-blue-500 text-red rounded cursor-pointer">Deconnexion</a>
           </div>
           <br><br>
 
-          <h2 class="text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold">
+          <h2 class="text-lg sm:text-xl md:text-4xl text-neutral-800">
             <span class="text-header-gradient-big">Vos blogs / articles publiés</span>
           </h2>
 
@@ -63,7 +64,7 @@
 
         <!-- Display all blogs -->
         <div class="w-full px-8 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 class="text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold">
+          <h2 class="text-lg sm:text-xl md:text-4xl text-neutral-800">
             <span class="text-header-gradient-big">Vos opportunités publiées</span>
           </h2>
           <div v-if="opportunities && opportunities.length > 0" class="flex flex-wrap items-center justify-center">
@@ -102,7 +103,9 @@
         </div>
 
       </div>
+      <br></br><br></br><br></br><br></br>
     </section> 
+ 
       </div>
   </client-only>
 </template>

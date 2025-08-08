@@ -22,6 +22,7 @@ import SearchIcon from 'vue-material-design-icons/Magnify.vue'
 import TrashCanIcon from 'vue-material-design-icons/TrashCan.vue';
 import PencilIcon from 'vue-material-design-icons/Pencil.vue';
 import EmailIcon from 'vue-material-design-icons/Email.vue';
+import Youtube from 'vue-material-design-icons/YouTube.vue'
 
 const components = {
   ChevronDownIcon,
@@ -45,6 +46,7 @@ const components = {
   Whatsapp,
   Linkedin,
   Robot,
+  Youtube,
   SearchIcon,
   EmailIcon
 }

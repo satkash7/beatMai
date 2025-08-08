@@ -9,6 +9,7 @@
       </div>
       <div v-else class="px-2 sm:px-0 py-0 h-1000 flex flex-col space-y-2">
         <br>
+        <br></br><br></br><br></br>
         <h6 class="text-xs sm:text-sm text-neutral-500 font-semibold">
           <span class="text-header-gradient-big">{{ titleMessage }}</span>
         </h6>

@@ -9,6 +9,7 @@
           <!-- Display all blogs -->
           <div class="w-full px-4 sm:px-0 my-0 py-0 flex flex-col items-start justify-center space-y-4 text-left">
             <div class="ml-4 mr-4 px-4 sm:px-0 my-0 py-0 flex flex-col items-start justify-center space-y-4 text-left">
+              <br></br><br></br><br></br>
               <h1 data-aos="flip-down" class="text-4xl text-neutral-800 font-semibold" id="discover" style="color:#030a3c;">A propos de <span class="text-header-gradient"> Beat Expertise</span></h1>
                  </div>
             <h2 class="ml-5 mr-5"> 
@@ -47,10 +48,10 @@
 
       head() {
       return {
-          title: "AI tools | Everly Tools",
+          title: "Beat Expertise | A propos de nous",
           meta: [
-              { hid: 'description', content: 'EverlyTools is the jungle of AI tools, here you find hundreds of AI tools. You can also talk to EverlyAI that gives you a list of top AI tools for your search' },
-              { hid: 'keywords', name: 'keywords', content: 'AI tools, best AI tools, trending AI tools, AI training, AI certifications, AI software, top AI applications, top 5 ai tools, top 10 ai tools, top 5 ai, top 10 ai, top ai, top ai tols, AI automation tools, outils IA, meilleurs outils IA, formation intelligence artificielle, certification IA, logiciels IA, herramientas IA, mejores herramientas IA, cursos IA, certificaciones IA, أدوات الذكاء الاصطناعي, أفضل أدوات الذكاء الاصطناعي, تدريب الذكاء الاصطناعي, شهادات الذكاء الاصطناعي, ferrametas de IA, melhores ferramentas de IA, formação em IA, certificações de IA, инструменты ИИ, лучшие инструменты ИИ, обучение ИИ, сертификации ИИ, 工具人工智能, 最佳人工智能工具, 人工智能培训, 人工智能认证' },
+              { hid: 'description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
+              { hid: 'keywords', name: 'keywords', content: 'Beat Expertise' },
               { hid: 'robots', content: 'index, follow' },
               { hid: 'googlebot', content: 'index, follow' },
               { hid: 'bingbot', content: 'index, follow' },
@@ -58,8 +59,8 @@
               
               
               // Open Graph (Facebook, LinkedIn, etc.)
-              { hid: 'og:title', property: 'og:title', content: "AI tools | Everly Tools"},
-              { hid: 'og:description', property: 'og:description', content: 'EverlyTools is the jungle of AI tools, here you find hundreds of AI tools. You can also talk to EverlyAI that gives you a list of top AI tools for your search' },
+              { hid: 'og:title', property: 'og:title', content: "Beat Expertise"},
+              { hid: 'og:description', property: 'og:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
               { hid: 'og:image', property: 'og:image', content: "https://storage.everlytools.com/everlytools.jpg" },
               { hid: 'og:url', property: 'og:url', content: "https://everlytools.com/about" },
               { hid: 'og:locale', property: 'og:locale', content: 'en_US' }, // Primary language
@@ -75,8 +76,8 @@
               { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'ja_JP' },
 
               // Twitter Meta Tags
-              { hid: 'twitter:title', content: "AI tools | Everly Tools"},
-              { hid: 'twitter:description', content: 'EverlyTools is the jungle of AI tools, here you find hundreds of AI tools. You can also talk to EverlyAI that gives you a list of top AI tools for your search' },
+              { hid: 'twitter:title', content: "Beat Expertise"},
+              { hid: 'twitter:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
               { hid: 'twitter:image', content: "https://storage.everlytools.com/everlytools.jpg" },
               { hid: 'twitter:card', content: 'summary_large_image' },
               { hid: 'twitter:url', content: 'https://everlytools.com/about' }

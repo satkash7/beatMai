@@ -1,10 +1,11 @@
 <template>
   <client-only> 
-    <div @click="handleClick" class="inline-block cursor-pointer hover:shadow-md transition duration-300">
-      <img v-if="blog.imageUrl != null && blog.imageUrl != ''" :src="blog.imageUrl" class="max-w-[245px] mx-auto sm:rounded-2xl transition duration-300 transform hover:scale-105"/>
-      <img v-else :src="require('~/assets/img/ai.jpg')" class="max-w-[245px] mx-auto sm:rounded-2xl transition duration-300 transform hover:scale-105"/>
-      <div class="text-container max-w-[245px] mx-auto">
-        <h3 class="text-xl text-neutral-800 font-semibold hover:text-blue-500 transition duration-300">{{ blog.blogTitle }}</h3>
+     
+    <div @click="handleClick" class="max-w-[520px] xl:max-w-[580px] bg-white shadow-md rounded-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-xl ml-7 mr-7 mt-10 mb-10">
+      <img v-if="blog.imageUrl != null && blog.imageUrl != ''" :src="blog.imageUrl" class="w-full h-48 object-cover rounded-t-lg transition-opacity duration-500 ease-in-out hover:opacity-80"/>
+      <img v-else :src="require('~/assets/img/default.jpg')" class="w-full h-48 object-cover rounded-t-lg transition-opacity duration-500 ease-in-out hover:opacity-80"/>
+      <div class="text-container max-w-[385px] mx-auto">
+        <h4 class="text-xl text-neutral-800 font-semibold hover:text-blue-500 transition duration-300">{{ blog.blogTitle }}</h4>
         <p class="text-sm text-gray-700 leading-relaxed">
           {{ blog.blogCaption }}
         </p>

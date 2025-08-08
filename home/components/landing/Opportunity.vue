@@ -23,7 +23,7 @@
           />
           <img 
             v-else 
-            :src="require('~/assets/img/ai.jpg')" 
+            :src="require('~/assets/img/default.jpg')" 
             class="w-full rounded-lg transition duration-300 transform hover:scale-105 cursor-pointer " 
             :alt="opportunity.title"
             @click="handleClick"

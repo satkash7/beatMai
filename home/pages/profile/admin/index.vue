@@ -5,6 +5,7 @@
         <div v-if="isLoading" class="w-full flex flex-col items-center justify-center text-center">
           <p>Loading...</p>
         </div>
+        <br></br><br></br><br></br>
           <div v-if="successMessage  && !loading" class="bg-green-200 text-green-800 py-4 px-8 rounded my-6 text-center">
             <p v-html="successMessage"></p>  
           </div>
