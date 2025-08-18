@@ -143,11 +143,11 @@ export default {
     },
      linkedinShareUrl() { 
       if (this.isOpportunity) {
-        const url = "https://everlytools.com/" + this.username + "/opportunities/" + this.blogRoute;
+        const url = "https://beatexpertise.com/" + this.username + "/opportunities/" + this.blogRoute;
         return 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
       } else { 
         // blogs
-        const url = "https://everlytools.com/" + this.username + "/blogs/" + this.blogRoute;
+        const url = "https://beatexpertise.com/" + this.username + "/blogs/" + this.blogRoute;
         return 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
       } 
     }
@@ -186,22 +186,33 @@ watch: {
   methods: {
     getYoutubeEmbedUrl(input) {
       if (!input) return '';
-      let url = '';
+      let url = input.trim();
 
-      // Case 1: Extract from iframe src
-      const iframeMatch = input.match(/<iframe[^>]+src="([^"]+)"/);
+      // ✅ Case 1: Extract src from iframe-like string (with or without < >)
+      const iframeMatch = input.match(/iframe[^>]*src="([^"]+)"/i);
       if (iframeMatch) {
         url = iframeMatch[1];
       } else {
-        // Case 2: Extract from anchor href
-        const anchorMatch = input.match(/href="([^"]+)"/);
-        url = anchorMatch ? anchorMatch[1] : input.trim();
+        // ✅ Case 2: Extract href from anchor tag
+        const anchorMatch = input.match(/href="([^"]+)"/i);
+        if (anchorMatch) {
+          url = anchorMatch[1];
+        } else {
+          // ✅ Case 3: Extract raw URL from inside any HTML tag (e.g. <p>https://...<p>)
+          const urlMatch = input.match(/https:\/\/(?:www\.)?(youtube\.com|youtu\.be)\/[^\s<"]+/);
+          if (urlMatch) {
+            url = urlMatch[0];
+          }
+        }
       }
+      console.log(
+  'Extracted url', url );
 
-      // Case 3: Extract video ID from YouTube URL
+      // Case 2: Extract video ID from any YouTube format
       const idMatch = url.match(/(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([^&?/]+)/);
       const videoId = idMatch?.[1];
 
+      // ✅ Return normalized embed URL
       return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
     },
 

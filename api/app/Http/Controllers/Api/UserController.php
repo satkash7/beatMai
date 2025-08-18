@@ -98,9 +98,7 @@ class UserController extends Controller
     try {
         // first block all requests where referer is not everlytools.com
         $referer = $request->header('referer');
-        if ($referer == "https://beatexpertise.com" || $referer == "http://beatexpertise.com" || $referer == "http://localhost:3000"
-            || $referer == "https://beatexpertise.com/" || $referer == "https://testing.beatexpertise.com/" || $referer == "http://testing.beatexpertise.com/" || $referer == "http://beatexpertise.com/" || $referer == "http://localhost:3000/") 
-        {
+         
 
             // Check if the user with the provided email exists
             $existingUserEmail = User::where('email', $request->email)->first();
@@ -158,12 +156,6 @@ class UserController extends Controller
                     'data' => $user
                 ]);
             }
-        } else {
-            return response()->json([
-                'status_code' => 401,
-                'error' => 'Unauthorized request.'
-            ], 401);
-        }
     } catch (Exception $e) {
         return response()->json($e);
     }

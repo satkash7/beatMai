@@ -120,27 +120,17 @@ class BlogController extends Controller
 
             $imageUrl = null;
             // Handle blog image upload
+
             if ($request->hasFile('imageUrl')) {
                 $image = $request->file('imageUrl');
-            
-                // Extract original name and extension
-                $originalName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
-                $extension = $image->getClientOriginalExtension();
-            
-                // Sanitize the name
-                $sanitizedName = preg_replace('/\s+/', '_', $originalName); // Replace spaces with "_"
-                $sanitizedName = preg_replace('/[()]/', '-', $sanitizedName); // Replace "(" and ")" with "-"
-            
-                // Final formatted filename
-                $imageName = time() . '_' . $sanitizedName . '.' . $extension;
-            
-                // Store the file
+                $imageName = time() . '_' . $image->getClientOriginalName();
                 $image->storeAs('public', $imageName);
                 $blog->blogImage = $imageName;
-            
                 // Generate the public URL for the image
-                // $imageUrl = asset('storage/' . $imageName);
-                $imageUrl = rtrim(config('app.url'), '/') . '/storage/' . $imageName;
+                $imageUrl = asset('storage/' . $imageName);
+                $blog->imageUrl = $imageUrl;
+
+                // remove old image from storage 
             }
             
             $blog->imageUrl = $imageUrl;
