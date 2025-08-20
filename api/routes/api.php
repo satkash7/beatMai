@@ -6,7 +6,6 @@ use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\AIRequest;
 use App\Http\Controllers\Api\BlogController; 
 use App\Http\Controllers\Api\CommentController; 
-use App\Http\Controllers\Api\OpportunityController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Artisan;
 /*
@@ -41,12 +40,6 @@ Route::middleware('throttle:60,1')->group(function () {
             return 'Database connection failed: ' . $e->getMessage();
         }
     });
-    //create production symlink storage folder
-    Route::get('/linkstorage', function () {
-        $target = 'h:/root/home/esurdc-001/www/apidms/storage/app/public';
-        $shortcut = 'h:/root/home/esurdc-001/www/apidms/public/storage';
-        symlink($target, $shortcut);
-    });
     Route::post('visitor/message', [AIRequest::class, 'add']);
     Route::post('user/register', [UserController::class, 'register']);
     Route::post('user/login', [UserController::class, 'login']);
@@ -54,7 +47,6 @@ Route::middleware('throttle:60,1')->group(function () {
     // Dynamic route to fetch user details by username
     Route::get('user/{username}/profile', [UserController::class, 'getpublicProfile']);
     // get tools data and services
-    Route::get('opportunity/getall', [OpportunityController::class, 'index']);
     Route::get('blog/getall', [BlogController::class, 'index']);
     Route::get('tool/getall', [AIRequest::class, 'index']);
     // post comment
@@ -88,6 +80,4 @@ Route::middleware(['auth:sanctum', 'throttle:30,1'])->group(function() {
     // user blogs, tips, docs and trends deletion
     Route::delete('{category}/delete/{id}', [UserController::class, 'deleteUserPost']);
     Route::post('blog/edit/{id}', [BlogController::class, 'updateBlog']);
-
-    Route::post('opportunity/edit/{id}', [OpportunityController::class, 'updateTrend']);
 });

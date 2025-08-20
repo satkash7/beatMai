@@ -140,7 +140,7 @@
             <div v-if="titleAction == 'blog'" class="mb-8">
               <label class="flex items-center space-x-2">
               <input type="checkbox" v-model="publicPost" class="w-4 h-4">
-              <h3>Cochez s'il s'agit d'une opportunité</h3>
+              <h3>Cochez s'il s'agit d'une opportunité ou Offre d'emploi</h3>
             </label>
           </div>
 
@@ -308,64 +308,45 @@
             }
         },
         async submitAndPublish() {
-            try {
-                this.loading = true;
-                const storedBarrierDetails = sessionStorage.getItem('token');
+            this.loading = true;
+            const storedBarrierDetails = sessionStorage.getItem('token');
 
-                //remove symbols like , . ~!@#$%^&*()_+}|}{}|:"?><"
-                this.routeColumn = this.titleColumn
-                    .normalize("NFD") // Normalize Unicode characters
-                    .replace(/[\u0300-\u036f]/g, "") // Remove diacritics
-                    .trim() // Remove leading and trailing whitespace
-                    .toLowerCase() // Convert to lowercase
-                    .replace(/[^\w\s-]/g, "") // Remove symbols except word characters, spaces, and hyphens
-                    .replace(/^-+|-+$/g, "") // Remove leading or trailing hyphens
-                    .replace(/\s+/g, "-") // Replace spaces with a single hyphen
-                    .replace(/-+/g, "-"); // Collapse multiple hyphens into one
+            this.routeColumn = this.titleColumn
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "")
+              .trim()
+              .toLowerCase()
+              .replace(/[^\w\s-]/g, "")
+              .replace(/^-+|-+$/g, "")
+              .replace(/\s+/g, "-")
+              .replace(/-+/g, "-");
 
-                const formData = new FormData(); 
-                  formData.append('blogTitle', this.titleColumn);
-                  formData.append('blogCaption', this.captionColumn);
-                  formData.append('blogRoute', this.routeColumn);
-                  formData.append('blogCategory', this.categoryColumn);
-                  formData.append('blogData', this.dataColumn);
-                  formData.append('publicPost', this.publicPost == true ? 1 : 0);
-                  console.log("blogData is :  ", this.dataColumn);
-                 
-                  formData.append('imageUrl', this.imageColumn);
+            const formData = new FormData();
+            formData.append('blogTitle', this.titleColumn || '');
+            formData.append('blogCaption', this.captionColumn || '');
+            formData.append('blogRoute', this.routeColumn || '');
+            formData.append('blogCategory', this.categoryColumn || '');
+            formData.append('blogData', this.dataColumn || '');
+            formData.append('publicPost', this.publicPost === true ? 1 : 0);
+            formData.append('imageUrl', this.imageColumn || '');
+            formData.append('creator', this.creator || '');
 
-                // Send the POST request with the FormData object
-                console.log("formdata:", JSON.stringify(formData));
-                const response = await this.$axios.post(this.request, formData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data',
-                        Authorization: `Bearer ${storedBarrierDetails}`,  
-                    },
-                });
+            const response = await this.$axios.post('/blog/store', formData, {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+                Authorization: `Bearer ${storedBarrierDetails}`,
+              },
+            });
 
-                console.log(" title ==> data : ", this.titleColumn );
-                console.log(" caption  ==> data : ", this.captionColumn );
-                console.log(" route  ==> data : ", this.routeColumn );
-                console.log(" category  ==> data : ", this.categoryColumn );
-                console.log(" data  ==> data : ", this.dataColumn );
-                console.log(" image  ==> data : ", this.imageColumn );
-                console.log("Response:", JSON.stringify(response.data));
-
-                if (response.data.status_code === 200) {
-                    this.success = true;
-                }
-                else {
-                    this.failure = true;
-                }
-
-            } catch (error) {
-                console.error(error);
+            console.log("Response:", JSON.stringify(response.data));
+            if (response.data.status_code === 200) {
+              this.success = true;
+            } else {
+              this.failure = true;
             }
-            finally {
-              this.loading = false;  
-            }
-
+            this.loading = false;
         },
+
         async saveNewTool() {
             try {
                 this.loading = true;

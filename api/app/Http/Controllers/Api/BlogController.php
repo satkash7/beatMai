@@ -120,19 +120,44 @@ class BlogController extends Controller
 
             $imageUrl = null;
             // Handle blog image upload
-
+            // Handle blog image upload
             if ($request->hasFile('imageUrl')) {
-                $image = $request->file('imageUrl');
-                $imageName = time() . '_' . $image->getClientOriginalName();
-                $image->storeAs('public', $imageName);
-                $blog->blogImage = $imageName;
-                // Generate the public URL for the image
-                $imageUrl = asset('storage/' . $imageName);
-                $blog->imageUrl = $imageUrl;
+                try { 
+                    // Validate the image or pdf
+                    $request->validate([
+                        'imageUrl' => 'required',
+                    ]);
 
-                // remove old image from storage 
+                    $image = $request->file('imageUrl');
+
+                    // Extract original name and extension
+                    $originalName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+                    $extension = $image->getClientOriginalExtension();
+
+                    // Sanitize the name
+                    $sanitizedName = preg_replace('/\s+/', '_', $originalName);
+                    $sanitizedName = preg_replace('/[()]/', '-', $sanitizedName);
+
+                    // Final formatted filename
+                    $imageName = time() . '_' . $sanitizedName . '.' . $extension;
+
+                    // Store the file in storage/app/public/blogs/ if saving in temp fails, fix
+                    $image->storeAs('public/blogs', $imageName);
+
+                    // Save relative path in DB (storage/blogs/filename)
+                    $blog->blogImage = $imageName;
+
+                    // Generate public URL for API response
+                    $imageUrl = asset('storage/blogs/' . $imageName);
+
+                } catch (Exception $e) {
+                    return response()->json([
+                        'status_code' => 422,
+                        'status_message' => 'Invalid image file: ' . $e->getMessage()
+                    ]);
+                }
             }
-            
+
             $blog->imageUrl = $imageUrl;
             $blog->save();
 
@@ -143,7 +168,10 @@ class BlogController extends Controller
                 'image_url' => $imageUrl
             ]);
         } catch (Exception $e) {
-            return response()->json($e);
+            return response()->json([
+                'status_code' => 501,
+                'status_message' => 'Invalid image file: ' . $e->getMessage()
+            ]);
         }
    }
 
@@ -174,26 +202,23 @@ class BlogController extends Controller
             if ($request->blogCategory && $request->blogCategory != "skip") {
                 $blog->blogCategory = $request->blogCategory;
             }
-            if ($request->imageUrl && $request->imageUrl != "skip") {
-                $imageUrl = null;
-                // Handle blog image upload
-                if ($request->hasFile('imageUrl')) {
-
-                    $image = $request->file('imageUrl');
-                    $imageName = time() . '_' . $image->getClientOriginalName();
-                    $image->storeAs('public', $imageName);
-                    $blog->blogImage = $imageName;
-                    // Generate the public URL for the image
-                    $imageUrl = asset('storage/' . $imageName);
-                    $blog->imageUrl = $imageUrl;
-
-                    // remove old image from storage
-                    $oldImage = $blog->blogImage;
-                    if ($oldImage && Storage::exists('public/' . $oldImage)) {
-                        Storage::delete('public/' . $request->oldImageUrl);
-                    }
+            // Handle image upload if provided
+            if ($request->hasFile('imageUrl')) {
+                // Delete old image if exists
+                if ($blog->blogImage && Storage::exists('public/blogs/' . $blog->blogImage)) {
+                    Storage::delete('public/blogs/' . $blog->blogImage);
                 }
+            
+                $image = $request->file('imageUrl');
+                $imageName = time() . '_' . $image->getClientOriginalName();
+                
+                // Save in the same blogs folder
+                $image->storeAs('public/blogs', $imageName);
+            
+                $blog->blogImage = $imageName;
+                $blog->imageUrl = asset('storage/blogs/' . $imageName);
             }
+            
             $blog->publicPost = $request->publicPost;
             $blog->save();
             return response()->json([
