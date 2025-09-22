@@ -1,0 +1,291 @@
+[11-Mar-2025 17:05:36 UTC] PHP Warning:  move_uploaded_file(uploads/IMG_3088.png): Failed to open stream: No such file or directory in /home/beatexpertise24/public_html/traitement_candidature.php on line 39
+[11-Mar-2025 17:05:36 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpOFdcsG&quot; to &quot;uploads/IMG_3088.png&quot; in /home/beatexpertise24/public_html/traitement_candidature.php on line 39
+[12-Mar-2025 17:35:33 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_inscription.php on line 17
+[12-Mar-2025 17:35:33 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_inscription.php on line 18
+[12-Mar-2025 17:35:33 UTC] PHP Warning:  Undefined array key "service" in /home/beatexpertise24/public_html/traitement_inscription.php on line 19
+[12-Mar-2025 17:35:33 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_inscription.php on line 20
+[13-Mar-2025 06:29:12 UTC] PHP Warning:  move_uploaded_file(uploads/ATTESTATION DANY 005.jpg): Failed to open stream: No such file or directory in /home/beatexpertise24/public_html/traitement_candidature.php on line 39
+[13-Mar-2025 06:29:12 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpIfEmiC&quot; to &quot;uploads/ATTESTATION DANY 005.jpg&quot; in /home/beatexpertise24/public_html/traitement_candidature.php on line 39
+[13-Mar-2025 06:29:45 UTC] PHP Warning:  move_uploaded_file(uploads/ATTESTATION DANY 005.jpg): Failed to open stream: No such file or directory in /home/beatexpertise24/public_html/traitement_candidature.php on line 39
+[13-Mar-2025 06:29:45 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpnrY3vr&quot; to &quot;uploads/ATTESTATION DANY 005.jpg&quot; in /home/beatexpertise24/public_html/traitement_candidature.php on line 39
+[13-Mar-2025 18:49:52 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_contact.php on line 16
+[13-Mar-2025 18:49:52 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_contact.php on line 17
+[13-Mar-2025 18:49:52 UTC] PHP Warning:  Undefined array key "sujet" in /home/beatexpertise24/public_html/traitement_contact.php on line 18
+[13-Mar-2025 18:49:52 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_contact.php on line 19
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:10:35 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:17:51 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:17:55 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:17:56 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:20:43 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:24:24 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:26:32 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:30:10 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:30:25 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 17
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "postnom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 18
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "prenom" in /home/beatexpertise24/public_html/traitement_candidature.php on line 19
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "sexe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 20
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "age" in /home/beatexpertise24/public_html/traitement_candidature.php on line 21
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "province" in /home/beatexpertise24/public_html/traitement_candidature.php on line 22
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "ville" in /home/beatexpertise24/public_html/traitement_candidature.php on line 23
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "domaine" in /home/beatexpertise24/public_html/traitement_candidature.php on line 24
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "niveau_etude" in /home/beatexpertise24/public_html/traitement_candidature.php on line 25
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "annee_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 26
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "pays_diplome" in /home/beatexpertise24/public_html/traitement_candidature.php on line 27
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "consultant_principal" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "consultant_assistant" in /home/beatexpertise24/public_html/traitement_candidature.php on line 29
+[14-Mar-2025 10:30:58 UTC] PHP Warning:  Undefined array key "membre_equipe" in /home/beatexpertise24/public_html/traitement_candidature.php on line 30
+[14-Mar-2025 10:31:17 UTC] PHP Warning:  move_uploaded_file(uploads/RIB BTS SARL (1).pdf): Failed to open stream: No such file or directory in /home/beatexpertise24/public_html/traitement_candidature.php on line 40
+[14-Mar-2025 10:31:17 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpZo8ItQ&quot; to &quot;uploads/RIB BTS SARL (1).pdf&quot; in /home/beatexpertise24/public_html/traitement_candidature.php on line 40
+[14-Mar-2025 10:41:10 UTC] PHP Warning:  move_uploaded_file(uploads/DIPLOME UCS LICENCE_123958.pdf): Failed to open stream: No such file or directory in /home/beatexpertise24/public_html/traitement_candidature.php on line 40
+[14-Mar-2025 10:41:10 UTC] PHP Warning:  move_uploaded_file(): Unable to move &quot;/tmp/phpHzYue7&quot; to &quot;uploads/DIPLOME UCS LICENCE_123958.pdf&quot; in /home/beatexpertise24/public_html/traitement_candidature.php on line 40
+[14-Mar-2025 19:21:06 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:22:16 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:22:47 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:24:00 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:25:29 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:29:11 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:29:11 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:34:09 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:36:12 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:36:12 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 19:39:48 UTC] PHP Warning:  Undefined array key "niveau-expertise" in /home/beatexpertise24/public_html/traitement_candidature.php on line 28
+[14-Mar-2025 20:12:17 UTC] Erreur de base de données: SQLSTATE[HY000]: General error: 1364 Field 'telephone' doesn't have a default value
+[14-Mar-2025 20:32:36 UTC] Erreur de base de données: SQLSTATE[HY000]: General error: 1364 Field 'telephone' doesn't have a default value
+[14-Mar-2025 20:32:59 UTC] Erreur de base de données: SQLSTATE[HY000]: General error: 1364 Field 'telephone' doesn't have a default value
+[14-Mar-2025 20:34:02 UTC] Erreur de base de données: SQLSTATE[HY000]: General error: 1364 Field 'telephone' doesn't have a default value
+[15-Mar-2025 07:01:17 UTC] Erreur de base de données: SQLSTATE[HY000]: General error: 1364 Field 'telephone' doesn't have a default value
+[19-Mar-2025 15:29:58 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `beatexpertise24_beat`.`candidatures`.`annee_diplome` at row 1
+[19-Mar-2025 15:30:15 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `beatexpertise24_beat`.`candidatures`.`annee_diplome` at row 1
+[19-Mar-2025 15:31:07 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: '' for column `beatexpertise24_beat`.`candidatures`.`annee_diplome` at row 1
+[19-Mar-2025 23:28:09 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:09 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:09 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:39 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:41 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:41 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:43 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:43 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:43 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:45 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:46 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:28:47 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:29:19 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9C\x93Cns...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:29:26 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9C\x93Cns...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:29:28 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9C\x93Cns...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:29:29 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9C\x93Cns...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:29:45 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xEF\x83\xBC\x09Ap...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[19-Mar-2025 23:51:21 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[20-Mar-2025 02:00:09 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9C\x93Cns...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[20-Mar-2025 11:03:20 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_contact.php on line 16
+[20-Mar-2025 11:03:20 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_contact.php on line 17
+[20-Mar-2025 11:03:20 UTC] PHP Warning:  Undefined array key "sujet" in /home/beatexpertise24/public_html/traitement_contact.php on line 18
+[20-Mar-2025 11:03:20 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_contact.php on line 19
+[20-Mar-2025 11:03:21 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_contact.php on line 16
+[20-Mar-2025 11:03:21 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_contact.php on line 17
+[20-Mar-2025 11:03:21 UTC] PHP Warning:  Undefined array key "sujet" in /home/beatexpertise24/public_html/traitement_contact.php on line 18
+[20-Mar-2025 11:03:21 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_contact.php on line 19
+[20-Mar-2025 11:03:21 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_contact.php on line 16
+[20-Mar-2025 11:03:21 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_contact.php on line 17
+[20-Mar-2025 11:03:21 UTC] PHP Warning:  Undefined array key "sujet" in /home/beatexpertise24/public_html/traitement_contact.php on line 18
+[20-Mar-2025 11:03:21 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_contact.php on line 19
+[21-Mar-2025 02:06:44 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 02:06:50 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 02:06:52 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 02:07:07 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 02:07:10 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 04:03:09 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 14:47:49 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 14:50:46 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 14:51:56 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 15:06:23 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 15:07:00 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[21-Mar-2025 15:09:13 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[22-Mar-2025 16:33:46 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[22-Mar-2025 16:36:34 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[22-Mar-2025 16:36:37 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[22-Mar-2025 16:36:47 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[22-Mar-2025 16:36:47 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[22-Mar-2025 16:39:05 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[22-Mar-2025 20:28:03 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9C\x93 4 ...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[22-Mar-2025 20:29:39 UTC] Erreur de base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x9C\x93 4 ...' for column `beatexpertise24_beat`.`candidatures`.`temoignage` at row 1
+[23-Mar-2025 12:15:37 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_contact.php on line 16
+[23-Mar-2025 12:15:37 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_contact.php on line 17
+[23-Mar-2025 12:15:37 UTC] PHP Warning:  Undefined array key "sujet" in /home/beatexpertise24/public_html/traitement_contact.php on line 18
+[23-Mar-2025 12:15:37 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_contact.php on line 19
+[23-Mar-2025 12:15:38 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_contact.php on line 16
+[23-Mar-2025 12:15:38 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_contact.php on line 17
+[23-Mar-2025 12:15:38 UTC] PHP Warning:  Undefined array key "sujet" in /home/beatexpertise24/public_html/traitement_contact.php on line 18
+[23-Mar-2025 12:15:38 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_contact.php on line 19
+[23-Mar-2025 12:15:38 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_contact.php on line 16
+[23-Mar-2025 12:15:38 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_contact.php on line 17
+[23-Mar-2025 12:15:38 UTC] PHP Warning:  Undefined array key "sujet" in /home/beatexpertise24/public_html/traitement_contact.php on line 18
+[23-Mar-2025 12:15:38 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_contact.php on line 19
+[24-Mar-2025 08:03:20 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:15:16 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:39:46 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:40:13 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:40:13 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:41:14 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:46:32 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:46:35 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:46:48 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:48:02 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:48:02 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 08:51:52 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 09:03:11 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 09:03:11 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 09:03:44 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 09:03:44 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 09:05:20 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[24-Mar-2025 09:09:43 UTC] Erreur de base de données: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'telephone' at row 1
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_inscription.php on line 17
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_inscription.php on line 18
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "service" in /home/beatexpertise24/public_html/traitement_inscription.php on line 19
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_inscription.php on line 20
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_inscription.php on line 17
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_inscription.php on line 18
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "service" in /home/beatexpertise24/public_html/traitement_inscription.php on line 19
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_inscription.php on line 20
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_inscription.php on line 17
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_inscription.php on line 18
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "service" in /home/beatexpertise24/public_html/traitement_inscription.php on line 19
+[27-Mar-2025 16:03:50 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_inscription.php on line 20
+[01-Apr-2025 19:51:30 UTC] Erreur base de données: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'annee_plan_strategique' in 'INSERT INTO'
+[01-Apr-2025 20:07:31 UTC] Erreur base de données: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'annee_plan_strategique' in 'INSERT INTO'
+[01-Apr-2025 20:10:17 UTC] Erreur base de données: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'annee_plan_strategique' in 'INSERT INTO'
+[01-Apr-2025 20:11:53 UTC] Erreur base de données: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'annee_plan_strategique' in 'INSERT INTO'
+[01-Apr-2025 20:14:30 UTC] Erreur base de données: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'annee_plan_strategique' in 'INSERT INTO'
+[02-Apr-2025 08:43:50 UTC] PHP Warning:  Undefined variable $ong_anciennete in /home/beatexpertise24/public_html/traitement_candidature.php on line 12
+[04-Apr-2025 10:24:24 UTC] Erreur base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x81\xB0 14...' for column `beatexpertise24_beat`.`ong_demandes`.`siege_social` at row 1
+[04-Apr-2025 10:24:39 UTC] Erreur base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x81\xB0 14...' for column `beatexpertise24_beat`.`ong_demandes`.`siege_social` at row 1
+[04-Apr-2025 10:24:40 UTC] Erreur base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x81\xB0 14...' for column `beatexpertise24_beat`.`ong_demandes`.`siege_social` at row 1
+[04-Apr-2025 10:24:41 UTC] Erreur base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x81\xB0 14...' for column `beatexpertise24_beat`.`ong_demandes`.`siege_social` at row 1
+[04-Apr-2025 10:24:43 UTC] Erreur base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x81\xB0 14...' for column `beatexpertise24_beat`.`ong_demandes`.`siege_social` at row 1
+[04-Apr-2025 10:24:48 UTC] Erreur base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x81\xB0 14...' for column `beatexpertise24_beat`.`ong_demandes`.`siege_social` at row 1
+[04-Apr-2025 10:24:52 UTC] Erreur base de données: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xE2\x81\xB0 14...' for column `beatexpertise24_beat`.`ong_demandes`.`siege_social` at row 1
+[04-Apr-2025 10:51:09 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_contact.php on line 16
+[04-Apr-2025 10:51:09 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_contact.php on line 17
+[04-Apr-2025 10:51:09 UTC] PHP Warning:  Undefined array key "sujet" in /home/beatexpertise24/public_html/traitement_contact.php on line 18
+[04-Apr-2025 10:51:09 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_contact.php on line 19
+[01-May-2025 14:42:51 UTC] PHP Warning:  Undefined array key "nom" in /home/beatexpertise24/public_html/traitement_inscription.php on line 17
+[01-May-2025 14:42:51 UTC] PHP Warning:  Undefined array key "email" in /home/beatexpertise24/public_html/traitement_inscription.php on line 18
+[01-May-2025 14:42:51 UTC] PHP Warning:  Undefined array key "service" in /home/beatexpertise24/public_html/traitement_inscription.php on line 19
+[01-May-2025 14:42:51 UTC] PHP Warning:  Undefined array key "message" in /home/beatexpertise24/public_html/traitement_inscription.php on line 20
