@@ -66,10 +66,11 @@
                :class="{'translate-x-0': mobileMenuOpen, 'translate-x-full': !mobileMenuOpen}" 
                @click.stop>
             <div class="p-5 h-full flex flex-col">
+              <!-- En-tête simplifié du menu mobile -->
               <div class="flex justify-between items-center mb-6 border-b border-blue-100 pb-4">
                 <div class="flex items-center">
                   <img :src="require('~/assets/img/logo/logo.png')" class="w-10 h-10 object-contain" />
-                  <span class="ml-2 font-bold text-blue-900">Menu BEAT</span>
+                  <!-- Supprimé le texte "Menu BEAT" qui se répétait -->
                 </div>
                 <button @click="closeMobileMenu" class="p-2 rounded-full transition-colors duration-300 hover:bg-blue-100 focus:outline-none">
                   <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

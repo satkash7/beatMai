@@ -18,7 +18,12 @@
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-2xl font-semibold text-gray-800 mb-6 md:mb-8">Nos partenaires</h2>
         <div class="relative">
-          <div class="flex overflow-x-auto pb-4 md:grid md:grid-cols-5 md:gap-6 md:px-4 hide-scrollbar">
+          <div 
+            ref="partnersContainer" 
+            class="flex overflow-x-auto pb-4 md:grid md:grid-cols-5 md:gap-6 md:px-4 hide-scrollbar partners-scroll-container"
+            @mouseenter="pauseAutoScroll"
+            @mouseleave="resumeAutoScroll"
+          >
             <a v-for="partner in partners" :key="partner.name" :href="partner.link" target="_blank" rel="noopener noreferrer" class="partner-logo flex-shrink-0">
               <img 
                 :src="partner.logo" 
@@ -27,7 +32,11 @@
               />
             </a>
           </div>
-          <div class="md:hidden text-xs text-gray-500 mt-2">Faites glisser pour voir plus de partenaires</div>
+          <div class="md:hidden text-xs text-gray-500 mt-2 flex items-center justify-center gap-2">
+            <PauseIcon v-if="isScrollingPaused" :size="14" class="cursor-pointer" @click="resumeAutoScroll" />
+            <PlayIcon v-else :size="14" class="cursor-pointer" @click="pauseAutoScroll" />
+            <span>Faites glisser ou laissez défiler automatiquement</span>
+          </div>
         </div>
       </div>
     </section>
@@ -242,6 +251,8 @@ import SendIcon from 'vue-material-design-icons/Send.vue';
 import CheckCircleIcon from 'vue-material-design-icons/CheckCircle.vue';
 import AlertCircleIcon from 'vue-material-design-icons/AlertCircle.vue';
 import ClockOutlineIcon from 'vue-material-design-icons/ClockOutline.vue';
+import PlayIcon from 'vue-material-design-icons/Play.vue';
+import PauseIcon from 'vue-material-design-icons/Pause.vue';
 
 export default {
   name: 'BaseFooter',
@@ -251,7 +262,9 @@ export default {
     SendIcon,
     CheckCircleIcon,
     AlertCircleIcon,
-    ClockOutlineIcon
+    ClockOutlineIcon,
+    PlayIcon,
+    PauseIcon
   },
   props: {
     isHomepage: {
@@ -290,7 +303,11 @@ export default {
         { icon: 'EmailIcon', link: 'mailto:direction@beatexpertise.com' },
         { icon: 'Linkedin', link: 'https://www.linkedin.com/company/beat-expertise/about/' },
         { icon: 'Youtube', link: 'https://www.youtube.com/channel/UCcpAAfUJtM_sxZNb9LO94sQ' }
-      ]
+      ],
+      scrollInterval: null,
+      isScrollingPaused: false,
+      scrollDirection: 1,
+      currentScrollPosition: 0
     }
   },
   async fetch() {
@@ -304,6 +321,13 @@ export default {
   mounted() {
     window.addEventListener('resize', () => {
       this.isMobile = window.innerWidth < 768;
+    });
+
+    // Démarrer le défilement automatique après un court délai
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.startAutoScroll();
+      }, 1000);
     });
 
     // Smartsupp integration
@@ -333,10 +357,55 @@ export default {
       }
     }
   },
+  beforeDestroy() {
+    // Nettoyer l'intervalle lors de la destruction du composant
+    this.stopAutoScroll();
+  },
   methods: {
+    startAutoScroll() {
+      this.stopAutoScroll();
+      
+      this.scrollInterval = setInterval(() => {
+        if (this.isScrollingPaused || !this.$refs.partnersContainer) return;
+        
+        const container = this.$refs.partnersContainer;
+        const scrollWidth = container.scrollWidth;
+        const clientWidth = container.clientWidth;
+        
+        // Si on est à la fin, revenir au début
+        if (this.currentScrollPosition >= scrollWidth - clientWidth) {
+          this.scrollDirection = -1;
+        }
+        // Si on est au début, repartir vers la droite
+        else if (this.currentScrollPosition <= 0) {
+          this.scrollDirection = 1;
+        }
+        
+        // Déplacer la position
+        this.currentScrollPosition += 2 * this.scrollDirection;
+        container.scrollLeft = this.currentScrollPosition;
+      }, 30);
+    },
+    
+    stopAutoScroll() {
+      if (this.scrollInterval) {
+        clearInterval(this.scrollInterval);
+        this.scrollInterval = null;
+      }
+    },
+    
+    pauseAutoScroll() {
+      this.isScrollingPaused = true;
+    },
+    
+    resumeAutoScroll() {
+      this.isScrollingPaused = false;
+    },
+    
     showSingleBlog(blog) {
       this.$router.push({ path: `blogs/${blog.blogRoute}` });
     },
+    
     async sendMessage() {
       try {
         const response = await this.$axios.post('/visitor/message', {
@@ -371,6 +440,7 @@ export default {
         }, 5000);
       }
     },
+    
     async addToUsersList() {
       try {
         const response = await this.$axios.post("/user/register", {
@@ -425,6 +495,11 @@ export default {
 .partner-logo:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
+}
+
+.partners-scroll-container {
+  scroll-behavior: smooth;
+  will-change: scroll-position;
 }
 
 .social-icon {

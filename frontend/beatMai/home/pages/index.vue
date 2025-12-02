@@ -105,9 +105,9 @@ export default {
       },
       {
         id: 2,
-        name: "Notre approche",
+        name: "Notre Vision",
         imageUrl: require('~/assets/img/pic2.jpg'),
-        descriptions: "Transformer les défis en opportunité à travers la puissance de la technologie et fournir des solutions techniques innovantes grâce à un accompagnement personnalisé, en vue du développement économique de la RDC",
+        descriptions: "Nous accompagnons les personnes, entreprises, organisations, services étatiques dans la poursuite de leurs objectifs stratégiques grâce à un service innovant et co-produit afin de contribuer au développement durable de la RDC.",
         link: "#"
       }
     ];
