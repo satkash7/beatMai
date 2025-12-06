@@ -45,11 +45,11 @@
             <base-button v-if="!isMobile && userLogged == true" class="w-8 h-8 rounded-full flex items-center justify-center relative smallbtn hidden lg:flex transition-transform duration-300 hover:scale-110" @click="openModal" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
                 <PlusIcon :size="16" />
             </base-button>
-            <a href="/u"> <base-button  v-if="!isMobile" class="w-8 h-8 rounded-full flex items-center justify-center relative smallbtn hidden lg:flex transition-transform duration-300 hover:scale-110" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
+            <!-- <a href="/u"> <base-button  v-if="!isMobile" class="w-8 h-8 rounded-full flex items-center justify-center relative smallbtn hidden lg:flex transition-transform duration-300 hover:scale-110" style="background-image: linear-gradient(to right, #468ef9, #030a3c); color: white;">
                 <AccountIcon :size="16" />
-                <span v-if="userLogged == true" class="absolute top-0 right-0 w-3 h-3 bg-green-500 border border-white smallbtn rounded-full"></span> <!-- Add a small dot to indicate connection -->
+                <span v-if="userLogged == true" class="absolute top-0 right-0 w-3 h-3 bg-green-500 border border-white smallbtn rounded-full"></span>  
               </base-button>
-            </a>
+            </a> -->
             
             <!-- Hamburger button for mobile -->
             <button @click="toggleMobileMenu" class="lg:hidden focus:outline-none p-1 rounded-md transition-colors duration-300 hover:bg-gray-100">

@@ -1,0 +1,349 @@
+exports.ids = [13];
+exports.modules = {
+
+/***/ 111:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_202d227c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(98);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_202d227c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_202d227c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_202d227c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_202d227c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ 112:
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "", ""]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {};
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+
+/***/ 169:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/apropos/index.vue?vue&type=template&id=202d227c
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('client-only', [_c('div', {
+    staticClass: "w-full container mx-auto px-4 md:px-6 pt-24 md:pt-28"
+  }, [_c('div', {
+    staticClass: "w-full"
+  }, [_c('section', {
+    staticClass: "rounded-xl overflow-hidden mb-12 bg-white"
+  }, [_c('div', {
+    staticClass: "w-full px-6 py-12 md:py-16 flex flex-col md:flex-row items-center"
+  }, [_c('div', {
+    staticClass: "md:w-1/2 mb-8 md:mb-0 md:pr-8"
+  }, [_c('h1', {
+    staticClass: "text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+  }, [_vm._v("\n              Votre partenaire en \n              "), _c('span', {
+    staticClass: "text-blue-600"
+  }, [_vm._v("expertise technique")])]), _vm._v(" "), _c('p', {
+    staticClass: "text-gray-700 mb-6"
+  }, [_vm._v("\n              BEAT est un cabinet basé à Goma, en République Démocratique du Congo, qui accompagne les institutions, \n              entreprises et projets à fort impact grâce à des solutions techniques innovantes.\n            ")]), _vm._v(" "), _c('div', {
+    staticClass: "flex space-x-4"
+  }, [_c('a', {
+    staticClass: "px-5 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors",
+    attrs: {
+      "href": "#contact"
+    }
+  }, [_vm._v("\n                Nous contacter\n              ")]), _vm._v(" "), _c('a', {
+    staticClass: "px-5 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg font-medium hover:bg-gray-50 transition-colors",
+    attrs: {
+      "href": "#services"
+    }
+  }, [_vm._v("\n                Nos services\n              ")])])]), _vm._v(" "), _c('div', {
+    staticClass: "md:w-1/2 flex justify-center"
+  }, [_c('div', {
+    staticClass: "relative w-full max-w-md"
+  }, [_c('div', {
+    staticClass: "bg-white p-2 rounded-xl"
+  }, [_c('img', {
+    staticClass: "rounded-lg w-full h-64 object-cover",
+    attrs: {
+      "src": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+      "alt": "Équipe Beat Expertise"
+    }
+  })])])])])]), _vm._v(" "), _c('section', {
+    staticClass: "bg-white rounded-xl overflow-hidden mb-16"
+  }, [_c('div', {
+    staticClass: "grid grid-cols-1 lg:grid-cols-2 gap-8 p-8"
+  }, [_c('div', {
+    staticClass: "space-y-8"
+  }, [_c('div', [_c('h2', {
+    staticClass: "text-2xl font-semibold text-gray-900 mb-4"
+  }, [_vm._v("Qui sommes-nous?")]), _vm._v(" "), _c('p', {
+    staticClass: "text-gray-700"
+  }, [_vm._v("\n                BEAT est un cabinet basé à Goma, en République Démocratique du Congo, qui accompagne les institutions, \n                entreprises et projets à fort impact grâce à des solutions techniques innovantes, un conseil stratégique, \n                et un savoir-faire local ancré dans l'excellence.\n              ")])]), _vm._v(" "), _c('div', [_c('h2', {
+    staticClass: "text-2xl font-semibold text-gray-900 mb-4"
+  }, [_vm._v("Notre mission")]), _vm._v(" "), _c('p', {
+    staticClass: "text-gray-700"
+  }, [_vm._v("\n                Notre mission est de fournir des services de conseil et d'expertise technique de haute qualité, \n                adaptés aux besoins spécifiques de nos clients, tout en contribuant au développement durable \n                de la région.\n              ")])]), _vm._v(" "), _c('div', [_c('h2', {
+    staticClass: "text-2xl font-semibold text-gray-900 mb-4"
+  }, [_vm._v("Nos valeurs")]), _vm._v(" "), _c('div', {
+    staticClass: "grid grid-cols-1 md:grid-cols-2 gap-4"
+  }, [_c('div', {
+    staticClass: "bg-blue-50 rounded-lg p-4"
+  }, [_c('div', {
+    staticClass: "flex items-center mb-2"
+  }, [_c('div', {
+    staticClass: "w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3"
+  }, [_c('svg', {
+    staticClass: "w-4 h-4 text-blue-600",
+    attrs: {
+      "fill": "none",
+      "stroke": "currentColor",
+      "viewBox": "0 0 24 24"
+    }
+  }, [_c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M13 10V3L4 14h7v7l9-11h-7z"
+    }
+  })])]), _vm._v(" "), _c('h3', {
+    staticClass: "font-semibold text-gray-900"
+  }, [_vm._v("Innovation")])]), _vm._v(" "), _c('p', {
+    staticClass: "text-sm text-gray-700"
+  }, [_vm._v("Nous repoussons les limites de la technologie pour offrir des solutions avant-gardistes.")])]), _vm._v(" "), _c('div', {
+    staticClass: "bg-blue-50 rounded-lg p-4"
+  }, [_c('div', {
+    staticClass: "flex items-center mb-2"
+  }, [_c('div', {
+    staticClass: "w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3"
+  }, [_c('svg', {
+    staticClass: "w-4 h-4 text-blue-600",
+    attrs: {
+      "fill": "none",
+      "stroke": "currentColor",
+      "viewBox": "0 0 24 24"
+    }
+  }, [_c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+    }
+  })])]), _vm._v(" "), _c('h3', {
+    staticClass: "font-semibold text-gray-900"
+  }, [_vm._v("Excellence")])]), _vm._v(" "), _c('p', {
+    staticClass: "text-sm text-gray-700"
+  }, [_vm._v("Nous visons l'excellence dans chaque projet que nous entreprenons.")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "bg-blue-50 rounded-lg p-6"
+  }, [_c('h3', {
+    staticClass: "text-lg font-semibold text-gray-900 mb-3"
+  }, [_vm._v("Rejoignez notre équipe")]), _vm._v(" "), _c('p', {
+    staticClass: "text-gray-700 mb-4"
+  }, [_vm._v("\n                Vous souhaitez faire partie d'une équipe dynamique et innovante?\n              ")]), _vm._v(" "), _c('a', {
+    staticClass: "inline-flex items-center px-5 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors",
+    attrs: {
+      "href": "/opportunities"
+    }
+  }, [_vm._v("\n                Voir nos offres d'emploi\n                "), _c('svg', {
+    staticClass: "w-5 h-5 ml-2",
+    attrs: {
+      "fill": "none",
+      "stroke": "currentColor",
+      "viewBox": "0 0 24 24"
+    }
+  }, [_c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M17 8l4 4m0 0l-4 4m4-4H3"
+    }
+  })])])])]), _vm._v(" "), _c('div', {
+    staticClass: "bg-gray-50 rounded-lg p-6 h-fit"
+  }, [_c('h3', {
+    staticClass: "text-xl font-semibold text-gray-900 mb-6 flex items-center"
+  }, [_c('svg', {
+    staticClass: "w-6 h-6 mr-2 text-blue-600",
+    attrs: {
+      "fill": "none",
+      "stroke": "currentColor",
+      "viewBox": "0 0 24 24"
+    }
+  }, [_c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+    }
+  }), _vm._v(" "), _c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+    }
+  })]), _vm._v("\n              Nos coordonnées\n            ")]), _vm._v(" "), _c('div', {
+    staticClass: "space-y-4"
+  }, [_c('div', {
+    staticClass: "flex items-start"
+  }, [_c('svg', {
+    staticClass: "w-5 h-5 mt-1 mr-4 text-blue-600 flex-shrink-0",
+    attrs: {
+      "fill": "none",
+      "stroke": "currentColor",
+      "viewBox": "0 0 24 24"
+    }
+  }, [_c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+    }
+  }), _vm._v(" "), _c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+    }
+  })]), _vm._v(" "), _c('div', [_c('p', {
+    staticClass: "font-medium text-gray-900"
+  }, [_vm._v("Adresse physique")]), _vm._v(" "), _c('p', {
+    staticClass: "text-gray-700"
+  }, [_vm._v("Q.Kyeshero, Commune et Ville de Goma")])])]), _vm._v(" "), _c('div', {
+    staticClass: "flex items-start"
+  }, [_c('svg', {
+    staticClass: "w-5 h-5 mt-1 mr-4 text-blue-600 flex-shrink-0",
+    attrs: {
+      "fill": "none",
+      "stroke": "currentColor",
+      "viewBox": "0 0 24 24"
+    }
+  }, [_c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+    }
+  })]), _vm._v(" "), _c('div', [_c('p', {
+    staticClass: "font-medium text-gray-900"
+  }, [_vm._v("Email professionnel")]), _vm._v(" "), _c('p', {
+    staticClass: "text-gray-700"
+  }, [_vm._v("direction@beatexpertise.com")])])]), _vm._v(" "), _c('div', {
+    staticClass: "flex items-start"
+  }, [_c('svg', {
+    staticClass: "w-5 h-5 mt-1 mr-4 text-blue-600 flex-shrink-0",
+    attrs: {
+      "fill": "none",
+      "stroke": "currentColor",
+      "viewBox": "0 0 24 24"
+    }
+  }, [_c('path', {
+    attrs: {
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
+      "d": "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+    }
+  })]), _vm._v(" "), _c('div', [_c('p', {
+    staticClass: "font-medium text-gray-900"
+  }, [_vm._v("Téléphone")]), _vm._v(" "), _c('p', {
+    staticClass: "text-gray-700"
+  }, [_vm._v("+243 995 277 023")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "mt-8 pt-6 border-t border-gray-200"
+  }, [_c('p', {
+    staticClass: "text-sm text-gray-500"
+  }, [_vm._v("\n                N'hésitez pas à nous contacter pour discuter de vos projets.\n              ")])])])])])])])]);
+};
+var staticRenderFns = [];
+
+// CONCATENATED MODULE: ./pages/apropos/index.vue?vue&type=template&id=202d227c
+
+// EXTERNAL MODULE: ./mixins/aos.js
+var aos = __webpack_require__(11);
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/apropos/index.vue?vue&type=script&lang=js
+
+/* harmony default export */ var aproposvue_type_script_lang_js = ({
+  name: 'about-component',
+  layout: 'blog',
+  mixins: [aos["a" /* default */]],
+  head() {
+    return {
+      title: "Beat Expertise | À propos de nous",
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'BEAT Expertise - Cabinet technique basé à Goma, RDC. Découvrez notre mission, nos valeurs et nos services.'
+      }]
+    };
+  }
+});
+// CONCATENATED MODULE: ./pages/apropos/index.vue?vue&type=script&lang=js
+ /* harmony default export */ var pages_aproposvue_type_script_lang_js = (aproposvue_type_script_lang_js); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(0);
+
+// CONCATENATED MODULE: ./pages/apropos/index.vue
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__(111)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  pages_aproposvue_type_script_lang_js,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  null,
+  "1ccfd9bc"
+  
+)
+
+/* harmony default export */ var apropos = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ 98:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(112);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to SSR context
+var add = __webpack_require__(5).default
+module.exports.__inject__ = function (context) {
+  add("5b0e81bf", content, true, context)
+};
+
+/***/ })
+
+};;
+//# sourceMappingURL=index.js.map

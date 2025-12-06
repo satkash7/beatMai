@@ -13,11 +13,11 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_b1ea55e6 from 'nuxt_plugin_plugin_b1ea55e6' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_image_5e7eb1ab from 'nuxt_plugin_image_5e7eb1ab' // Source: .\\image.js (mode: 'all')
-import nuxt_plugin_axios_7377b4b0 from 'nuxt_plugin_axios_7377b4b0' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_smoothscroll_ac9d6bbe from 'nuxt_plugin_smoothscroll_ac9d6bbe' // Source: ..\\plugins\\smooth-scroll.js (mode: 'all')
-import nuxt_plugin_mdi_50afec0a from 'nuxt_plugin_mdi_50afec0a' // Source: ..\\plugins\\mdi.js (mode: 'all')
+import nuxt_plugin_plugin_3ae6e8e6 from 'nuxt_plugin_plugin_3ae6e8e6' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_image_36ac8c12 from 'nuxt_plugin_image_36ac8c12' // Source: ./image.js (mode: 'all')
+import nuxt_plugin_axios_0cba8608 from 'nuxt_plugin_axios_0cba8608' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_smoothscroll_ac9d6bbe from 'nuxt_plugin_smoothscroll_ac9d6bbe' // Source: ../plugins/smooth-scroll.js (mode: 'all')
+import nuxt_plugin_mdi_50afec0a from 'nuxt_plugin_mdi_50afec0a' // Source: ../plugins/mdi.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -217,16 +217,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_b1ea55e6 === 'function') {
-    await nuxt_plugin_plugin_b1ea55e6(app.context, inject)
+  if (typeof nuxt_plugin_plugin_3ae6e8e6 === 'function') {
+    await nuxt_plugin_plugin_3ae6e8e6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_image_5e7eb1ab === 'function') {
-    await nuxt_plugin_image_5e7eb1ab(app.context, inject)
+  if (typeof nuxt_plugin_image_36ac8c12 === 'function') {
+    await nuxt_plugin_image_36ac8c12(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_7377b4b0 === 'function') {
-    await nuxt_plugin_axios_7377b4b0(app.context, inject)
+  if (typeof nuxt_plugin_axios_0cba8608 === 'function') {
+    await nuxt_plugin_axios_0cba8608(app.context, inject)
   }
 
   if (typeof nuxt_plugin_smoothscroll_ac9d6bbe === 'function') {
