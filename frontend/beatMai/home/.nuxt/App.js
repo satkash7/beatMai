@@ -4,19 +4,20 @@ import { decode, parsePath, withoutBase, withoutTrailingSlash, normalizeURL } fr
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
 import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
+import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '../assets/css/main.css'
+import '..\\assets\\css\\main.css'
 
-import '../node_modules/aos/dist/aos.css'
+import '..\\node_modules\\aos\\dist\\aos.css'
 
-import _212cfd37 from '../layouts/anonymous.vue'
-import _2d21d098 from '../layouts/blog.vue'
-import _6df4dc72 from '../layouts/create.vue'
-import _6f6c098b from '../layouts/default.vue'
-import _1a3aed82 from '../layouts/doc.vue'
-import _2d29f42e from '../layouts/tips.vue'
-import _78187f67 from '../layouts/trend.vue'
-import _2d2a8cc1 from '../layouts/user.vue'
+import _212cfd37 from '..\\layouts\\anonymous.vue'
+import _2d21d098 from '..\\layouts\\blog.vue'
+import _6df4dc72 from '..\\layouts\\create.vue'
+import _6f6c098b from '..\\layouts\\default.vue'
+import _1a3aed82 from '..\\layouts\\doc.vue'
+import _2d29f42e from '..\\layouts\\tips.vue'
+import _78187f67 from '..\\layouts\\trend.vue'
+import _2d2a8cc1 from '..\\layouts\\user.vue'
 
 const layouts = { "_anonymous": sanitizeComponent(_212cfd37),"_blog": sanitizeComponent(_2d21d098),"_create": sanitizeComponent(_6df4dc72),"_default": sanitizeComponent(_6f6c098b),"_doc": sanitizeComponent(_1a3aed82),"_tips": sanitizeComponent(_2d29f42e),"_trend": sanitizeComponent(_78187f67),"_user": sanitizeComponent(_2d2a8cc1) }
 
@@ -53,7 +54,7 @@ export default {
       }
     }, [
       loadingEl,
-
+      h(NuxtBuildIndicator),
       transitionEl
     ])
   },
@@ -195,6 +196,10 @@ export default {
     },
 
     setLayout (layout) {
+      if(layout && typeof layout !== 'string') {
+        throw new Error('[nuxt] Avoid using non-string value as layout property.')
+      }
+
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }

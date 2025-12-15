@@ -116,21 +116,21 @@ export default {
       {
         id: 1,
         name: "Entrepreunariat",
-        imageUrl: require('~/assets/img/dd.jpeg'),
+        imageUrl: require('~/assets/img/entre.jpg'),
         descriptions: "Accompagnement dans l'élaboration des plans d'affaires; Proposition des méthodes de gestion innovante des entreprises; Appui à l'élaboration de plan de continuité des affaires; Accompagnement dans l'élaboration des stratégies et plans de sécurité et de communication des organisations et/ou entreprises",
         link: "#"
       },
       {
         id: 2,
         name: "Gestion de l'environnement et protection des personnes",
-        imageUrl: require('~/assets/img/catas.png'),
+        imageUrl: require('~/assets/img/gestionEnv.jpg'),
         descriptions: "Évaluation de l'impact environnemental des projets et des affaires; Proposition des pratiques écologiques; Coaching et mentorat sur la gestion sensible à l'environnement;",
         link: "#"
       },
       {
         id: 3,
         name: "Réduction des risques de catastrophes",
-        imageUrl: require('~/assets/img/bb.jpeg'),
+        imageUrl: require('~/assets/img/reduc.jpg'),
         descriptions: "Modélisation de la surveillance des aléas; Accompagnement des organisations dans la gestion sensible aux risques; Proposition des méthodes innovantes de gestion et de la protection de l'environnement; Formation sur la gestion des risques de catastrophes et des urgences; Développement des outils d'analyse de vulnérabilité des enjeux et risques de catastrophes; Élaboration des modules de gestion des risques adaptés aux besoins;",
         link: "#"
       },
@@ -144,7 +144,7 @@ export default {
       {
         id: 5,
         name: "Renforcement des capacités, Communication pour le changement de comportement",
-        imageUrl: require('~/assets/img/aa.jpeg'),
+        imageUrl: require('~/assets/img/Comm.jpg'),
         descriptions: "Développement des modules adaptés aux besoins des divers groupes, Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements, Coaching et mentorat dans la motivation des groupes",
         link: "#"
       },

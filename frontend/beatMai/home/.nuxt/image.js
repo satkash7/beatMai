@@ -3,8 +3,8 @@ import { createImage} from '~image'
 import NuxtImg from '~image/components/nuxt-img.vue'
 import NuxtPicture from '~image/components/nuxt-picture.vue'
 
-import * as staticRuntime$b21e from '/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/node_modules/@nuxt/image/dist/runtime/providers/static.js'
-import * as ipxRuntime$11ac from '/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/node_modules/@nuxt/image/dist/runtime/providers/ipx.js'
+import * as staticRuntime$2637 from 'C:/Users/HP/Desktop/beatMai/frontend/beatMai/home/node_modules/@nuxt/image/dist/runtime/providers/static.js'
+import * as ipxRuntime$876a from 'C:/Users/HP/Desktop/beatMai/frontend/beatMai/home/node_modules/@nuxt/image/dist/runtime/providers/ipx.js'
 
 const imageOptions = {
   "screens": {
@@ -32,8 +32,8 @@ const imageOptions = {
 }
 
 imageOptions.providers = {
-  ['static']: { provider: staticRuntime$b21e, defaults: {} },
-  ['ipx']: { provider: ipxRuntime$11ac, defaults: {} }
+  ['static']: { provider: staticRuntime$2637, defaults: {} },
+  ['ipx']: { provider: ipxRuntime$876a, defaults: {} }
 }
 
 Vue.component(NuxtImg.name, NuxtImg)

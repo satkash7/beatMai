@@ -30,7 +30,7 @@
               <div class="relative w-full max-w-md">
                 <div class="bg-white p-2 rounded-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" 
+                    :src="require('~/assets/img/dd.jpeg')"
                     alt="Équipe Beat Expertise" 
                     class="rounded-lg w-full h-64 object-cover"
                   >

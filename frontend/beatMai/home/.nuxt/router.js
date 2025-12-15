@@ -4,20 +4,20 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _185a6cbc = () => interopDefault(import('../pages/admin/index.vue' /* webpackChunkName: "pages/admin/index" */))
-const _e00d9d80 = () => interopDefault(import('../pages/anonymous/index.vue' /* webpackChunkName: "pages/anonymous/index" */))
-const _2dff853b = () => interopDefault(import('../pages/apropos/index.vue' /* webpackChunkName: "pages/apropos/index" */))
-const _12b6c0e4 = () => interopDefault(import('../pages/blogs/index.vue' /* webpackChunkName: "pages/blogs/index" */))
-const _730673c2 = () => interopDefault(import('../pages/create/index.vue' /* webpackChunkName: "pages/create/index" */))
-const _558a88a6 = () => interopDefault(import('../pages/edit/index.vue' /* webpackChunkName: "pages/edit/index" */))
-const _28cb6af8 = () => interopDefault(import('../pages/opportunities/index.vue' /* webpackChunkName: "pages/opportunities/index" */))
-const _2565d380 = () => interopDefault(import('../pages/password-reset/index.vue' /* webpackChunkName: "pages/password-reset/index" */))
-const _93b02422 = () => interopDefault(import('../pages/projet/index.vue' /* webpackChunkName: "pages/projet/index" */))
-const _1afe6970 = () => interopDefault(import('../pages/u/index.vue' /* webpackChunkName: "pages/u/index" */))
-const _2821253c = () => interopDefault(import('../pages/profile/admin/index.vue' /* webpackChunkName: "pages/profile/admin/index" */))
-const _34d37262 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _4d15aea6 = () => interopDefault(import('../pages/blogs/_blogRoute.vue' /* webpackChunkName: "pages/blogs/_blogRoute" */))
-const _63072906 = () => interopDefault(import('../pages/opportunities/_blogRoute.vue' /* webpackChunkName: "pages/opportunities/_blogRoute" */))
+const _749f0bf9 = () => interopDefault(import('..\\pages\\admin\\index.vue' /* webpackChunkName: "pages/admin/index" */))
+const _57e165ca = () => interopDefault(import('..\\pages\\anonymous\\index.vue' /* webpackChunkName: "pages/anonymous/index" */))
+const _47beee00 = () => interopDefault(import('..\\pages\\apropos\\index.vue' /* webpackChunkName: "pages/apropos/index" */))
+const _3239fcf7 = () => interopDefault(import('..\\pages\\blogs\\index.vue' /* webpackChunkName: "pages/blogs/index" */))
+const _f51b6f20 = () => interopDefault(import('..\\pages\\create\\index.vue' /* webpackChunkName: "pages/create/index" */))
+const _1eb77f22 = () => interopDefault(import('..\\pages\\edit\\index.vue' /* webpackChunkName: "pages/edit/index" */))
+const _650edd52 = () => interopDefault(import('..\\pages\\opportunities\\index.vue' /* webpackChunkName: "pages/opportunities/index" */))
+const _bbd185a2 = () => interopDefault(import('..\\pages\\password-reset\\index.vue' /* webpackChunkName: "pages/password-reset/index" */))
+const _e9a7cac0 = () => interopDefault(import('..\\pages\\projet\\index.vue' /* webpackChunkName: "pages/projet/index" */))
+const _2c75ebda = () => interopDefault(import('..\\pages\\u\\index.vue' /* webpackChunkName: "pages/u/index" */))
+const _1e7bff26 = () => interopDefault(import('..\\pages\\profile\\admin\\index.vue' /* webpackChunkName: "pages/profile/admin/index" */))
+const _31795c6c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _2ab7f31a = () => interopDefault(import('..\\pages\\blogs\\_blogRoute.vue' /* webpackChunkName: "pages/blogs/_blogRoute" */))
+const _5199a3da = () => interopDefault(import('..\\pages\\opportunities\\_blogRoute.vue' /* webpackChunkName: "pages/opportunities/_blogRoute" */))
 
 const emptyFn = () => {}
 
@@ -32,59 +32,59 @@ export const routerOptions = {
 
   routes: [{
     path: "/admin",
-    component: _185a6cbc,
+    component: _749f0bf9,
     name: "admin"
   }, {
     path: "/anonymous",
-    component: _e00d9d80,
+    component: _57e165ca,
     name: "anonymous"
   }, {
     path: "/apropos",
-    component: _2dff853b,
+    component: _47beee00,
     name: "apropos"
   }, {
     path: "/blogs",
-    component: _12b6c0e4,
+    component: _3239fcf7,
     name: "blogs"
   }, {
     path: "/create",
-    component: _730673c2,
+    component: _f51b6f20,
     name: "create"
   }, {
     path: "/edit",
-    component: _558a88a6,
+    component: _1eb77f22,
     name: "edit"
   }, {
     path: "/opportunities",
-    component: _28cb6af8,
+    component: _650edd52,
     name: "opportunities"
   }, {
     path: "/password-reset",
-    component: _2565d380,
+    component: _bbd185a2,
     name: "password-reset"
   }, {
     path: "/projet",
-    component: _93b02422,
+    component: _e9a7cac0,
     name: "projet"
   }, {
     path: "/u",
-    component: _1afe6970,
+    component: _2c75ebda,
     name: "u"
   }, {
     path: "/profile/admin",
-    component: _2821253c,
+    component: _1e7bff26,
     name: "profile-admin"
   }, {
     path: "/",
-    component: _34d37262,
+    component: _31795c6c,
     name: "index"
   }, {
     path: "/blogs/:blogRoute",
-    component: _4d15aea6,
+    component: _2ab7f31a,
     name: "blogs-blogRoute"
   }, {
     path: "/opportunities/:blogRoute",
-    component: _63072906,
+    component: _5199a3da,
     name: "opportunities-blogRoute"
   }],
 
