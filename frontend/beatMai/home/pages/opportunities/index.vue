@@ -5,19 +5,14 @@
     <!-- AI Top trend section -->
     <section class="bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl overflow-hidden">
       <!-- Display all blogs -->
-      <h6 ata-aos-once="true"
-          class="ml-4 font-bold leading-tight sm:pr-8 xl:pr-10"
-          style="color:#030a3c;"
-        >
-               Opportunités
-            </h6>
+    <br> <br> <br>
       <LandingSearch type="blog"/>
       <div class="w-full px-8 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
         <h2 class="text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold">
           <span class="text-header-gradient-big">Opportunités | Beat Expertise</span>
         </h2>
         <div class="flex flex-wrap items-center justify-center">
-          <LandingBlog v-for="blogItem in blogs" :key="blogItem.id" :blog="blogItem" @open-blog="showSingleBlog(blogItem)" />
+          <LandingBlog v-for="blogItem in blogs" :key="blogItem.id" :blog="blogItem" @open-blog="showSingleBlog(blogItem)" :opportunity="true"/>
         </div>
       </div>
     </section>

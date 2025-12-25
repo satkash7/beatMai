@@ -14,32 +14,59 @@
     </section>
 
     <!-- Section des partenaires -->
-    <section class="partners-section py-8 md:py-12 bg-gray-50">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6 md:mb-8">Nos partenaires</h2>
-        <div class="relative">
-          <div 
-            ref="partnersContainer" 
-            class="flex overflow-x-auto pb-4 md:grid md:grid-cols-5 md:gap-6 md:px-4 hide-scrollbar partners-scroll-container"
-            @mouseenter="pauseAutoScroll"
-            @mouseleave="resumeAutoScroll"
-          >
-            <a v-for="partner in partners" :key="partner.name" :href="partner.link" target="_blank" rel="noopener noreferrer" class="partner-logo flex-shrink-0">
-              <img 
-                :src="partner.logo" 
-                class="h-20 object-contain rounded-lg transition-all duration-300 hover:scale-105" 
-                :alt="partner.name" 
-              />
-            </a>
-          </div>
-          <div class="md:hidden text-xs text-gray-500 mt-2 flex items-center justify-center gap-2">
-            <PauseIcon v-if="isScrollingPaused" :size="14" class="cursor-pointer" @click="resumeAutoScroll" />
-            <PlayIcon v-else :size="14" class="cursor-pointer" @click="pauseAutoScroll" />
-            <span>Faites glisser ou laissez défiler automatiquement</span>
-          </div>
-        </div>
+    <section class="partners-section py-10 md:py-14 bg-gray-50">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">
+      Nos partenaires
+    </h2>
+
+    <div class="relative">
+      <!-- Gradient fade (carousel feel) -->
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+
+      <div
+        ref="partnersContainer"
+        class="flex items-center gap-8 overflow-x-auto pb-6 px-4 hide-scrollbar partners-scroll-container"
+        @mouseenter="pauseAutoScroll"
+        @mouseleave="resumeAutoScroll"
+      >
+        <a
+          v-for="partner in partners"
+          :key="partner.name"
+          :href="partner.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-logo flex-shrink-0 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 px-6 py-4"
+        >
+          <img
+            :src="partner.logo"
+            class="h-16 md:h-20 object-contain mx-auto transition-transform duration-300 hover:scale-105"
+            :alt="partner.name"
+          />
+        </a>
       </div>
-    </section>
+
+      <!-- Mobile hint -->
+      <div class="md:hidden text-xs text-gray-500 mt-3 flex items-center justify-center gap-2">
+        <PauseIcon
+          v-if="isScrollingPaused"
+          :size="14"
+          class="cursor-pointer"
+          @click="resumeAutoScroll"
+        />
+        <PlayIcon
+          v-else
+          :size="14"
+          class="cursor-pointer"
+          @click="pauseAutoScroll"
+        />
+        <span>Swipe or let it scroll automatically</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Section de contact -->
     <section v-if="isHomepage" id="contact" class="bg-white relative max-w-full sm:mx-4 my-12 md:my-16 py-8 md:py-12 shadow-lg rounded-xl">
@@ -285,7 +312,7 @@ export default {
       addedUser: false,
       userExists: false,
       failedRequest: false,
-      partners: [ 
+      partners: [
         { name: "Olame", logo: require('~/assets/img/olame.jpeg'), link: "https://olamerdc.org/" },
         { name: "UniGom", logo: require('~/assets/img/unigom.png'), link: "https://unigom.ac.cd/" },
         { name: "Caritas", logo: require('~/assets/img/caritasnew.png'), link: "https://www.caritas.org/" },
@@ -294,6 +321,7 @@ export default {
         { name: "Cafodd", logo: require('~/assets/img/cafod.webp'), link: "https://cafod.org.uk/" },
         { name: "Start", logo: require('~/assets/img/start.jpeg'), link: "https://startnetwork.org/" },
         { name: "Cajed", logo: require('~/assets/img/cajed.png'), link: "https://www.cajed.org/" },
+        { name: "Biferd", logo: require('~/assets/img/biferd.jpeg'), link: "https://www.biferd.org/en-UK" },
         { name: "Hub", logo: require('~/assets/img/hub.png'), link: "https://startnetwork.org/network/hubs/democratic-republic-congo-hub" },
       ],
       socialLinks: [

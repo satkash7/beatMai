@@ -15,15 +15,15 @@
         <div class="w-48 flex-shrink-0">
           <img 
             v-if="opportunity.imageUrl && opportunity.imageUrl !== ''" 
-            :src="opportunity.imageUrl"
+            :src="require('~/assets/img/opp.jpg')"
             class="w-full rounded-lg transition duration-300 transform hover:scale-105 cursor-pointer " 
             :alt="opportunity.title"
             @click="handleClick"
             
           />
           <img 
-            v-else 
-            :src="require('~/assets/img/default.jpg')" 
+            v-else
+            :src="require('~/assets/img/opp.jpg')"
             class="w-full rounded-lg transition duration-300 transform hover:scale-105 cursor-pointer " 
             :alt="opportunity.title"
             @click="handleClick"

@@ -30,12 +30,9 @@
       <h3 v-if="showSearchResultTitle == true" class="text-1xl text-neutral-800 font-semibold">
         Recherche pour : <span class="text-header-gradient-big text-1xl"> {{ this.query }}</span>
       </h3>
-      <div v-if="this.type == 'blog'" class="flex flex-wrap items-center justify-center">
-        <LandingBlog v-for="blogItem in searchResult" :key="blogItem.id" :blog="blogItem" @open-blog="showSingleBlog(blogItem)" />
-      </div>
-      <div v-if="this.type == 'opportunitie'" class="flex flex-wrap items-center justify-center">
-        <LandingOpportunity v-for="opportunityItem in searchResult" :key="opportunityItem.id" :opportunity="opportunityItem" @open-opportunity="showSingleOpportunity(opportunityItem)" />
-      </div>
+      <div class="flex flex-wrap items-center justify-center">
+        <LandingBlog v-for="blogItem in searchResult" :opportunity="blogItem.type == 'blog' ? false : true" :key="blogItem.id" :blog="blogItem" @open-blog="showSingleBlog(blogItem)" />
+      </div> 
 
       <div v-if="invalidsearch" class="bg-red-400 text-white px-4 py-2 rounded-md mb-4">
         Aucun résultat trouvé pour votre recherche.
