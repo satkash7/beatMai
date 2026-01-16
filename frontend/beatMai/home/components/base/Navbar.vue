@@ -122,13 +122,6 @@
                   Créer du contenu
                 </base-button>
                 
-                <a href="/u" class="flex items-center py-4 px-5 text-blue-900 rounded-xl transition-all duration-300 hover:bg-blue-100 mb-3" @click="closeMobileMenu">
-                  <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                  </svg>
-                  Mon compte
-                  <span v-if="userLogged == true" class="ml-auto w-3 h-3 bg-green-500 border border-white rounded-full"></span>
-                </a>
                 
                 <button v-if="userLogged" @click="logOut" class="w-full py-3 px-5 text-red-600 border border-red-200 rounded-xl text-center transition-all duration-300 hover:bg-red-50 hover:border-red-300 flex items-center justify-center">
                   <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

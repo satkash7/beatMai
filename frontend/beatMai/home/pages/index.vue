@@ -100,14 +100,14 @@ export default {
         id: 1,
         name: "Notre mission",
         imageUrl: require('~/assets/img/pic1.jpg'),
-        descriptions: "Fournir un accompagnement technique personnalisé, aux entreprises, organisations et/ou individus, pour les aider à mieux rendre les services leur sollicités, grâce à des solutions techniques innovantes, pour le développement économique et social de la RDC",
+        descriptions: "Accompagner les organisations, les entreprises et les particuliers dans l’atteinte de leurs objectifs stratégiques à travers des services d’expertise et d’accompagnement technique innovants, contribuant ainsi au développement économique et social durable de la République Démocratique du Congo.",
         link: "#"
       },
       {
         id: 2,
         name: "Notre Vision",
         imageUrl: require('~/assets/img/pic2.jpg'),
-        descriptions: "Nous accompagnons les personnes, entreprises, organisations, services étatiques dans la poursuite de leurs objectifs stratégiques grâce à un service innovant et co-produit afin de contribuer au développement durable de la RDC.",
+        descriptions: "Devenir un bureau d’expertise de référence en République Démocratique du Congo, reconnu pour la qualité, le professionnalisme et l’impact de ses services, au service des individus, des institutions publiques, des organisations de la société civile et des entreprises dans l’accomplissement de leurs missions.",
         link: "#"
       }
     ];
@@ -144,14 +144,14 @@ export default {
       {
         id: 5,
         name: "Renforcement des capacités, Communication pour le changement de comportement",
-        imageUrl: require('~/assets/img/Comm.jpg'),
+        imageUrl: require('~/assets/img/renforcement.jpeg'),
         descriptions: "Développement des modules adaptés aux besoins des divers groupes, Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements, Coaching et mentorat dans la motivation des groupes",
         link: "#"
       },
       {
         id: 6,
         name: "Accompagnement dans la collecte et analyse des données",
-        imageUrl: require('~/assets/img/pic1.jpg'),
+        imageUrl: require('~/assets/img/Comm.jpg'),
         descriptions: "Accompagnement technique des entreprises dans la collecte et l'analyse des données qualitatives et quantitatives pour une prise de décision stratégique.",
         link: "#"
       }

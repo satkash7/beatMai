@@ -158,7 +158,7 @@ export default {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: rgba(14, 42, 74, 0.7); /* Overlay color */
+    background-color: rgba(14, 42, 74, 0.8); /* Overlay color */
     background-blend-mode: multiply; /* Darkens images */
     z-index: 1; 
     animation: heroFade 25s infinite;

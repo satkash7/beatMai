@@ -315,13 +315,14 @@ export default {
       partners: [
         { name: "Olame", logo: require('~/assets/img/olame.jpeg'), link: "https://olamerdc.org/" },
         { name: "UniGom", logo: require('~/assets/img/unigom.png'), link: "https://unigom.ac.cd/" },
-        { name: "Caritas", logo: require('~/assets/img/caritasnew.png'), link: "https://www.caritas.org/" },
+        { name: "esv.unigom", logo: require('~/assets/img/esv-unigom.png'), link: "https://esv.unigom.ac.cd/" },
+        
+        { name: "Caritas Goma", logo: require('~/assets/img/caritasgoma.png'), link: "https://www.caritas.org/" },
         { name: "Australia", logo: require('~/assets/img/australia.jpeg'), link: "https://www.caritas.org.au/" },
         { name: "CaritasKindu", logo: require('~/assets/img/kindu.jpeg'), link: "https://caritasdev.cd/" },
-        { name: "Cafodd", logo: require('~/assets/img/cafod.webp'), link: "https://cafod.org.uk/" },
-        { name: "Start", logo: require('~/assets/img/start.jpeg'), link: "https://startnetwork.org/" },
+        { name: "Cafodd", logo: require('~/assets/img/cafod.jpeg'), link: "https://cafod.org.uk/" },
+        { name: "Start", logo: require('~/assets/img/start.png'), link: "https://startnetwork.org/" },
         { name: "Cajed", logo: require('~/assets/img/cajed.png'), link: "https://www.cajed.org/" },
-        { name: "Biferd", logo: require('~/assets/img/biferd.jpeg'), link: "https://www.biferd.org/en-UK" },
         { name: "Hub", logo: require('~/assets/img/hub.png'), link: "https://startnetwork.org/network/hubs/democratic-republic-congo-hub" },
         { name: "Socoac Asbl", logo: require('~/assets/img/socoac.jpg'), link: "https://socoacasbl.com/" },
         { name: "Eglise Anglicane du Congo", logo: require('~/assets/img/anglican.jpg'), link: "https://www.goma.anglican.org/" },
@@ -394,27 +395,23 @@ export default {
   methods: {
     startAutoScroll() {
       this.stopAutoScroll();
-      
+
+      const container = this.$refs.partnersContainer;
+      if (!container) return;
+
       this.scrollInterval = setInterval(() => {
-        if (this.isScrollingPaused || !this.$refs.partnersContainer) return;
-        
-        const container = this.$refs.partnersContainer;
-        const scrollWidth = container.scrollWidth;
-        const clientWidth = container.clientWidth;
-        
-        // Si on est à la fin, revenir au début
-        if (this.currentScrollPosition >= scrollWidth - clientWidth) {
-          this.scrollDirection = -1;
+        if (this.isScrollingPaused) return;
+
+        // Vitesse (1 = très fluide)
+        const speed = 1;
+
+        // Si on atteint la fin → retour silencieux au début
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+          container.scrollLeft = 0;
+        } else {
+          container.scrollLeft += speed;
         }
-        // Si on est au début, repartir vers la droite
-        else if (this.currentScrollPosition <= 0) {
-          this.scrollDirection = 1;
-        }
-        
-        // Déplacer la position
-        this.currentScrollPosition += 2 * this.scrollDirection;
-        container.scrollLeft = this.currentScrollPosition;
-      }, 30);
+      }, 20);
     },
     
     stopAutoScroll() {
@@ -528,9 +525,9 @@ export default {
 }
 
 .partners-scroll-container {
-  scroll-behavior: smooth;
   will-change: scroll-position;
 }
+
 
 .social-icon {
   display: flex;
