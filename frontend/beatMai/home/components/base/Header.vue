@@ -8,7 +8,7 @@
           data-aos-once="true"
           class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight sm:pr-8 xl:pr-10 mobile"
           style="color:white;"
-        > <br></br><br></br><br></br>
+        > <br></br><br>
         Bienvenu au "Bureau d'Expertise et Accompagnement Technique" BEAT
         </h1>
         <p data-aos-once="true" data-aos-delay="300" class="text-white extramobile">
@@ -20,7 +20,7 @@
           class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2"
         > 
         <a href="#contact">
-          <base-button class="px-2 xl:px-4 py-3 mt-2 bg-inherit border border-[#0c66ee] smallbtn">
+          <base-button class="px-2 xl:px-4 py-3 mt-0 bg-inherit border border-[#0c66ee] smallbtn">
           Entrez en contact avec nous pour savoir plus
           </base-button>
         </a>

@@ -4,95 +4,109 @@
     "path": "/admin",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/admin/index.vue",
     "chunkName": "pages/admin/index",
-    "url": "/admin"
+    "url": "/admin",
+    "_name": "_185a6cbc"
   },
   {
     "name": "anonymous",
     "path": "/anonymous",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/anonymous/index.vue",
     "chunkName": "pages/anonymous/index",
-    "url": "/anonymous"
+    "url": "/anonymous",
+    "_name": "_e00d9d80"
   },
   {
     "name": "apropos",
     "path": "/apropos",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/apropos/index.vue",
     "chunkName": "pages/apropos/index",
-    "url": "/apropos"
+    "url": "/apropos",
+    "_name": "_2dff853b"
   },
   {
     "name": "blogs",
     "path": "/blogs",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/blogs/index.vue",
     "chunkName": "pages/blogs/index",
-    "url": "/blogs"
+    "url": "/blogs",
+    "_name": "_12b6c0e4"
   },
   {
     "name": "create",
     "path": "/create",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/create/index.vue",
     "chunkName": "pages/create/index",
-    "url": "/create"
+    "url": "/create",
+    "_name": "_730673c2"
   },
   {
     "name": "edit",
     "path": "/edit",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/edit/index.vue",
     "chunkName": "pages/edit/index",
-    "url": "/edit"
+    "url": "/edit",
+    "_name": "_558a88a6"
   },
   {
     "name": "opportunities",
     "path": "/opportunities",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/opportunities/index.vue",
     "chunkName": "pages/opportunities/index",
-    "url": "/opportunities"
+    "url": "/opportunities",
+    "_name": "_28cb6af8"
   },
   {
     "name": "password-reset",
     "path": "/password-reset",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/password-reset/index.vue",
     "chunkName": "pages/password-reset/index",
-    "url": "/password-reset"
+    "url": "/password-reset",
+    "_name": "_2565d380"
   },
   {
     "name": "projet",
     "path": "/projet",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/projet/index.vue",
     "chunkName": "pages/projet/index",
-    "url": "/projet"
+    "url": "/projet",
+    "_name": "_93b02422"
   },
   {
     "name": "u",
     "path": "/u",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/u/index.vue",
     "chunkName": "pages/u/index",
-    "url": "/u"
+    "url": "/u",
+    "_name": "_1afe6970"
   },
   {
     "name": "profile-admin",
     "path": "/profile/admin",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/profile/admin/index.vue",
     "chunkName": "pages/profile/admin/index",
-    "url": "/profile/admin"
+    "url": "/profile/admin",
+    "_name": "_2821253c"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/index.vue",
     "chunkName": "pages/index",
-    "url": "/"
+    "url": "/",
+    "_name": "_34d37262"
   },
   {
     "name": "blogs-blogRoute",
     "path": "/blogs/:blogRoute",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/blogs/_blogRoute.vue",
-    "chunkName": "pages/blogs/_blogRoute"
+    "chunkName": "pages/blogs/_blogRoute",
+    "_name": "_4d15aea6"
   },
   {
     "name": "opportunities-blogRoute",
     "path": "/opportunities/:blogRoute",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/beatMai/frontend/beatMai/home/pages/opportunities/_blogRoute.vue",
-    "chunkName": "pages/opportunities/_blogRoute"
+    "chunkName": "pages/opportunities/_blogRoute",
+    "_name": "_63072906"
   }
 ]

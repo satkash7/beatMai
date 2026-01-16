@@ -115,9 +115,9 @@ export default {
     this.projects = [
       {
         id: 1,
-        name: "Entrepreunariat",
+        name: "Entrepreneuriat et innovation sociale",
         imageUrl: require('~/assets/img/entre.jpg'),
-        descriptions: "Accompagnement dans l'élaboration des plans d'affaires; Proposition des méthodes de gestion innovante des entreprises; Appui à l'élaboration de plan de continuité des affaires; Accompagnement dans l'élaboration des stratégies et plans de sécurité et de communication des organisations et/ou entreprises",
+        descriptions: "Soutenir les communautés touchées par des catastrophes dans leurs processus de relèvement et renforcer leur résilience face aux crises futures. Nous accompagnons la planification, la mise en œuvre et le suivi d’initiatives locales d'entrepreneuriat et innovation sociales pour restaurer les conditions de vie, renforcer la capacité d’adaptation et favoriser un développement durable après les catastrophes.",
         link: "#"
       },
       {
@@ -138,7 +138,7 @@ export default {
         id: 4,
         name: "Innovation et technologie",
         imageUrl: require('~/assets/img/bg1.jpg'),
-        descriptions: "Accompagnement dans la pensée design; Accompagnement dans l'utilisation éthique de l'Intelligence Artificielle; Développement des applications dans divers domaines;",
+        descriptions: "Nous concevons et déployons des solutions technologiques innovantes, en mettant l’accent sur le design thinking, promotion de l’utilisation éthique de l’intelligence artificielle, Conception et développement de sites web, d’applications numériques et de solutions de gestion de bases de données innovantes, adaptées aux besoins des organisations, avec une approche orientée performance, sécurité et durabilité.",
         link: "/projects"
       },
       {

@@ -1,6 +1,7 @@
 <template>
   <client-only>
-    <div class="w-full container mx-auto px-4 md:px-6 pt-24 md:pt-28">
+    <div class="w-full container mx-auto px-4 md:px-6 pt-24 md:pt-28 relative z-10">
+
       <div class="w-full">
         <!-- Hero Section simplifiée -->
         <section class="rounded-xl overflow-hidden mb-12 bg-white">
@@ -13,7 +14,8 @@
               </h1>
               <p class="text-gray-700 mb-6">
                 BEAT est un cabinet basé à Goma, en République Démocratique du Congo, qui accompagne les institutions, 
-                entreprises et projets à fort impact grâce à des solutions techniques innovantes.
+                  entreprises et projets à fort impact grâce à des solutions techniques innovantes, un conseil stratégique, 
+                  et un savoir-faire local ancré dans l'excellence.
               </p>
               <div class="flex space-x-4">
                 <a href="#contact" class="px-5 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors">
@@ -44,15 +46,7 @@
         <section class="bg-white rounded-xl overflow-hidden mb-16">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
             <!-- Text Content -->
-            <div class="space-y-8">
-              <div>
-                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Qui sommes-nous?</h2>
-                <p class="text-gray-700">
-                  BEAT est un cabinet basé à Goma, en République Démocratique du Congo, qui accompagne les institutions, 
-                  entreprises et projets à fort impact grâce à des solutions techniques innovantes, un conseil stratégique, 
-                  et un savoir-faire local ancré dans l'excellence.
-                </p>
-              </div>
+            <div class="space-y-8"> 
               
               <div>
                 <h2 class="text-2xl font-semibold text-gray-900 mb-4">Notre mission</h2>

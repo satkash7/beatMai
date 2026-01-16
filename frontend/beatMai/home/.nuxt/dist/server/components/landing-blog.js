@@ -1,21 +1,21 @@
 exports.ids = [4];
 exports.modules = {
 
-/***/ 84:
+/***/ 86:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/opp.2d8e158.jpg";
 
 /***/ }),
 
-/***/ 85:
+/***/ 87:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/default.526b6e3.jpg";
 
 /***/ }),
 
-/***/ 86:
+/***/ 88:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34,7 +34,7 @@ var render = function render() {
   }, [_vm.opportunity == true ? _c('span', [_c('img', {
     staticClass: "w-full h-48 object-cover rounded-t-lg transition-opacity duration-500 ease-in-out hover:opacity-80",
     attrs: {
-      "src": __webpack_require__(84)
+      "src": __webpack_require__(86)
     }
   })]) : _c('span', [_vm.blog.imageUrl != null && _vm.blog.imageUrl != '' ? _c('img', {
     staticClass: "w-full h-48 object-cover rounded-t-lg transition-opacity duration-500 ease-in-out hover:opacity-80",
@@ -44,7 +44,7 @@ var render = function render() {
   }) : _c('img', {
     staticClass: "w-full h-48 object-cover rounded-t-lg transition-opacity duration-500 ease-in-out hover:opacity-80",
     attrs: {
-      "src": __webpack_require__(85)
+      "src": __webpack_require__(87)
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "text-container max-w-[385px] mx-auto"

@@ -1,25 +1,39 @@
 exports.ids = [18,2];
 exports.modules = {
 
-/***/ 106:
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/bg1.832e952.jpg";
+
+/***/ }),
+
+/***/ 101:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/Comm.6eeafe1.jpg";
+
+/***/ }),
+
+/***/ 108:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(125);
+var content = __webpack_require__(127);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(5).default
 module.exports.__inject__ = function (context) {
-  add("358777ca", content, true, context)
+  add("15e36e7c", content, true, context)
 };
 
 /***/ }),
 
-/***/ 111:
+/***/ 113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -122,19 +136,19 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 124:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4f0ec809_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(106);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4f0ec809_prod_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4f0ec809_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4f0ec809_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4f0ec809_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_2a52c059_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(108);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_2a52c059_prod_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_2a52c059_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_2a52c059_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_2a52c059_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ 125:
+/***/ 127:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -149,14 +163,14 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 182:
+/***/ 184:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=4f0ec809
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=2a52c059
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -222,7 +236,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=4f0ec809
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=2a52c059
 
 // EXTERNAL MODULE: ./mixins/aos.js
 var aos = __webpack_require__(11);
@@ -338,32 +352,32 @@ var aos = __webpack_require__(11);
     }];
     this.projects = [{
       id: 1,
-      name: "Entrepreunariat",
-      imageUrl: __webpack_require__(95),
-      descriptions: "Accompagnement dans l'élaboration des plans d'affaires; Proposition des méthodes de gestion innovante des entreprises; Appui à l'élaboration de plan de continuité des affaires; Accompagnement dans l'élaboration des stratégies et plans de sécurité et de communication des organisations et/ou entreprises",
+      name: "Entrepreneuriat et innovation sociale",
+      imageUrl: __webpack_require__(97),
+      descriptions: "Soutenir les communautés touchées par des catastrophes dans leurs processus de relèvement et renforcer leur résilience face aux crises futures. Nous accompagnons la planification, la mise en œuvre et le suivi d’initiatives locales d'entrepreneuriat et innovation sociales pour restaurer les conditions de vie, renforcer la capacité d’adaptation et favoriser un développement durable après les catastrophes.",
       link: "#"
     }, {
       id: 2,
       name: "Gestion de l'environnement et protection des personnes",
-      imageUrl: __webpack_require__(96),
+      imageUrl: __webpack_require__(98),
       descriptions: "Évaluation de l'impact environnemental des projets et des affaires; Proposition des pratiques écologiques; Coaching et mentorat sur la gestion sensible à l'environnement;",
       link: "#"
     }, {
       id: 3,
       name: "Réduction des risques de catastrophes",
-      imageUrl: __webpack_require__(97),
+      imageUrl: __webpack_require__(99),
       descriptions: "Modélisation de la surveillance des aléas; Accompagnement des organisations dans la gestion sensible aux risques; Proposition des méthodes innovantes de gestion et de la protection de l'environnement; Formation sur la gestion des risques de catastrophes et des urgences; Développement des outils d'analyse de vulnérabilité des enjeux et risques de catastrophes; Élaboration des modules de gestion des risques adaptés aux besoins;",
       link: "#"
     }, {
       id: 4,
       name: "Innovation et technologie",
-      imageUrl: __webpack_require__(98),
-      descriptions: "Accompagnement dans la pensée design; Accompagnement dans l'utilisation éthique de l'Intelligence Artificielle; Développement des applications dans divers domaines;",
+      imageUrl: __webpack_require__(100),
+      descriptions: "Nous concevons et déployons des solutions technologiques innovantes, en mettant l’accent sur le design thinking, promotion de l’utilisation éthique de l’intelligence artificielle, Conception et développement de sites web, d’applications numériques et de solutions de gestion de bases de données innovantes, adaptées aux besoins des organisations, avec une approche orientée performance, sécurité et durabilité.",
       link: "/projects"
     }, {
       id: 5,
       name: "Renforcement des capacités, Communication pour le changement de comportement",
-      imageUrl: __webpack_require__(99),
+      imageUrl: __webpack_require__(101),
       descriptions: "Développement des modules adaptés aux besoins des divers groupes, Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements, Coaching et mentorat dans la motivation des groupes",
       link: "#"
     }, {
@@ -389,7 +403,7 @@ var componentNormalizer = __webpack_require__(0);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(124)
+  var style0 = __webpack_require__(126)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -410,43 +424,29 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var pages = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {LandingAiTrend: __webpack_require__(111).default})
+installComponents(component, {LandingAiTrend: __webpack_require__(113).default})
 
-
-/***/ }),
-
-/***/ 95:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/entre.b774b3c.jpg";
-
-/***/ }),
-
-/***/ 96:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/gestionEnv.0fc4133.jpg";
 
 /***/ }),
 
 /***/ 97:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/reduc.12c07dd.jpg";
+module.exports = __webpack_require__.p + "img/entre.b774b3c.jpg";
 
 /***/ }),
 
 /***/ 98:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/bg1.832e952.jpg";
+module.exports = __webpack_require__.p + "img/gestionEnv.0fc4133.jpg";
 
 /***/ }),
 
 /***/ 99:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/Comm.6eeafe1.jpg";
+module.exports = __webpack_require__.p + "img/reduc.12c07dd.jpg";
 
 /***/ })
 
