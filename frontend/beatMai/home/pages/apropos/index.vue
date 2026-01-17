@@ -50,10 +50,8 @@
               
               <div>
                 <h2 class="text-2xl font-semibold text-gray-900 mb-4">Notre mission</h2>
-                <p class="text-gray-700">
-                  Notre mission est de fournir des services de conseil et d'expertise technique de haute qualité, 
-                  adaptés aux besoins spécifiques de nos clients, tout en contribuant au développement durable 
-                  de la région.
+                <p class="text-gray-700"> 
+                  Accompagner les organisations, les entreprises et les particuliers dans l’atteinte de leurs objectifs stratégiques à travers des services d’expertise et d’accompagnement technique innovants, contribuant ainsi au développement économique et social durable de la République Démocratique du Congo.
                 </p>
               </div>
               
