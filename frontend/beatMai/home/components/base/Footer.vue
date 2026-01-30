@@ -324,6 +324,8 @@ export default {
         { name: "Start", logo: require('~/assets/img/start.png'), link: "https://startnetwork.org/" },
         { name: "Cajed", logo: require('~/assets/img/cajed.png'), link: "https://www.cajed.org/" },
         { name: "Hub", logo: require('~/assets/img/hub.png'), link: "https://startnetwork.org/network/hubs/democratic-republic-congo-hub" },
+        { name: "Start Network", logo: require('~/assets/img/startnetwork.jpeg'), link: "https://startnetwork.org/" },
+        
         { name: "Socoac Asbl", logo: require('~/assets/img/socoac.jpg'), link: "https://socoacasbl.com/" },
         { name: "Eglise Anglicane du Congo", logo: require('~/assets/img/anglican.jpg'), link: "https://www.goma.anglican.org/" },
       ],

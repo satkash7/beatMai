@@ -4,31 +4,38 @@ exports.modules = {
 /***/ 100:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/bg1.832e952.jpg";
+module.exports = __webpack_require__.p + "img/reduc.12c07dd.jpg";
 
 /***/ }),
 
 /***/ 101:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/renforcement.f1ec737.jpeg";
+module.exports = __webpack_require__.p + "img/bg1.832e952.jpg";
 
 /***/ }),
 
 /***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "img/renforcement.f1ec737.jpeg";
+
+/***/ }),
+
+/***/ 103:
+/***/ (function(module, exports, __webpack_require__) {
+
 module.exports = __webpack_require__.p + "img/Comm.6eeafe1.jpg";
 
 /***/ }),
 
-/***/ 109:
+/***/ 110:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(128);
+var content = __webpack_require__(129);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -40,7 +47,7 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 114:
+/***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -143,19 +150,19 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 127:
+/***/ 128:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_11e6528c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(109);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_11e6528c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(110);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_11e6528c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_11e6528c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_11e6528c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_11e6528c_prod_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ 128:
+/***/ 129:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -170,7 +177,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 188:
+/***/ 189:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -360,37 +367,37 @@ var aos = __webpack_require__(11);
     this.projects = [{
       id: 1,
       name: "Entrepreneuriat et innovation sociale",
-      imageUrl: __webpack_require__(97),
+      imageUrl: __webpack_require__(98),
       descriptions: "Soutenir les communautés touchées par des catastrophes dans leurs processus de relèvement et renforcer leur résilience face aux crises futures. Nous accompagnons la planification, la mise en œuvre et le suivi d’initiatives locales d'entrepreneuriat et innovation sociales pour restaurer les conditions de vie, renforcer la capacité d’adaptation et favoriser un développement durable après les catastrophes.",
       link: "#"
     }, {
       id: 2,
       name: "Gestion de l'environnement et protection des personnes",
-      imageUrl: __webpack_require__(98),
+      imageUrl: __webpack_require__(99),
       descriptions: "Évaluation de l'impact environnemental des projets et des affaires; Proposition des pratiques écologiques; Coaching et mentorat sur la gestion sensible à l'environnement;",
       link: "#"
     }, {
       id: 3,
       name: "Réduction des risques de catastrophes",
-      imageUrl: __webpack_require__(99),
+      imageUrl: __webpack_require__(100),
       descriptions: "Modélisation de la surveillance des aléas; Accompagnement des organisations dans la gestion sensible aux risques; Proposition des méthodes innovantes de gestion et de la protection de l'environnement; Formation sur la gestion des risques de catastrophes et des urgences; Développement des outils d'analyse de vulnérabilité des enjeux et risques de catastrophes; Élaboration des modules de gestion des risques adaptés aux besoins;",
       link: "#"
     }, {
       id: 4,
       name: "Innovation et technologie",
-      imageUrl: __webpack_require__(100),
+      imageUrl: __webpack_require__(101),
       descriptions: "Nous concevons et déployons des solutions technologiques innovantes, en mettant l’accent sur le design thinking, promotion de l’utilisation éthique de l’intelligence artificielle, Conception et développement de sites web, d’applications numériques et de solutions de gestion de bases de données innovantes, adaptées aux besoins des organisations, avec une approche orientée performance, sécurité et durabilité.",
       link: "/projects"
     }, {
       id: 5,
       name: "Renforcement des capacités, Communication pour le changement de comportement",
-      imageUrl: __webpack_require__(101),
+      imageUrl: __webpack_require__(102),
       descriptions: "Développement des modules adaptés aux besoins des divers groupes, Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements, Coaching et mentorat dans la motivation des groupes",
       link: "#"
     }, {
       id: 6,
       name: "Accompagnement dans la collecte et analyse des données",
-      imageUrl: __webpack_require__(102),
+      imageUrl: __webpack_require__(103),
       descriptions: "Accompagnement technique des entreprises dans la collecte et l'analyse des données qualitatives et quantitatives pour une prise de décision stratégique.",
       link: "#"
     }];
@@ -410,7 +417,7 @@ var componentNormalizer = __webpack_require__(0);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(127)
+  var style0 = __webpack_require__(128)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -431,29 +438,22 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var pages = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {LandingAiTrend: __webpack_require__(114).default})
+installComponents(component, {LandingAiTrend: __webpack_require__(115).default})
 
-
-/***/ }),
-
-/***/ 97:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/entre.b774b3c.jpg";
 
 /***/ }),
 
 /***/ 98:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/gestionEnv.0fc4133.jpg";
+module.exports = __webpack_require__.p + "img/entre.b774b3c.jpg";
 
 /***/ }),
 
 /***/ 99:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/reduc.12c07dd.jpg";
+module.exports = __webpack_require__.p + "img/gestionEnv.0fc4133.jpg";
 
 /***/ })
 
