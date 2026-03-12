@@ -1,16 +1,16 @@
 <template>
     <div 
-      class="max-w-[320px] xl:max-w-[380px] bg-white dark:bg-dark-card shadow-md rounded-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-xl ml-5 mr-5 border border-transparent dark:border-dark-border"
+      class="w-full max-w-[380px] mx-auto bg-white dark:bg-dark-card shadow-md rounded-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-xl border border-transparent dark:border-dark-border flex flex-col h-full"
     >
-      <div class="relative">
+      <div class="relative flex-shrink-0">
         <a :href="'/blogs/' + blog.blogRoute" class="block">
           <img :src="blog.imageUrl" 
                class="w-full h-48 object-cover rounded-t-lg transition-opacity duration-500 ease-in-out hover:opacity-80" 
                :alt="blog.blogTitle" />
         </a>
       </div>
-      <div class="p-4">
-        <a :href="'/blogs/' + blog.blogRoute" class="block">
+      <div class="p-4 flex flex-col flex-grow">
+        <a :href="'/blogs/' + blog.blogRoute" class="block flex-grow">
           <h3 class="text-lg font-bold text-gray-800 dark:text-dark-text hover:text-blue-500 transition-all duration-300 mb-3">
             {{ blog.blogTitle }}
           </h3>
@@ -20,7 +20,7 @@
         </a>
         
         <!-- Lien "Lire la suite" -->
-        <div class="mt-4 pt-3 border-t border-gray-100 dark:border-dark-border">
+        <div class="mt-auto pt-3 border-t border-gray-100 dark:border-dark-border">
           <a 
             :href="'/blogs/' + blog.blogRoute" 
             class="text-blue-600 hover:text-blue-800 font-medium flex items-center justify-center transition-colors duration-300 group"

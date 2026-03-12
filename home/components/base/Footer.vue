@@ -7,7 +7,7 @@
           Nos actualités les plus récentes
         </h2>
 
-        <div class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 px-4 xl:px-8">
+        <div class="relative w-full grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 xl:px-8">
           <LandingStep v-for="blog in blogs" :key="blog.id" :blog="blog" @open-blog="showSingleBlog(blog)"/>
         </div>
       </div>
@@ -16,7 +16,7 @@
     <!-- Partners section -->
     <section class="partners-section py-10 md:py-14 bg-gray-50 dark:bg-dark-surface">
       <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-dark-text mb-8">
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-800 mb-8">
           Nos partenaires
         </h2>
 

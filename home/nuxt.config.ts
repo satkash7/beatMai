@@ -115,6 +115,10 @@ export default defineNuxtConfig({
     urls: async () => {
       try {
         const response = await fetch(baseURL + '/blog/sitemap-urls');
+        const contentType = response.headers.get('content-type') || '';
+        if (!response.ok || !contentType.includes('application/json')) {
+          throw new Error(`API returned ${response.status} (${contentType})`);
+        }
         const data = await response.json();
         const slugs = data.urls || [];
         

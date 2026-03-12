@@ -88,7 +88,7 @@ useHead({
   title: 'Opportunités & Offres | Beat Expertise - Carrières à Goma, RDC',
   meta: [
     { name: 'description', content: 'Découvrez les opportunités d\'emploi et offres proposées par BEAT Expertise à Goma, RDC. Rejoignez une équipe dynamique et innovante.' },
-    { name: 'keywords', content: 'opportunités Beat Expertise, emploi Goma, offres RDC, carrières, recrutement Nord-Kivu' },
+    { name: 'keywords', content: 'opportunités Beat Expertise, emploi Goma, offres RDC, carrières, recrutement Nord-Kivu, accompagnement des entreprises, formation des agents de terrain, renforcement des capacités, entrepreneuriat congolais, accompagnement des entrepreneurs, plans d\'affaires, mentorat, développement des applications, innovation technologique, suivi à temps réel, formation en entrepreneuriat, accompagnement des entreprises locales, entrepreneuriat des femmes, autonomisation des femmes, Bureau d\'Expertise et d\'Accompagnement Technique, Goma, RDC' },
     { name: 'robots', content: 'index, follow' },
     { property: 'og:title', content: 'Opportunités | Beat Expertise' },
     { property: 'og:description', content: 'Offres d\'emploi et opportunités chez BEAT Expertise à Goma, RDC.' },

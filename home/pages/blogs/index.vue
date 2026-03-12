@@ -88,7 +88,7 @@ useHead({
   title: 'Publications & Articles | Beat Expertise - Analyses et Réflexions',
   meta: [
     { name: 'description', content: 'Découvrez les publications, articles et analyses de BEAT Expertise. Actualités, réflexions et ressources sur le développement technique en RDC.' },
-    { name: 'keywords', content: 'publications Beat Expertise, articles, analyses, actualités, RDC, Goma, développement technique' },
+    { name: 'keywords', content: 'publications Beat Expertise, articles, analyses, actualités, Bureau d\'expertise, accompagnement technique, Goma, RDC, Nord-Kivu, catastrophes naturelles, inondations pluviales, protection de l\'environnement, développement durable, renforcement des capacités, innovation technologique, intelligence artificielle, éruption volcanique, gestion des risques, prévention des catastrophes, CAFOD, CARITAS, CAJED, UNIGOM, entrepreneuriat, autonomisation de la femme, résilience des communautés, exploitation minière, impact environnemental, sensibilisation communautaire, plaidoyer humanitaire' },
     { name: 'robots', content: 'index, follow' },
     { property: 'og:title', content: 'Publications | Beat Expertise' },
     { property: 'og:description', content: 'Articles, analyses et réflexions de BEAT Expertise sur le développement technique en RDC.' },

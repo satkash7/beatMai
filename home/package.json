@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "rm -rf .nuxt/dist",
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",

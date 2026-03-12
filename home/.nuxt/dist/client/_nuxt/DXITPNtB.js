@@ -1,1 +1,0 @@
-import{_ as t,z as o,A as s,W as r,X as n}from"./D7NIsCqy.js";const a={name:"BaseButton",inheritAttrs:!1};function c(e,_,d,l,p,u){return o(),s("button",n({class:"text-sm text-center rounded-full hover:shadow-md hover:shadow-[#0c66ee]/50 transition duration-300"},e.$attrs),[r(e.$slots,"default")],16)}const m=t(a,[["render",c]]);export{m as _};

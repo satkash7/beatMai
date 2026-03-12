@@ -152,7 +152,7 @@ useHead({
   title: 'À propos | Beat Expertise - Cabinet d\'expertise technique à Goma, RDC',
   meta: [
     { name: 'description', content: 'BEAT Expertise est un cabinet technique basé à Goma, en République Démocratique du Congo. Découvrez notre mission, nos valeurs d\'innovation et d\'excellence, et nos services d\'accompagnement technique.' },
-    { name: 'keywords', content: 'Beat Expertise, cabinet technique, Goma, RDC, expertise, accompagnement technique, innovation, Nord-Kivu' },
+    { name: 'keywords', content: 'Beat Expertise, Bureau d\'Expertise et d\'Accompagnement Technique, cabinet d\'expertise à Goma, accompagnement technique, expertise technique, Goma, RDC, Nord-Kivu, région des grands lacs, plan stratégique, stratégie de communication, motivation des groupes, changement de comportement, renforcement des capacités, développement durable, protection de l\'environnement, innovation technologique, intelligence artificielle, pensée design, catastrophes naturelles, gestion des risques, éruption volcanique Nyiragongo, OVG, CAFOD, CARITAS, CAJED, Centre OLAME, BIFERD, UNIGOM, bien-être humanitaire, culture environnementale, appui à la résilience, stabilisation socioéconomique, plaidoyer humanitaire' },
     { property: 'og:title', content: 'À propos | Beat Expertise' },
     { property: 'og:description', content: 'BEAT Expertise - Cabinet technique basé à Goma, RDC. Découvrez notre mission, nos valeurs et nos services.' },
     { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
