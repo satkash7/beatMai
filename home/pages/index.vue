@@ -19,7 +19,7 @@
 
       <!-- Domaines Section -->
       <section id="domaines" class="section-container">
-        <h2 class="section-title">Nos <span class="text-header-gradient">domaines d'intervention</span></h2>
+        <h2 class="section-title">Nos <span class="text-blue-600 dark:text-blue-400">domaines d'intervention</span></h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
           <LandingAiTrend
             v-for="(project, index) in projects.slice(0, 7)"
@@ -35,7 +35,7 @@
 
       <!-- Team Section -->
       <section id="team" class="section-container">
-        <h2 class="section-title">Notre <span class="text-header-gradient">équipe</span></h2>
+        <h2 class="section-title">Notre <span class="text-blue-600 dark:text-blue-400">équipe</span></h2>
         <div class="team-section fade-in card-dark rounded-lg p-6">
           <p class="team-description">
             Elle est composée d'experts certifiés et qualifiés dans nos domaines d'intervention. Sa grande passion est d'apporter des solutions concrètes aux problèmes locaux grâce à son accompagnement technique. Les membres de l'équipe du BEAT travaillent ensemble pour offrir des services de qualité et obtenir un résultat durable.
@@ -159,6 +159,11 @@ onMounted(() => {
   padding-bottom: 15px;
   font-size: 1.875rem;
   font-weight: 600;
+  color: #1f2937;
+}
+
+.dark .section-title {
+  color: #f1f5f9;
 }
 
 .section-title:after {
@@ -174,10 +179,7 @@ onMounted(() => {
 }
 
 .text-header-gradient {
-  background: linear-gradient(to right, #1a56db, #0e9f6e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1a56db;
 }
 
 .team-section {
@@ -189,12 +191,21 @@ onMounted(() => {
   border: 1px solid #e5e7eb;
 }
 
+.dark .team-section {
+  background-color: #334155;
+  border-color: #475569;
+}
+
 .team-description {
   max-width: 800px;
   margin: 0 auto;
   font-size: 1.1rem;
   color: #6b7280;
   line-height: 1.8;
+}
+
+.dark .team-description {
+  color: #cbd5e1;
 }
 
 .fade-in {

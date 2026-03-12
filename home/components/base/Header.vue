@@ -28,7 +28,7 @@
         </p>
         <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2"> 
           <a href="#contact">
-            <base-button class="px-2 xl:px-4 py-3 mt-0 bg-inherit border border-[#0c66ee] smallbtn hover:bg-blue-600 transition-all duration-300">
+            <base-button class="px-2 xl:px-4 py-3 mt-0 bg-inherit text-white border border-[#0c66ee] smallbtn hover:bg-blue-600 transition-all duration-300">
             Entrez en contact avec nous pour savoir plus
             </base-button>
           </a>

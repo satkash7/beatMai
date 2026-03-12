@@ -1,7 +1,5 @@
 <template>
-  <client-only> 
-     
-    <div @click="handleClick" class="max-w-[520px] xl:max-w-[580px] bg-white shadow-md rounded-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-xl ml-7 mr-7 mt-10 mb-10">
+    <div @click="handleClick" class="max-w-[520px] xl:max-w-[580px] bg-white dark:bg-dark-card shadow-md rounded-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:shadow-xl ml-7 mr-7 mt-10 mb-10 border border-transparent dark:border-dark-border">
       <span v-if="opportunity==true">
         <img :src="oppImg" class="w-full h-48 object-cover rounded-t-lg transition-opacity duration-500 ease-in-out hover:opacity-80"/>
       </span>
@@ -10,13 +8,12 @@
         <img v-else :src="defaultImg" class="w-full h-48 object-cover rounded-t-lg transition-opacity duration-500 ease-in-out hover:opacity-80"/>
       </span>
       <div class="text-container max-w-[385px] mx-auto">
-      <h4 class="text-xl text-neutral-800 font-semibold hover:text-blue-500 transition duration-300">{{ blog.blogTitle }}</h4>
-      <p class="text-sm text-gray-700 leading-relaxed">
+      <h4 class="text-xl text-neutral-800 dark:text-dark-text font-semibold hover:text-blue-500 transition duration-300">{{ blog.blogTitle }}</h4>
+      <p class="text-sm text-gray-700 dark:text-gray-400 leading-relaxed">
         {{ blog.blogCaption }}
       </p>
       </div> 
   </div>
-</client-only>
 </template>
 
 <script>

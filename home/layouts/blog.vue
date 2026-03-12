@@ -1,33 +1,13 @@
 <template>
-  <client-only>
-  <div class="min-h-screen font-sans antialiased relative">
+  <div class="min-h-screen font-sans antialiased relative bg-white dark:bg-dark-bg transition-colors duration-300">
     <div class="relative">
-      <div
-        class="absolute top-0 left-0 w-full h-[125vh] sm:h-[225vh] lg:h-[125vh] cover-gradient-2 sm:cover-gradient"
-      ></div>
       <BaseNavbar from="blog"/>
-      <LoadingIndicator />
 
-      <main class="text-neutral-800">
-        <Nuxt />
+      <main class="text-neutral-800 dark:text-dark-text transition-colors duration-300 pt-20">
+        <slot />
       </main>
 
-      <BaseFooter />
+      <BaseFooter :is-homepage="false"/>
     </div>
   </div>
-</client-only>
 </template>
-<script>
-import LoadingIndicator from "@/components/LoadingIndicator.vue";
-export default {
-  name: 'CreateLayout',
-  components: {
-    LoadingIndicator,
-  },
-  $route(to, from) {
-    if (to.path !== from.path) {
-      this.$nuxt.$emit('routeChange');
-    }
-  }
-}
-</script>

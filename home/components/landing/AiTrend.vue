@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="relative bg-white shadow-lg rounded-lg border border-gray-300 overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+    class="relative bg-white dark:bg-dark-card shadow-lg rounded-lg border border-gray-300 dark:border-dark-border overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
   >
     <a :href="link" target="_blank">  
       <div class="relative">
@@ -14,8 +14,8 @@
         <div class="absolute inset-0 bg-black opacity-30 transition-opacity duration-500 hover:opacity-10"></div>
       </div>
       <div class="p-4 text-center">
-        <h3 class="text-lg font-bold text-gray-800 hover:text-blue-500 transition-all duration-300">{{ title }}</h3>
-        <p class="text-gray-600 text-sm">{{ description }}</p>
+        <h3 class="text-lg font-bold text-gray-800 dark:text-dark-text hover:text-blue-500 transition-all duration-300">{{ title }}</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">{{ description }}</p>
       </div>
     </a>
   </div>

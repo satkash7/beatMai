@@ -8,22 +8,25 @@
       </div>
       
       <BaseNavbar />
-      <BaseHeader />
+      <BaseHeader v-if="isHomepage" />
 
       <main class="text-neutral-800 dark:text-dark-text transition-colors duration-300">
         <slot />
       </main>
 
-      <BaseFooter :is-homepage="true"/>
+      <BaseFooter :is-homepage="isHomepage"/>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
+const route = useRoute()
 const router = useRouter()
 const isLoading = ref(false)
+
+const isHomepage = computed(() => route.path === '/')
 
 router.beforeEach((to, from) => {
   if (to.path !== from.path) {
@@ -45,6 +48,12 @@ router.afterEach(() => {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.dark .text-gradient {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: #f1f5f9;
 }
 
 .slide-enter-active {

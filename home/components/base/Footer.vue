@@ -1,11 +1,12 @@
 <template>
 <footer class="max-w-screen-xl px-4 md:px-8 mx-auto mb-0">
     <!-- Recent news section -->
-    <section v-if="isHomepage" class="bg-white relative max-w-full sm:mx-4 xl:mx-10 my-12 md:my-16 shadow-lg rounded-xl overflow-hidden">
+    <section v-if="isHomepage" class="bg-white dark:bg-dark-card relative max-w-full sm:mx-4 xl:mx-10 my-12 md:my-16 shadow-lg rounded-xl overflow-hidden border border-gray-200 dark:border-dark-border">
       <div class="w-full py-8 md:py-12 flex flex-col items-center">
-        <h2 class="text-2xl md:text-3xl font-semibold text-center text-gray-800 mb-6 md:mb-8">
+        <h2 class="text-2xl md:text-3xl font-semibold text-center text-gray-800 dark:text-dark-text mb-6 md:mb-8">
           Nos actualités les plus récentes
         </h2>
+
         <div class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 px-4 xl:px-8">
           <LandingStep v-for="blog in blogs" :key="blog.id" :blog="blog" @open-blog="showSingleBlog(blog)"/>
         </div>
@@ -13,15 +14,16 @@
     </section>
 
     <!-- Partners section -->
-    <section class="partners-section py-10 md:py-14 bg-gray-50">
+    <section class="partners-section py-10 md:py-14 bg-gray-50 dark:bg-dark-surface">
       <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-dark-text mb-8">
           Nos partenaires
         </h2>
 
+
         <div class="relative">
-          <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
-          <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+          <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-gray-50 dark:from-dark-surface to-transparent z-10"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-gray-50 dark:from-dark-surface to-transparent z-10"></div>
 
           <div
             ref="partnersContainer"
@@ -35,7 +37,7 @@
               :href="partner.link"
               target="_blank"
               rel="noopener noreferrer"
-              class="partner-logo flex-shrink-0 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 px-6 py-4"
+              class="partner-logo flex-shrink-0 bg-white dark:bg-dark-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300 px-6 py-4 border border-transparent dark:border-dark-border"
             >
               <img
                 :src="partner.logo"
@@ -65,11 +67,11 @@
     </section>
 
     <!-- Contact section -->
-    <section v-if="isHomepage" id="contact" class="bg-white relative max-w-full sm:mx-4 my-12 md:my-16 py-8 md:py-12 shadow-lg rounded-xl">
+    <section v-if="isHomepage" id="contact" class="bg-white dark:bg-dark-card relative max-w-full sm:mx-4 my-12 md:my-16 py-8 md:py-12 shadow-lg rounded-xl border border-gray-200 dark:border-dark-border">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-8 md:mb-10">
-          <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Contactez-nous</h2>
-          <p class="text-gray-600 mb-6">
+          <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-dark-text mb-4">Contactez-nous</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
             Nous sommes à votre écoute pour répondre à toutes vos questions
           </p>
           <div class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-8 text-sm md:text-base">
@@ -90,7 +92,7 @@
         
         <div class="flex flex-col lg:flex-row gap-8">
           <!-- Contact form -->
-          <form @submit.prevent="sendMessage" class="lg:w-1/2 max-w-lg mx-auto lg:mx-0 bg-gray-50 p-6 md:p-8 rounded-xl">
+          <form @submit.prevent="sendMessage" class="lg:w-1/2 max-w-lg mx-auto lg:mx-0 bg-gray-50 dark:bg-dark-surface p-6 md:p-8 rounded-xl">
             <div v-if="addedRequest" class="bg-green-100 text-green-700 px-4 py-3 rounded-md mb-4 flex items-center">
               <CheckCircleIcon :size="20" class="mr-2" />
               <span>Votre message a été envoyé avec succès. Nous vous contacterons bientôt.</span>
@@ -189,21 +191,21 @@
     </section>
  
     <!-- Main footer section -->
-    <div class="py-8 md:py-10 border-t border-gray-200">
+    <div class="py-8 md:py-10 border-t border-gray-200 dark:border-dark-border">
       <div class="flex flex-col md:flex-row justify-between items-start gap-8">
         <!-- Logo and description -->
         <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-md mx-auto md:mx-0">
           <a href="/" class="mb-4">
             <img :src="logoImg" class="w-28 md:w-32 object-contain" alt="Beat Expertise Logo"/>
           </a>
-          <p class="text-gray-600 text-sm md:text-base">
+          <p class="text-gray-600 dark:text-gray-400 text-sm md:text-base">
             BEAT est un bureau d'expertise et accompagnement technique basé à Goma, dédié à offrir des solutions innovantes pour le développement technologique de la région.
           </p>
         </div>
 
         <!-- Navigation -->
-        <nav class="flex flex-col items-center md:items-start space-y-3 text-gray-700 mx-auto md:mx-0">
-          <h3 class="font-semibold text-gray-800 mb-2 text-center md:text-left">Navigation</h3>
+        <nav class="flex flex-col items-center md:items-start space-y-3 text-gray-700 dark:text-gray-300 mx-auto md:mx-0">
+          <h3 class="font-semibold text-gray-800 dark:text-dark-text mb-2 text-center md:text-left">Navigation</h3>
           <a href="/blogs" class="hover:text-blue-600 transition-colors text-sm md:text-base">Actualités</a>
           <a href="/#mission" class="hover:text-blue-600 transition-colors text-sm md:text-base">Mission</a>
           <a href="/#domaines" class="hover:text-blue-600 transition-colors text-sm md:text-base">Domaines</a> 
@@ -212,7 +214,7 @@
         </nav>
 
         <!-- Newsletter -->
-        <div class="bg-gray-50 rounded-lg p-4 md:p-6 max-w-md w-full mx-auto md:mx-0">
+        <div class="bg-gray-50 dark:bg-dark-surface rounded-lg p-4 md:p-6 max-w-md w-full mx-auto md:mx-0 border border-gray-200 dark:border-dark-border">
           <form @submit.prevent="addToUsersList" class="space-y-3">
             <div v-if="addedUser" class="bg-green-100 text-green-700 px-3 py-2 rounded-md text-xs md:text-sm flex items-center">
               <CheckCircleIcon :size="16" class="mr-1" />
@@ -223,7 +225,7 @@
               <span>Cette adresse mail est déjà enregistrée</span>
             </div>
             
-            <h3 class="font-semibold text-gray-800 text-center text-sm md:text-base">Rejoindre notre newsletter</h3>
+            <h3 class="font-semibold text-gray-800 dark:text-dark-text text-center text-sm md:text-base">Rejoindre notre newsletter</h3>
             
             <div class="flex">
               <input 
@@ -247,7 +249,7 @@
     </div>
  
     <!-- Social links and copyright -->
-    <div class="py-4 md:py-6 border-t border-gray-200">
+    <div class="py-4 md:py-6 border-t border-gray-200 dark:border-dark-border">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="flex flex-wrap justify-center gap-2">
           <a v-for="(social, index) in socialLinks" :key="index" :href="social.link" target="_blank" rel="noopener noreferrer" class="social-icon">
