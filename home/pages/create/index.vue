@@ -167,7 +167,7 @@
     layout: 'create',
     mixins: [aosMixin],
     components: {
-      tinymce: () => { if (typeof window !== "undefined") { return import("vue-tinymce-editor" ) } },
+      tinymce: () => { if (typeof window !== "undefined") { return import("@tinymce/tinymce-vue") } },
     }, 
     data() {
       return {

@@ -129,12 +129,22 @@ export default {
             title: this.details.blogTitle + ' | Beat Expertise',
             meta: [
               { name: 'description', content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
+              { name: 'author', content: this.details.realnames || 'Beat Expertise' },
               { property: 'og:title', content: this.details.blogTitle },
               { property: 'og:description', content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
               { property: 'og:image', content: this.details.imageUrl || 'https://storage.everlytools.com/beatexpertise.jpg' },
               { property: 'og:url', content: this.currentUrl },
               { property: 'og:type', content: 'article' },
+              { property: 'og:locale', content: 'fr_FR' },
+              { property: 'og:site_name', content: 'Beat Expertise' },
+              { property: 'article:published_time', content: this.details.creation_date },
               { name: 'twitter:card', content: 'summary_large_image' },
+              { name: 'twitter:title', content: this.details.blogTitle },
+              { name: 'twitter:description', content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
+              { name: 'twitter:image', content: this.details.imageUrl || 'https://storage.everlytools.com/beatexpertise.jpg' },
+            ],
+            link: [
+              { rel: 'canonical', href: 'https://beatexpertise.com/opportunities/' + this.route.params.blogRoute }
             ]
           })
         }
@@ -165,8 +175,8 @@ export default {
 }
 </script>
 
-<style>
-.prose img { border-radius: 0.75rem; }
-.prose a { color: #2563eb; }
-.dark .prose a { color: #60a5fa; }
+<style scoped>
+:deep(.prose img) { border-radius: 0.75rem; }
+:deep(.prose a) { color: #2563eb; }
+:deep(.dark .prose a) { color: #60a5fa; }
 </style>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /u/
+Disallow: /edit/
+Disallow: /create/
+Disallow: /password-reset/
+Disallow: /anonymous/
+
+Sitemap: https://beatexpertise.com/sitemap.xml

@@ -1,0 +1,1 @@
+{"file":"aos-DgaNNj1M.js","mappings":";AAIA,MAAA,WAAe;AAAA,EACb,UAAU;AACR,QAAI,KAAK,EAAE,SAAS,QAAO,CAAE;AAAA,EAC/B;AACF;","names":[],"sources":["../../../../mixins/aos.js"],"sourcesContent":["// mixins/aos.js\nimport AOS from 'aos'\nimport 'aos/dist/aos.css'\n\nexport default {\n  mounted() {\n    AOS.init({ disable: 'phone' })\n  },\n}\n"],"version":3}

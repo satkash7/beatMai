@@ -85,13 +85,25 @@ import oppImg from '~/assets/img/opp.jpg'
 definePageMeta({ layout: 'blog' })
 
 useHead({
-  title: 'Opportunités | Beat Expertise',
+  title: 'Opportunités & Offres | Beat Expertise - Carrières à Goma, RDC',
   meta: [
-    { name: 'description', content: 'Découvrez les opportunités proposées par BEAT Expertise.' },
+    { name: 'description', content: 'Découvrez les opportunités d\'emploi et offres proposées par BEAT Expertise à Goma, RDC. Rejoignez une équipe dynamique et innovante.' },
+    { name: 'keywords', content: 'opportunités Beat Expertise, emploi Goma, offres RDC, carrières, recrutement Nord-Kivu' },
+    { name: 'robots', content: 'index, follow' },
     { property: 'og:title', content: 'Opportunités | Beat Expertise' },
+    { property: 'og:description', content: 'Offres d\'emploi et opportunités chez BEAT Expertise à Goma, RDC.' },
     { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { property: 'og:url', content: 'https://beatexpertise.com/opportunities' },
     { property: 'og:type', content: 'website' },
+    { property: 'og:locale', content: 'fr_FR' },
+    { property: 'og:site_name', content: 'Beat Expertise' },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Opportunités | Beat Expertise' },
+    { name: 'twitter:description', content: 'Rejoignez BEAT Expertise. Découvrez nos offres d\'emploi.' },
+    { name: 'twitter:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://beatexpertise.com/opportunities' }
   ]
 })
 
@@ -121,7 +133,7 @@ function formatDate(dateString) {
 onMounted(async () => {
   try {
     const response = await $fetch(config.public.baseURL + '/blog/getall')
-    blogs.value = (response.blogs || []).filter(blog => blog.publicPost == '1')
+    blogs.value = (response.blogs || []).filter(blog => blog.publicPost == '1').sort((a, b) => new Date(b.creation_date) - new Date(a.creation_date))
   } catch (error) {
     console.error('Error fetching opportunities:', error)
   } finally {

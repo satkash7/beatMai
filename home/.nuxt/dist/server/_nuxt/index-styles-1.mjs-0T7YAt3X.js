@@ -1,0 +1,5 @@
+const index_vue_vue_type_style_index_0_scoped_e5f14e40_lang = "@media(min-width:1024px){#sample[data-v-e5f14e40]{width:100%}}.modal-overlay[data-v-e5f14e40]{align-items:center;background-color:#00000080;display:flex;height:100%;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:999}.modal-content[data-v-e5f14e40]{background-color:#fff;border-radius:10px;max-width:500px;padding:20px;width:80%}";
+export {
+  index_vue_vue_type_style_index_0_scoped_e5f14e40_lang as default
+};
+//# sourceMappingURL=index-styles-1.mjs-0T7YAt3X.js.map

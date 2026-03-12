@@ -1,91 +1,62 @@
 <template>
-  <client-only>
   <div class="w-full">
-     <div class="container mx-auto px-6">
-    <!-- AI Top trend section -->
-    <section class="bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl overflow-hidden">
-      <!-- Display all blogs -->
-      <h6 ata-aos-once="true"
-          class="ml-4 font-bold leading-tight sm:pr-8 xl:pr-10"
-          style="color:#030a3c;"
-        >
-               Publications
-            </h6>
-      <LandingSearch type="blog"/>
-      <div class="w-full px-8 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
-        <h2 class="text-lg sm:text-xl md:text-2xl text-neutral-800 font-semibold">
-          <span class="text-header-gradient-big">Publications | Beat Expertise</span>
-        </h2>
-        <div class="flex flex-wrap items-center justify-center">
-          <LandingBlog v-for="blogItem in blogs" :key="blogItem.id" :blog="blogItem" @open-blog="showSingleBlog(blogItem)" />
+    <div class="container mx-auto px-6 pt-16">
+      <section class="max-w-full my-0">
+        <h6 class="ml-4 font-bold leading-tight sm:pr-8 xl:pr-10 text-gray-900 dark:text-dark-text">
+          Publications
+        </h6>
+        <LandingSearch type="blog"/>
+        <div class="w-full px-8 sm:px-0 my-0 py-0 flex flex-col items-center justify-center space-y-4 text-center">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-dark-text">
+            <span class="text-blue-600">Publications</span> | Beat Expertise
+          </h2>
+          <div v-if="blogs.length" class="flex flex-wrap items-center justify-center">
+            <LandingBlog v-for="blogItem in blogs" :key="blogItem.id" :blog="blogItem" @open-blog="showSingleBlog(blogItem)" />
+          </div>
+          <div v-else-if="!loading" class="py-12">
+            <p class="text-gray-500 dark:text-gray-400">Aucune publication disponible.</p>
+          </div>
+          <div v-if="loading" class="py-12">
+            <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
-  </div>
-</client-only>
 </template>
 
-<script>
-import aosMixin from '@/mixins/aos';
+<script setup>
+const router = useRouter()
 
-export default {
-  name: 'blog-component',
-  layout: 'blog',
-  mixins: [aosMixin],
-  data() {
-    return {
-      year: `${new Date().toLocaleString('fr-fr', { year: 'numeric' })}`,
-      blogs: []
-    };
-  },
-  methods: {
-    showSingleBlog(blog) {
-      console.log('username :', blog.username);
-      this.$router.push({ path: `/blogs/${blog.blogRoute}` });
-    },
-  },
-  async fetch() {
-    // Fetch data from the API endpoint during server-side rendering
-    try {
-      const response = await this.$axios.get('/blog/getall'); 
-      this.blogs = response.data.blogs.filter(blog => blog.publicPost == '0');
-    } catch (error) {
-      console.error("Error fetching blogs:", error);
-    }
-  },
+definePageMeta({ layout: 'blog' })
 
-  head() {
-      return {
-          title: "Beat Expertise | Publications",
-          meta: [
-              { hid: 'description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
-              { hid: 'keywords', name: 'keywords', content: 'Beat expertise' },
-              { hid: 'robots', content: 'index, follow' },
-              { hid: 'googlebot', content: 'index, follow' },
-              { hid: 'bingbot', content: 'index, follow' },
-              { hid: 'yandex', content: 'index, follow' },
-              
-              // Open Graph (Facebook, LinkedIn, etc.)
-              { hid: 'og:title', property: 'og:title', content: "Beat Expertise | Publications"},
-              { hid: 'og:description', property: 'og:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
-              { hid: 'og:image', property: 'og:image', content: "https://storage.everlytools.com/beatexpertise.jpg" },
-              { hid: 'og:url', property: 'og:url', content: "https://beatexpertise.com/blogs" },
-              { hid: 'og:locale', property: 'og:locale', content: 'fr_FR' }, // Primary language
-              { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en_GB' },
-              { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'zh_CN' },
-              { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'hi_IN' },
-              { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'es_ES' },
-              { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en_US' },
-              { hid: 'og:type', property: 'og:type', content: 'website' },
-              // Twitter Meta Tags
-              { hid: 'twitter:title', content: "Beat Expertise | Publications"},
-              { hid: 'twitter:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
-              { hid: 'twitter:image', content: "https://storage.everlytools.com/beatexpertise.jpg" },
-              { hid: 'twitter:card', content: 'summary_large_image' },
-              { hid: 'twitter:url', content: 'https://everlytools.com/blogs' }
-            ]
-        };
-      }
-    };
+useHead({
+  title: 'Publications | Beat Expertise',
+  meta: [
+    { name: 'description', content: 'D\u00e9couvrez les publications et articles de BEAT Expertise.' },
+    { property: 'og:title', content: 'Publications | Beat Expertise' },
+    { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+  ]
+})
+
+const config = useRuntimeConfig()
+const blogs = ref([])
+const loading = ref(true)
+
+function showSingleBlog(blog) {
+  router.push('/blogs/' + blog.blogRoute)
+}
+
+onMounted(async () => {
+  try {
+    const response = await $fetch(config.public.baseURL + '/blog/getall')
+    blogs.value = (response.blogs || []).filter(blog => blog.publicPost == '0').sort((a, b) => new Date(b.creation_date) - new Date(a.creation_date))
+  } catch (error) {
+    console.error('Error fetching blogs:', error)
+  } finally {
+    loading.value = false
+  }
+})
 </script>

@@ -58,7 +58,11 @@ import { NuxtModule, ModuleDependencyMeta } from '@nuxt/schema'
 
             route: string,
 
-            defaults: any,
+            defaults: {
+               changefreq: string,
+
+               priority: number,
+            },
 
             include: Array<any>,
 

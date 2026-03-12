@@ -85,13 +85,25 @@ import defaultImg from '~/assets/img/default.jpg'
 definePageMeta({ layout: 'blog' })
 
 useHead({
-  title: 'Publications | Beat Expertise',
+  title: 'Publications & Articles | Beat Expertise - Analyses et Réflexions',
   meta: [
-    { name: 'description', content: "Découvrez les publications et articles de BEAT Expertise." },
+    { name: 'description', content: 'Découvrez les publications, articles et analyses de BEAT Expertise. Actualités, réflexions et ressources sur le développement technique en RDC.' },
+    { name: 'keywords', content: 'publications Beat Expertise, articles, analyses, actualités, RDC, Goma, développement technique' },
+    { name: 'robots', content: 'index, follow' },
     { property: 'og:title', content: 'Publications | Beat Expertise' },
+    { property: 'og:description', content: 'Articles, analyses et réflexions de BEAT Expertise sur le développement technique en RDC.' },
     { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { property: 'og:url', content: 'https://beatexpertise.com/blogs' },
     { property: 'og:type', content: 'website' },
+    { property: 'og:locale', content: 'fr_FR' },
+    { property: 'og:site_name', content: 'Beat Expertise' },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Publications | Beat Expertise' },
+    { name: 'twitter:description', content: 'Découvrez nos articles et analyses sur le développement technique.' },
+    { name: 'twitter:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://beatexpertise.com/blogs' }
   ]
 })
 
@@ -121,7 +133,7 @@ function formatDate(dateString) {
 onMounted(async () => {
   try {
     const response = await $fetch(config.public.baseURL + '/blog/getall')
-    blogs.value = (response.blogs || []).filter(blog => blog.publicPost == '0')
+    blogs.value = (response.blogs || []).filter(blog => blog.publicPost == '0').sort((a, b) => new Date(b.creation_date) - new Date(a.creation_date))
   } catch (error) {
     console.error('Error fetching blogs:', error)
   } finally {

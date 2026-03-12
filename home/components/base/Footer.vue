@@ -371,7 +371,7 @@ export default {
       try {
         const data = await $fetch(`${this.baseURL}/blog/getall`)
         if (data && data.blogs) {
-          this.blogs = data.blogs.filter(blog => blog.publicPost == '0').slice(0, 3)
+          this.blogs = data.blogs.filter(blog => blog.publicPost == '0').sort((a, b) => new Date(b.creation_date) - new Date(a.creation_date)).slice(0, 3)
         }
       } catch (error) {
         console.error('Failed to fetch blogs:', error)
@@ -490,6 +490,10 @@ export default {
   background: linear-gradient(to bottom, #f9fafb, #ffffff);
 }
 
+:global(.dark) .partners-section {
+  background: linear-gradient(to bottom, #1e293b, #1e293b);
+}
+
 .partner-logo {
   display: flex;
   align-items: center;
@@ -502,6 +506,12 @@ export default {
   margin: 0 0.5rem;
   width: 160px;
   height: 100px;
+}
+
+:global(.dark) .partner-logo {
+  background: #334155;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #475569;
 }
 
 .partner-logo:hover {
@@ -527,6 +537,14 @@ export default {
 .social-icon:hover {
   background: #e5e7eb;
   transform: translateY(-2px);
+}
+
+:global(.dark) .social-icon {
+  background: #334155;
+}
+
+:global(.dark) .social-icon:hover {
+  background: #475569;
 }
 
 .hide-scrollbar {

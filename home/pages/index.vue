@@ -58,21 +58,26 @@ import renforcement from '~/assets/img/renforcement.jpeg'
 import commImg from '~/assets/img/Comm.jpg'
 
 useHead({
-  title: "BUREAU D'EXPERTISE ET ACCOMPAGNEMENT TECHNIQUE",
+  title: "Beat Expertise | Bureau d'Expertise et Accompagnement Technique à Goma, RDC",
   meta: [
-    { name: 'description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo.' },
-    { name: 'keywords', content: 'Beat Expertise' },
+    { name: 'description', content: 'BEAT Expertise est un bureau d\'expertise et d\'accompagnement technique basé à Goma, RDC. Conseil stratégique, solutions innovantes, formation et renforcement des capacités.' },
+    { name: 'keywords', content: 'Beat Expertise, bureau expertise, accompagnement technique, Goma, RDC, Congo, conseil stratégique, formation, Nord-Kivu, développement' },
     { name: 'robots', content: 'index, follow' },
-    { property: 'og:title', content: 'BUREAU D\'EXPERTISE ET ACCOMPAGNEMENT TECHNIQUE' },
-    { property: 'og:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo.' },
+    { name: 'author', content: 'Beat Expertise' },
+    { property: 'og:title', content: 'Beat Expertise | Bureau d\'Expertise et Accompagnement Technique' },
+    { property: 'og:description', content: 'Cabinet technique basé à Goma, RDC. Solutions innovantes, conseil stratégique et accompagnement technique pour le développement durable.' },
     { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
     { property: 'og:url', content: 'https://beatexpertise.com' },
     { property: 'og:type', content: 'website' },
+    { property: 'og:locale', content: 'fr_FR' },
+    { property: 'og:site_name', content: 'Beat Expertise' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'BUREAU D\'EXPERTISE ET ACCOMPAGNEMENT TECHNIQUE' },
+    { name: 'twitter:title', content: 'Beat Expertise | Bureau d\'Expertise et Accompagnement Technique' },
+    { name: 'twitter:description', content: 'Cabinet technique basé à Goma, RDC. Solutions innovantes et accompagnement technique.' },
     { name: 'twitter:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
   ],
   link: [
+    { rel: 'canonical', href: 'https://beatexpertise.com' },
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' }
   ]

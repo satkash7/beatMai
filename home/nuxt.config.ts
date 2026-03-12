@@ -10,6 +10,11 @@ if (APP_STATUS == "development") {
 
 export default defineNuxtConfig({
   ssr: true,
+
+  // Site URL for sitemap and SEO
+  site: {
+    url: 'https://beatexpertise.com',
+  },
   
   // App configuration
   app: {
@@ -99,36 +104,39 @@ export default defineNuxtConfig({
     }
   },
 
-  // Sitemap configuration
+  // Sitemap configuration (v5 format)
   sitemap: {
-    hostname: 'https://beatexpertise.com',
-    gzip: true,
-    exclude: ['/admin/**', '/anonymous/**'],
-    routes: async () => {
+    exclude: ['/admin/**', '/anonymous/**', '/u/**', '/edit/**', '/create/**', '/password-reset/**'],
+    experimentalCompression: true,
+    defaults: {
+      changefreq: 'daily',
+      priority: 0.8,
+    },
+    urls: async () => {
       try {
         const response = await fetch(baseURL + '/blog/sitemap-urls');
         const data = await response.json();
-        const routes = data.urls || [];
+        const slugs = data.urls || [];
         
-        const staticRoutes = [
-          { url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() },
-          { url: '/blogs', changefreq: 'daily', priority: 0.9, lastmod: new Date().toISOString() },
-          { url: '/apropos', changefreq: 'monthly', priority: 0.8, lastmod: new Date().toISOString() },
-        ];
-        
-        const blogRoutes = routes.map((route: string) => ({
-          url: `/blogs/${route}`,
-          changefreq: 'weekly',
+        const blogRoutes = slugs.map((slug: string) => ({
+          loc: `/blogs/${slug}`,
+          changefreq: 'weekly' as const,
           priority: 0.7,
-          lastmod: new Date().toISOString()
         }));
         
-        return [...staticRoutes, ...blogRoutes];
+        return [
+          { loc: '/', changefreq: 'daily' as const, priority: 1.0 },
+          { loc: '/blogs', changefreq: 'daily' as const, priority: 0.9 },
+          { loc: '/opportunities', changefreq: 'daily' as const, priority: 0.9 },
+          { loc: '/apropos', changefreq: 'monthly' as const, priority: 0.8 },
+          ...blogRoutes,
+        ];
       } catch (error) {
         console.error('Sitemap generation error:', error);
         return [
-          { url: '/', changefreq: 'daily', priority: 1.0 },
-          { url: '/blogs', changefreq: 'daily', priority: 0.9 }
+          { loc: '/', changefreq: 'daily' as const, priority: 1.0 },
+          { loc: '/blogs', changefreq: 'daily' as const, priority: 0.9 },
+          { loc: '/opportunities', changefreq: 'daily' as const, priority: 0.9 },
         ];
       }
     }

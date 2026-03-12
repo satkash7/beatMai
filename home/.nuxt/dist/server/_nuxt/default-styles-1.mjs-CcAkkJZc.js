@@ -1,0 +1,5 @@
+const default_vue_vue_type_style_index_0_lang = ".bg-blue-gradient,.text-gradient{background:linear-gradient(136.91deg,#468ef9 -12.5%,#0c66ee 107.5%)}.text-gradient{background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}.dark .text-gradient{background:none;-webkit-background-clip:unset;-webkit-text-fill-color:unset;color:#f1f5f9}.slide-enter-active{transition-duration:.3s;transition-timing-function:ease-in}.slide-leave-active{transition-duration:.3s;transition-timing-function:cubic-bezier(0,1,.5,1)}.slide-enter-to,.slide-leave{max-height:100px;overflow:hidden}.slide-enter,.slide-leave-to{max-height:0;overflow:hidden}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin{animation:spin 1s linear infinite}";
+export {
+  default_vue_vue_type_style_index_0_lang as default
+};
+//# sourceMappingURL=default-styles-1.mjs-CcAkkJZc.js.map
