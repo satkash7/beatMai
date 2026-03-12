@@ -110,11 +110,14 @@
   </client-only>
 </template>
 
+<script setup>
+definePageMeta({ layout: 'user' })
+</script>
+
 <script>
 import aosMixin from '@/mixins/aos';
 export default {
   name: 'user-component',
-  layout: 'user',
   mixins: [aosMixin],
   data() {
     return {
@@ -122,48 +125,31 @@ export default {
       isLoading: true,
       opportunities: [], 
       blogs: [], 
-      user: []
+      user: {}
     };
   },
-  async beforeRouteEnter(to, from, next) {
-    // Check if the page is being reloaded
-    const isReload = from.name === null;
-
-    if (isReload) {
-      // Redirect to /u if the page is being reloaded
-      next('/u');
-    } else {
-      next();
+  async mounted() {
+    // Redirect to login if no token
+    if (typeof sessionStorage === 'undefined' || !sessionStorage.getItem('token')) {
+      this.$router.push('/u');
+      return;
     }
-  },
-  async asyncData({ app }) {
-    try {
-      let storedBarrierDetails = null;
-      if (typeof sessionStorage !== 'undefined') {
-        storedBarrierDetails = sessionStorage.getItem('token');
-        console.log("token ===========> : ", storedBarrierDetails);
-      }
-      const response = await app.$axios.get(`/user/mydetails`, {
-        headers: {
-          Authorization: `Bearer ${storedBarrierDetails}`,  
-        },
-      });
-
-      const userdetails = response.data.user;
-      const userblogs = response.data.blogs;
-      const useropportunities = response.data.opportunities;
-
-      // Update loading state to false
-      console.log('response data:', response.data);
-      return { user: userdetails, opportunities: useropportunities, blogs: userblogs, isLoading: false };
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      // Handle errors if needed
-      return { details: null, isLoading: false };
-    }
+    await this.loadUserData();
   },
   methods: {
-    // logout 
+    async loadUserData() {
+      try {
+        const response = await this.$axios.get('/user/mydetails');
+        this.user = response.data.user;
+        this.blogs = response.data.blogs || [];
+        this.opportunities = response.data.opportunities || [];
+        this.isLoading = false;
+        console.log('response data:', response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        this.isLoading = false;
+      }
+    },
     logout() {
       if (typeof sessionStorage !== 'undefined') {
         sessionStorage.removeItem('token');
@@ -180,10 +166,10 @@ export default {
       }
     },
     showSingleBlog(blog) {
-      this.$router.push({ path: `blogs/${blog.blogRoute}` });
+      this.$router.push({ path: `/blogs/${blog.blogRoute}` });
     },
     showSingleOpportunity(opportunity) {
-      this.$router.push({ path: `opportunities/${opportunity.blogRoute}` });
+      this.$router.push({ path: `/opportunities/${opportunity.blogRoute}` });
     }, 
     editItem(category, route) {
       this.$router.push({ path: `/edit?category=${category}&route=${route}` });
@@ -192,23 +178,12 @@ export default {
     async deleteItem(category, blogId) {
       if (confirm("Voulez vous vraiment supprimer cette publication ?")) {
         try {
-          let storedBarrierDetails = null;
-          if (typeof sessionStorage !== 'undefined') {
-            storedBarrierDetails = sessionStorage.getItem('token');
-          }
-          const response = await this.$axios.delete(`/${category}/delete/${blogId}`, {
-            headers: {
-              Authorization: `Bearer ${storedBarrierDetails}`,  
-            },
-          });
+          const response = await this.$axios.delete(`/${category}/delete/${blogId}`);
           if (response.data.status_code == 200) {
             this.blogs = this.blogs.filter(blog => blog.id !== blogId);
-            // display alert for success
+            this.opportunities = this.opportunities.filter(o => o.id !== blogId);
             alert("Votre publication a été supprimée avec succès.");
-            // refresh the page
-            this.$router.go();
           } else {
-            // display alert for failure
             alert("Echec lors de la supression de la publication.");
           }
         } catch (error) {

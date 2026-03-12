@@ -159,18 +159,23 @@
 </template>
 
   
+  <script setup>
+  definePageMeta({ layout: 'create' })
+  </script>
+
   <script>
+  import { defineAsyncComponent } from 'vue';
   import aosMixin from '@/mixins/aos'; 
 
   export default {
     name: 'create-component',
-    layout: 'create',
     mixins: [aosMixin],
     components: {
-      tinymce: () => { if (typeof window !== "undefined") { return import("@tinymce/tinymce-vue") } },
+      tinymce: defineAsyncComponent(() => import('@tinymce/tinymce-vue')),
     }, 
     data() {
       return {
+        loading: false,
         request: "",
         accesshash: "",
         success: false,
@@ -193,7 +198,7 @@
         dataColumn: "",
         imageColumn: null,
         creatorColumn: "",
-        creator : sessionStorage.getItem('username'),
+        creator: "",
 
         titleColumn_: "",
         captionColumn_: "",
@@ -387,10 +392,9 @@
 
         },
     },
-    async fetch() {
-        // Call the definetitle method when the component is loaded
+    mounted() {
+        this.creator = typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('username') : '';
         this.getSourceAction();
-
     },
   };
   </script>

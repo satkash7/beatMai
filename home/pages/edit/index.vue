@@ -158,19 +158,23 @@
 </client-only>
 </template>
 
+  <script setup>
+  definePageMeta({ layout: 'create' })
+  </script>
+
   <script>
+  import { defineAsyncComponent } from 'vue';
   import aosMixin from '@/mixins/aos'; 
 
   export default {
     name: 'create-component',
-    layout: 'create',
     mixins: [aosMixin],
     components: {
-      tinymce: () => { if (typeof window !== "undefined") { return import("@tinymce/tinymce-vue") } },
-      
+      tinymce: defineAsyncComponent(() => import('@tinymce/tinymce-vue')),
     },
     data() {
       return {
+        loading: false,
         editorLoaded: false,
         request: "",
         accesshash: "",
@@ -195,7 +199,7 @@
         imageColumn: null,
         creatorColumn: "",
         alreadyLoaded: false,
-        creator : sessionStorage.getItem('username'),
+        creator: "",
 
         oldTitle: "",
         oldCaption: "",
@@ -228,50 +232,44 @@
     },
     mounted() {
       this.editorLoaded = true;
+      this.creator = typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('username') : '';
+      this.loadEditData();
     },
-  
-    async fetch() {
-      try {
-        console.log('Loading article to edit');
-        const category = this.$route.query.category;
-        const postRoute = this.$route.query.route;
-        const response = await this.$axios.get(`/${category}/getall?route=${postRoute}`);
+    methods: {
+      async loadEditData() {
+        try {
+          console.log('Loading article to edit');
+          const category = this.$route.query.category;
+          const postRoute = this.$route.query.route;
+          const response = await this.$axios.get(`/${category}/getall?route=${postRoute}`);
 
-        if (response.data.status_code === 200) {
-          const post = response.data[category][0];
-          this.id = post.id || 0;
-          this.titleColumn = post.blogTitle || post.tipTitle || post.docTitle || post.trendTitle || "";
-          this.captionColumn = post.blogCaption || post.tipCaption || post.docCaption || post.trendCaption || "";
-          this.routeColumn = post.blogRoute || post.tipRoute || post.docRoute || post.trendRoute || "";
-          this.categoryColumn = post.blogCategory || post.tipCategory || post.docCategory || post.trendCategory || "";
-          this.dataColumn = post.blogData || post.tipData || post.docData || post.trendData || "";
-          this.imageColumn = post.imageUrl || null;
-          if (category == 'blog') { this.publicPost = post.publicPost == '1' ? true : false; console.log('public or not : ', post.publicPost);}
-          this.titleAction = category;
-          this.docTechnology = post.docTechnology || "";
-          this.docTechVersion = post.docTechVersion || "";
+          if (response.data.status_code === 200) {
+            const post = response.data[category][0];
+            this.id = post.id || 0;
+            this.titleColumn = post.blogTitle || post.tipTitle || post.docTitle || post.trendTitle || "";
+            this.captionColumn = post.blogCaption || post.tipCaption || post.docCaption || post.trendCaption || "";
+            this.routeColumn = post.blogRoute || post.tipRoute || post.docRoute || post.trendRoute || "";
+            this.categoryColumn = post.blogCategory || post.tipCategory || post.docCategory || post.trendCategory || "";
+            this.dataColumn = post.blogData || post.tipData || post.docData || post.trendData || "";
+            this.imageColumn = post.imageUrl || null;
+            if (category == 'blog') { this.publicPost = post.publicPost == '1' ? true : false; console.log('public or not : ', post.publicPost);}
+            this.titleAction = category;
+            this.docTechnology = post.docTechnology || "";
+            this.docTechVersion = post.docTechVersion || "";
 
-          this.oldRoute = this.routeColumn;
-          this.oldTitle = this.titleColumn;
-          this.oldCaption = this.captionColumn;
-          this.oldCategory = this.categoryColumn;
-          this.oldData = this.dataColumn;
-          this.oldCover = this.imageColumn;
-          this.oldDocTechnology = this.docTechnology;
-          this.oldDocTechVersion = this.docTechVersion;
+            this.oldRoute = this.routeColumn;
+            this.oldTitle = this.titleColumn;
+            this.oldCaption = this.captionColumn;
+            this.oldCategory = this.categoryColumn;
+            this.oldData = this.dataColumn;
+            this.oldCover = this.imageColumn;
+            this.oldDocTechnology = this.docTechnology;
+            this.oldDocTechVersion = this.docTechVersion;
+          }
+        } catch (error) {
+          console.error("Error fetching data:", error);
         }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    },
-
-    // watch what the user is typing and always update to this.editordata column
-    watch: {
-      editorData: function (val) {
-        this.editorData = val;
-      }
-    },
-    methods: { 
+      },
       limitCaptionLength() {
         if (this.captionColumn.length > 200) {
           this.captionColumn = this.captionColumn.substring(0, 200);

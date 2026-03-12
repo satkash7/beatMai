@@ -15,7 +15,7 @@
         loading="lazy"
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63811.47636251019!2d29.11131532259476!3d-1.6232212809677344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dd092a7268daf5%3A0xd630ab5bd2dd6559!2sULPGL%20(campus%20Moise)%2FGoma!5e0!3m2!1sen!2srw!4v1747604115002!5m2!1sen!2srw"> 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12151.406270284722!2d29.17910752382813!3d-1.6550603461538438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2scd!4v1773319308733!5m2!1sen!2scd"> 
       </iframe>
     </div>
     <br>

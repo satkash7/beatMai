@@ -265,25 +265,27 @@ export default {
       try {
         this.loading = true;
         const response = await this.$axios.post('/user/login', {
-          login: this.loginLogin,
-          password: this.loginPassword,
+            login: this.loginLogin,
+            password: this.loginPassword,
         });
 
         console.log(response.data);
         const userData = response.data.user;
         const token = response.data.token;
         
-        localStorage.setItem('email', response.data.user.email);
-        localStorage.setItem('username', response.data.user.username);
+        localStorage.setItem('email', userData.email);
+        localStorage.setItem('username', userData.username);
         localStorage.setItem('token', token);
-        localStorage.setItem('accesshash', response.data.user.accesshash);
-        localStorage.setItem('name', response.data.user.name);
+        localStorage.setItem('accesshash', userData.accesshash);
+        localStorage.setItem('name', userData.name);
 
-        sessionStorage.setItem('email', response.data.user.email);
-        sessionStorage.setItem('username', response.data.user.username);
+        sessionStorage.setItem('email', userData.email);
+        sessionStorage.setItem('username', userData.username);
         sessionStorage.setItem('token', token);
-        sessionStorage.setItem('accesshash', response.data.user.accesshash);
-        sessionStorage.setItem('name', response.data.user.name);
+        sessionStorage.setItem('accesshash', userData.accesshash);
+        sessionStorage.setItem('name', userData.name);
+
+        document.cookie = `authToken=${token}; path=/; max-age=${60*60*24*30}; SameSite=Lax`;
         
         this.loading = false;
         if (this.nextroute != null && this.nextpost != null) {
@@ -309,11 +311,11 @@ export default {
         const username = normalizedUsername.replace(/[^a-zA-Z0-9]/g, "");
 
         const response = await this.$axios.post('/user/register', {
-          email: this.registerEmail,
-          name: this.registerName,
-          username: username,
-          password: this.registerPassword,
-          accesshash: 'beat_user'
+            email: this.registerEmail,
+            name: this.registerName,
+            username: username,
+            password: this.registerPassword,
+            accesshash: 'beat_user'
         });
         
         if (response.data.status_code == 409) {

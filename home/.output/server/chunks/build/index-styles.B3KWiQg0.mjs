@@ -1,2 +1,0 @@
-const d=["@media(min-width:1024px){#sample[data-v-cdc62583]{width:100%}}.modal-overlay[data-v-cdc62583]{align-items:center;background-color:#00000080;display:flex;height:100%;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:999}.modal-content[data-v-cdc62583]{background-color:#fff;border-radius:10px;max-width:500px;padding:20px;width:80%}"];export{d as default};
-//# sourceMappingURL=index-styles.B3KWiQg0.mjs.map

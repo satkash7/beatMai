@@ -6,6 +6,7 @@
   "dependencies": {
     "@babel/parser": "7.29.0",
     "@fastify/accept-negotiator": "1.1.0",
+    "@tinymce/tinymce-vue": "5.1.1",
     "@vue/compiler-core": "3.5.30",
     "@vue/compiler-dom": "3.5.30",
     "@vue/compiler-ssr": "3.5.30",
