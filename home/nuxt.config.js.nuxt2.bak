@@ -1,0 +1,237 @@
+
+const axios = require('axios');
+
+const APP_STATUS = "production" // production
+let baseURL = "https://api.beatexpertise.com/api"
+let storageUrl = "https://api.beatexpertise.com/storage/"
+
+if (APP_STATUS == "development") {
+  baseURL = "http://127.0.0.1:8000/api"
+  storageUrl = "http://127.0.0.1:8000/storage/"
+}
+
+module.exports = {
+  ssr: true,
+  target: 'server', // This is the default
+  
+  // Performance optimizations
+  modern: 'client',
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['script', 'style', 'font'].includes(type)
+      }
+    },
+    http2: {
+      push: true,
+      pushAssets: (req, res, publicPath, preloadFiles) => 
+        preloadFiles.filter(f => f.asType === 'script' && f.file.match(/app\..*\.js$/))
+    }
+  },
+  
+  head: {
+    title: 'Beat Expertise',
+    meta: [
+      { charset: 'utf-8' }, // Ensures correct encoding
+      { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'theme-color', name: 'theme-color', content: '#1a56db' },
+      { hid: 'description', name: 'description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' }
+    ],
+    htmlAttrs: {
+      lang: 'fr',
+    },
+   script: [
+      {
+        hid: 'smartsupp-chat',
+        innerHTML: `
+          var _smartsupp = _smartsupp || {};
+          _smartsupp.key = '397e838a791a5461fc16ba17caad84ac66ac1a16';
+          window.smartsupp||(function(d) {
+            var s,c,o=smartsupp=function(){ o._.push(arguments)};
+            o._=[];
+            s=d.getElementsByTagName('script')[0];
+            c=d.createElement('script');
+            c.type='text/javascript';
+            c.charset='utf-8';
+            c.async=true;
+            c.src='https://www.smartsuppchat.com/loader.js?';
+            s.parentNode.insertBefore(c,s);
+          })(document);
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8',
+        defer: true
+      }
+    ],
+
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com'
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap',
+      },
+    ],
+  },
+  css: ['@/assets/css/main.css', 'aos/dist/aos.css'],
+  plugins: ['~/plugins/smooth-scroll.js', '~/plugins/mdi.js', '~/plugins/dark-mode.client.js'],
+  components: true,
+  buildModules: ['@nuxt/postcss8', '@nuxtjs/axios'],
+  publicRuntimeConfig: {
+    baseURL: baseURL,
+    storageUrl: storageUrl
+  },
+  env: {
+    baseURL: baseURL,
+    storageUrl: storageUrl
+  },
+  modules: ['@nuxtjs/sitemap', '@nuxt/image', '@nuxtjs/axios'],
+  image: {
+    domains: ['*'],
+    formats: ['webp', 'avif', 'jpg', 'png'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+    quality: 80,
+    loading: 'lazy',
+    presets: {
+      avatar: {
+        modifiers: {
+          format: 'webp',
+          width: 50,
+          height: 50,
+          quality: 80
+        }
+      },
+      thumbnail: {
+        modifiers: {
+          format: 'webp',
+          width: 300,
+          height: 200,
+          quality: 80
+        }
+      },
+      hero: {
+        modifiers: {
+          format: 'webp',
+          width: 1920,
+          height: 1080,
+          quality: 85
+        }
+      }
+    }
+  },
+  axios: {
+    baseURL: baseURL
+  },
+  
+  build: {
+    analyze: false,
+    extractCSS: {
+      ignoreOrder: true
+    },
+    optimization: {
+      minimize: true,
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: process.env.NODE_ENV !== 'production',
+        maxSize: 244000,
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: 10,
+            name(module) {
+              const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+              return `npm.${packageName.replace('@', '')}`;
+            }
+          },
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
+    },
+    filenames: {
+      app: () => process.env.NODE_ENV === 'development' ? '[name].js' : '[contenthash:7].js',
+      chunk: () => process.env.NODE_ENV === 'development' ? '[name].js' : '[contenthash:7].js',
+      css: () => process.env.NODE_ENV === 'development' ? '[name].css' : '[contenthash:7].css'
+    },
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: process.env.NODE_ENV === 'production'
+        }
+      }
+    }
+  },
+  sitemap: {
+    hostname: 'https://beatexpertise.com',
+    path: '/sitemap.xml',
+    exclude: ['**/*.js', '/admin/**', '/anonymous/**'],
+    routes: async () => {
+      try {
+        const { data } = await axios.get(baseURL + '/blog/sitemap-urls');
+        const routes = data.urls || [];
+        
+        // Add static pages with their priorities
+        const staticRoutes = [
+          { url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() },
+          { url: '/blogs', changefreq: 'daily', priority: 0.9, lastmod: new Date().toISOString() },
+          { url: '/apropos', changefreq: 'monthly', priority: 0.8, lastmod: new Date().toISOString() },
+        ];
+        
+        // Add blog routes with proper priorities
+        const blogRoutes = routes.map(route => ({
+          url: `/blogs/${route}`,
+          changefreq: 'weekly',
+          priority: 0.7,
+          lastmod: new Date().toISOString()
+        }));
+        
+        return [...staticRoutes, ...blogRoutes];
+      }
+      catch (error) {
+        console.error('Sitemap generation error:', error);
+        return [
+          { url: '/', changefreq: 'daily', priority: 1.0 },
+          { url: '/blogs', changefreq: 'daily', priority: 0.9 }
+        ];
+      }
+    },
+    cacheTime: 1000 * 60 * 15, // 15 minutes
+    etag: {
+      weak: false
+    },
+    gzip: true,
+    trailingSlash: false,
+    defaults: {
+      changefreq: 'daily',
+      priority: 0.8,
+      lastmod: new Date().toISOString()
+    }
+  },
+  //buildDir: 'public',
+}

@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode base styles */
+@layer base {
+  html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  html.dark {
+    @apply bg-dark-bg;
+  }
+  
+  html.dark body {
+    @apply bg-dark-bg text-dark-text;
+  }
+}
+
+/* Component layer for reusable styles */
+@layer components {
+  .card-dark {
+    @apply dark:bg-dark-card dark:text-dark-text dark:border-dark-border;
+  }
+  
+  .surface-dark {
+    @apply dark:bg-dark-surface dark:text-dark-text;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600;
+  }
+  
+  .text-muted {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+}
+
+.transform-fade-down-enter-active,
+.transform-fade-down-leave-active {
+  @apply transition-all translate-y-0 duration-300;
+}
+.transform-fade-down-enter, .transform-fade-down-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  @apply opacity-0 transform -translate-y-2;
+}
+
+.paragraph {
+  @apply text-gray-700 dark:text-gray-300 tracking-wide leading-relaxed;
+}
+
+
+/* for remove arrow spinner button on input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

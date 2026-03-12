@@ -21,12 +21,16 @@ function shouldAddParenthesesToMemberExpressionObject(node, sourceCode) {
 		case 'TemplateLiteral':
 		case 'ThisExpression':
 		case 'ArrayExpression':
-		case 'FunctionExpression':
+		case 'FunctionExpression': {
 			return false;
-		case 'NewExpression':
+		}
+
+		case 'NewExpression': {
 			return !isNewExpressionWithParentheses(node, sourceCode);
+		}
+
 		case 'Literal': {
-			/* istanbul ignore next */
+			/* c8 ignore next */
 			if (isDecimalIntegerNode(node)) {
 				return true;
 			}
@@ -34,8 +38,9 @@ function shouldAddParenthesesToMemberExpressionObject(node, sourceCode) {
 			return false;
 		}
 
-		default:
+		default: {
 			return true;
+		}
 	}
 }
 
