@@ -73,7 +73,7 @@ useHead({
     // Open Graph
     { property: 'og:title', content: 'BUREAU D\'EXPERTISE ET ACCOMPAGNEMENT TECHNIQUE' },
     { property: 'og:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
-    { property: 'og:image', content: "https://storage.everlytools.com/beatexpertise.jpg" },
+    { property: 'og:image', content: "https://api.beatexpertise.com/storage/logo.png" },
     { property: 'og:url', content: 'https://beatexpertise.com' },
     { property: 'og:locale', content: 'en_US' },
     { property: 'og:type', content: 'website' },
@@ -81,7 +81,7 @@ useHead({
     // Twitter
     { name: 'twitter:title', content: 'BUREAU D\'EXPERTISE ET ACCOMPAGNEMENT TECHNIQUE' },
     { name: 'twitter:description', content: 'BEAT est un bureau d\'expertise et d\'accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.' },
-    { name: 'twitter:image', content: "https://storage.everlytools.com/beatexpertise.jpg" },
+    { name: 'twitter:image', content: "https://api.beatexpertise.com/storage/logo.png" },
     { name: 'twitter:url', content: "https://beatexpertise.com" },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:site', content: '@beatexpertise' },

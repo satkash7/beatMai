@@ -35,6 +35,7 @@
         </div>
         <div class="prose prose-lg max-w-none dark:prose-invert mb-10 text-gray-800 dark:text-gray-200"
              v-html="details.blogData"></div>
+        <!-- Share Section -->
         <div class="border-t border-gray-200 dark:border-dark-border pt-6 mb-10">
           <h3 class="text-lg font-semibold text-gray-800 dark:text-dark-text mb-4">Partager cet article</h3>
           <div class="flex gap-3">
@@ -60,15 +61,10 @@
             </a>
           </div>
         </div>
-        <div v-if="details.comments && details.comments.length" class="border-t border-gray-200 dark:border-dark-border pt-6 mb-10">
-          <h3 class="text-lg font-semibold text-gray-800 dark:text-dark-text mb-4">Commentaires ({{ details.comments.length }})</h3>
-          <div v-for="comment in details.comments" :key="comment.id" class="mb-4 p-4 bg-gray-50 dark:bg-dark-surface rounded-lg">
-            <div class="flex items-center mb-2">
-              <span class="font-semibold text-gray-800 dark:text-dark-text">{{ comment.realnames }}</span>
-              <span class="text-gray-400 text-sm ml-3">{{ formatDate(comment.creation_date) }}</span>
-            </div>
-            <p class="text-gray-700 dark:text-gray-300">{{ comment.comment }}</p>
-          </div>
+        <!-- Comment Section -->
+        <div class="border-t border-gray-200 dark:border-dark-border pt-6 mb-10">
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-dark-text mb-4">Commentaires</h3>
+          <LandingComment type="blog" :id="details.id" :route="details.blogRoute" :creator="details.creator || ''" />
         </div>
       </div>
       <div v-else class="text-center py-20">
@@ -108,8 +104,9 @@ export default {
         const response = await $fetch(config.public.baseURL + '/blog/getall', {
           params: { route: blogRoute }
         })
-        if (response.blogs && response.blogs.length > 0) {
-          this.details = response.blogs[0]
+        const blogArray = response.blogs || response.blog
+        if (blogArray && blogArray.length > 0) {
+          this.details = blogArray[0]
           useHead({
             title: this.details.blogTitle + ' | Beat Expertise',
             meta: [
@@ -117,7 +114,7 @@ export default {
               { name: 'author', content: this.details.realnames || 'Beat Expertise' },
               { property: 'og:title', content: this.details.blogTitle },
               { property: 'og:description', content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
-              { property: 'og:image', content: this.details.imageUrl || 'https://storage.everlytools.com/beatexpertise.jpg' },
+              { property: 'og:image', content: this.details.imageUrl || 'https://api.beatexpertise.com/storage/logo.png' },
               { property: 'og:url', content: this.currentUrl },
               { property: 'og:type', content: 'article' },
               { property: 'og:locale', content: 'fr_FR' },
@@ -126,7 +123,7 @@ export default {
               { name: 'twitter:card', content: 'summary_large_image' },
               { name: 'twitter:title', content: this.details.blogTitle },
               { name: 'twitter:description', content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
-              { name: 'twitter:image', content: this.details.imageUrl || 'https://storage.everlytools.com/beatexpertise.jpg' },
+              { name: 'twitter:image', content: this.details.imageUrl || 'https://api.beatexpertise.com/storage/logo.png' },
             ],
             link: [
               { rel: 'canonical', href: 'https://beatexpertise.com/blogs/' + this.route.params.blogRoute }

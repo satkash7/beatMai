@@ -186,7 +186,7 @@ export default {
           metaTags: {
             title: "Beat Expertise",
             keywords: + 'Beat Expertise',
-            image: "https://storage.everlytools.com/beatexpertise.jpg",
+            image: "https://api.beatexpertise.com/storage/logo.png",
             url: "https://beatexpertise.com"
           }
         };

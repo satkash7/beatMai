@@ -18,8 +18,9 @@
                    class="bg-white dark:bg-dark-card rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col border border-gray-200 dark:border-dark-border">
             <div class="h-48 overflow-hidden">
               <a :href="'/opportunities/' + blogItem.blogRoute" class="block">
-                <img :src="blogItem.imageUrl || oppImg" :alt="blogItem.blogTitle"
-                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                <img :src="getDisplayImage(blogItem)" :alt="blogItem.blogTitle"
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                     @error="$event.target.src = oppImg">
               </a>
             </div>
             <div class="p-5 flex-grow flex flex-col">
@@ -42,7 +43,7 @@
               </div>
               <div class="mt-4 pt-3 border-t border-gray-100 dark:border-dark-border">
                 <a :href="'/opportunities/' + blogItem.blogRoute"
-                   class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium flex items-center justify-center transition-colors duration-300 group">
+                   class="text-blue-600 dark:text-sky-400 hover:text-blue-800 dark:hover:text-sky-300 font-medium flex items-center justify-center transition-colors duration-300 group">
                   Lire la suite
                   <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -76,6 +77,7 @@
         </div>
       </section>
     </div>
+    <div class="mb-16"></div>
   </div>
 </template>
 
@@ -88,11 +90,11 @@ useHead({
   title: 'Opportunités & Offres | Beat Expertise - Carrières à Goma, RDC',
   meta: [
     { name: 'description', content: 'Découvrez les opportunités d\'emploi et offres proposées par BEAT Expertise à Goma, RDC. Rejoignez une équipe dynamique et innovante.' },
-    { name: 'keywords', content: 'opportunités Beat Expertise, emploi Goma, offres RDC, carrières, recrutement Nord-Kivu, accompagnement des entreprises, formation des agents de terrain, renforcement des capacités, entrepreneuriat congolais, accompagnement des entrepreneurs, plans d\'affaires, mentorat, développement des applications, innovation technologique, suivi à temps réel, formation en entrepreneuriat, accompagnement des entreprises locales, entrepreneuriat des femmes, autonomisation des femmes, Bureau d\'Expertise et d\'Accompagnement Technique, Goma, RDC' },
+    { name: 'keywords', content: 'opportunités Beat Expertise, emploi Goma, offres RDC, carrières, recrutement Nord-Kivu, accompagnement des entreprises, accompagnement des entreprises locales, accompagnement des entrepreneurs, accompagnement des organisations, accompagnement des ONG, formation des agents de terrain, renforcement des capacités, développement des compétences, entrepreneuriat congolais, entrepreneuriat des jeunes, entrepreneuriat des femmes, plans d\'affaires pour PME, élaboration de plans d\'affaires, mentorat professionnel, développement des applications, innovation technologique, suivi en temps réel, formation en entrepreneuriat, autonomisation des femmes, leadership communautaire, gouvernance locale, pensée design, Bureau d\'Expertise et d\'Accompagnement Technique, cabinet d\'expertise à Goma, Goma, RDC, Nord-Kivu, collaboration avec les universités, UNIGOM, Université de Goma, programmes humanitaires, programmes environnementaux, sensibilisation sociale' },
     { name: 'robots', content: 'index, follow' },
     { property: 'og:title', content: 'Opportunités | Beat Expertise' },
     { property: 'og:description', content: 'Offres d\'emploi et opportunités chez BEAT Expertise à Goma, RDC.' },
-    { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { property: 'og:image', content: 'https://api.beatexpertise.com/storage/logo.png' },
     { property: 'og:url', content: 'https://beatexpertise.com/opportunities' },
     { property: 'og:type', content: 'website' },
     { property: 'og:locale', content: 'fr_FR' },
@@ -100,7 +102,7 @@ useHead({
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Opportunités | Beat Expertise' },
     { name: 'twitter:description', content: 'Rejoignez BEAT Expertise. Découvrez nos offres d\'emploi.' },
-    { name: 'twitter:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { name: 'twitter:image', content: 'https://api.beatexpertise.com/storage/logo.png' },
   ],
   link: [
     { rel: 'canonical', href: 'https://beatexpertise.com/opportunities' }
@@ -123,6 +125,12 @@ function getExcerpt(content) {
   if (!content) return ''
   const plainText = content.replace(/<[^>]*>/g, '')
   return plainText.length > 120 ? plainText.substring(0, 120) + '...' : plainText
+}
+
+function getDisplayImage(blogItem) {
+  if (!blogItem.imageUrl) return oppImg
+  if (blogItem.imageUrl.toLowerCase().endsWith('.pdf')) return oppImg
+  return blogItem.imageUrl
 }
 
 function formatDate(dateString) {

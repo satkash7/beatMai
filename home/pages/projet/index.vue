@@ -35,7 +35,7 @@ useHead({
   meta: [
     { name: 'description', content: 'D\u00e9couvrez les publications et articles de BEAT Expertise.' },
     { property: 'og:title', content: 'Publications | Beat Expertise' },
-    { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { property: 'og:image', content: 'https://api.beatexpertise.com/storage/logo.png' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
   ]

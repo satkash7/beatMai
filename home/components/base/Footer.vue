@@ -14,16 +14,16 @@
     </section>
 
     <!-- Partners section -->
-    <section class="partners-section py-10 md:py-14 bg-gray-50 dark:bg-dark-surface">
+    <section class="partners-section py-10 md:py-14 bg-gradient-to-b from-gray-50 to-white dark:from-[#0f172a] dark:to-[#1e293b]">
       <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-800 mb-8">
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-dark-text mb-8">
           Nos partenaires
         </h2>
 
 
         <div class="relative">
-          <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-gray-50 dark:from-dark-surface to-transparent z-10"></div>
-          <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-gray-50 dark:from-dark-surface to-transparent z-10"></div>
+          <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-gray-50 dark:from-[#0f172a] to-transparent z-10"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-gray-50 dark:from-[#0f172a] to-transparent z-10"></div>
 
           <div
             ref="partnersContainer"
@@ -168,7 +168,7 @@
               </div>
               <div class="h-80 md:h-96">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4085951.67416805!2d26.553710875!3d-1.239759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19da4dce0d5d7c3f%3A0x1e3e5f5f5f5f5f5f!2sGoma%2C%20Nord-Kivu%2C%20R%C3%A9publique%20D%C3%A9mocratique%20du%20Congo!5e0!3m2!1sfr!2sus!4v1633456789012!5m2!1sfr!2sus" 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12151.406270284722!2d29.17910752382813!3d-1.6550603461538438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2scd!4v1773319308733!5m2!1sen!2scd" 
                   width="100%" 
                   height="100%" 
                   style="border:0;" 
@@ -486,20 +486,11 @@ export default {
 </script>
 
 <style scoped>
-.partners-section {
-  background: linear-gradient(to bottom, #f9fafb, #ffffff);
-}
-
-:global(.dark) .partners-section {
-  background: linear-gradient(to bottom, #1e293b, #1e293b);
-}
-
 .partner-logo {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -509,9 +500,7 @@ export default {
 }
 
 :global(.dark) .partner-logo {
-  background: #334155;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid #475569;
 }
 
 .partner-logo:hover {

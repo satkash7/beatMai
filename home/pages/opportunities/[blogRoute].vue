@@ -37,11 +37,21 @@
         </h1>
 
         <!-- Featured Image or PDF -->
-        <div v-if="details.imageUrl" class="mb-8 rounded-xl overflow-hidden shadow-lg">
-          <iframe v-if="isPdf(details.imageUrl)" :src="details.imageUrl"
-                  class="w-full h-[600px] md:h-[800px] border-0"></iframe>
-          <img v-else :src="details.imageUrl" :alt="details.blogTitle"
-               class="w-full max-h-[500px] object-cover">
+        <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
+          <div v-if="details.imageUrl && isPdf(details.imageUrl)">
+            <iframe :src="details.imageUrl"
+                    class="w-full h-[600px] md:h-[800px] border-0"
+                    @error="pdfLoadError = true"></iframe>
+            <div v-if="pdfLoadError" class="p-6 bg-gray-50 dark:bg-dark-surface text-center">
+              <p class="text-gray-600 dark:text-gray-400 mb-3">Le PDF n'a pas pu être chargé.</p>
+              <a :href="details.imageUrl" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                Télécharger le PDF
+              </a>
+            </div>
+          </div>
+          <img v-else :src="details.imageUrl || oppImg" :alt="details.blogTitle"
+               class="w-full max-h-[500px] object-cover" @error="$event.target.src = oppImg">
         </div>
 
         <!-- YouTube Video -->
@@ -98,17 +108,20 @@
 </template>
 
 <script>
+import oppImg from '~/assets/img/opp.jpg'
+
 export default {
   setup() {
     definePageMeta({ layout: 'blog' })
     const route = useRoute()
-    return { route }
+    return { route, oppImg }
   },
   data() {
     return {
       details: null,
       isLoading: true,
-      currentUrl: ''
+      currentUrl: '',
+      pdfLoadError: false
     }
   },
   mounted() {
@@ -123,8 +136,9 @@ export default {
         const response = await $fetch(config.public.baseURL + '/blog/getall', {
           params: { route: blogRoute }
         })
-        if (response.blogs && response.blogs.length > 0) {
-          this.details = response.blogs[0]
+        const blogArray = response.blogs || response.blog
+        if (blogArray && blogArray.length > 0) {
+          this.details = blogArray[0]
           useHead({
             title: this.details.blogTitle + ' | Beat Expertise',
             meta: [
@@ -132,7 +146,7 @@ export default {
               { name: 'author', content: this.details.realnames || 'Beat Expertise' },
               { property: 'og:title', content: this.details.blogTitle },
               { property: 'og:description', content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
-              { property: 'og:image', content: this.details.imageUrl || 'https://storage.everlytools.com/beatexpertise.jpg' },
+              { property: 'og:image', content: this.details.imageUrl || 'https://api.beatexpertise.com/storage/logo.png' },
               { property: 'og:url', content: this.currentUrl },
               { property: 'og:type', content: 'article' },
               { property: 'og:locale', content: 'fr_FR' },
@@ -141,7 +155,7 @@ export default {
               { name: 'twitter:card', content: 'summary_large_image' },
               { name: 'twitter:title', content: this.details.blogTitle },
               { name: 'twitter:description', content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
-              { name: 'twitter:image', content: this.details.imageUrl || 'https://storage.everlytools.com/beatexpertise.jpg' },
+              { name: 'twitter:image', content: this.details.imageUrl || 'https://api.beatexpertise.com/storage/logo.png' },
             ],
             link: [
               { rel: 'canonical', href: 'https://beatexpertise.com/opportunities/' + this.route.params.blogRoute }

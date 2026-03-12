@@ -1,0 +1,2 @@
+const a=["[data-v-aadd19e4] .prose img{border-radius:.75rem}[data-v-aadd19e4] .prose a{color:#2563eb}[data-v-aadd19e4] .dark .prose a{color:#60a5fa}"];export{a as default};
+//# sourceMappingURL=_blogRoute_-styles.D7FytFOb.mjs.map

@@ -42,7 +42,7 @@
               </div>
               <div class="mt-4 pt-3 border-t border-gray-100 dark:border-dark-border">
                 <a :href="'/blogs/' + blogItem.blogRoute"
-                   class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium flex items-center justify-center transition-colors duration-300 group">
+                   class="text-blue-600 dark:text-sky-400 hover:text-blue-800 dark:hover:text-sky-300 font-medium flex items-center justify-center transition-colors duration-300 group">
                   Lire la suite
                   <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -88,11 +88,11 @@ useHead({
   title: 'Publications & Articles | Beat Expertise - Analyses et Réflexions',
   meta: [
     { name: 'description', content: 'Découvrez les publications, articles et analyses de BEAT Expertise. Actualités, réflexions et ressources sur le développement technique en RDC.' },
-    { name: 'keywords', content: 'publications Beat Expertise, articles, analyses, actualités, Bureau d\'expertise, accompagnement technique, Goma, RDC, Nord-Kivu, catastrophes naturelles, inondations pluviales, protection de l\'environnement, développement durable, renforcement des capacités, innovation technologique, intelligence artificielle, éruption volcanique, gestion des risques, prévention des catastrophes, CAFOD, CARITAS, CAJED, UNIGOM, entrepreneuriat, autonomisation de la femme, résilience des communautés, exploitation minière, impact environnemental, sensibilisation communautaire, plaidoyer humanitaire' },
+    { name: 'keywords', content: 'publications Beat Expertise, articles, analyses, actualités, Bureau d\'expertise et d\'accompagnement technique, Goma, RDC, Nord-Kivu, catastrophes naturelles, catastrophes naturelles en RDC, catastrophes naturelles en Afrique, inondations pluviales, inondations en RDC, inondations à Goma, inondations à Kinshasa, inondations à Kindu, inondations au Maniema, protection de l\'environnement, gestion durable de l\'environnement, développement durable, objectifs de développement durable, renforcement des capacités, innovation technologique, intelligence artificielle, utilisation éthique de l\'IA, éruption volcanique Nyiragongo, volcan Nyamulagira, OVG, gestion des risques, gestion des catastrophes, prévention des catastrophes, réduction des risques de catastrophes, changement climatique, adaptation au changement climatique, risques climatiques, CAFOD, CARITAS, CAJED, Centre OLAME, UNIGOM, entrepreneuriat, autonomisation des femmes, résilience communautaire, résilience climatique, exploitation minière, impact environnemental, sensibilisation communautaire, plaidoyer humanitaire, défis humanitaires, surveillance volcanique, gaz du lac Kivu, glissements de terrain, pluies torrentielles, cartographie des inondations, actions anticipatoires, protection civile, déplacés internes, guerre au Nord-Kivu, région des Grands Lacs' },
     { name: 'robots', content: 'index, follow' },
     { property: 'og:title', content: 'Publications | Beat Expertise' },
     { property: 'og:description', content: 'Articles, analyses et réflexions de BEAT Expertise sur le développement technique en RDC.' },
-    { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { property: 'og:image', content: 'https://api.beatexpertise.com/storage/logo.png' },
     { property: 'og:url', content: 'https://beatexpertise.com/blogs' },
     { property: 'og:type', content: 'website' },
     { property: 'og:locale', content: 'fr_FR' },
@@ -100,7 +100,7 @@ useHead({
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Publications | Beat Expertise' },
     { name: 'twitter:description', content: 'Découvrez nos articles et analyses sur le développement technique.' },
-    { name: 'twitter:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { name: 'twitter:image', content: 'https://api.beatexpertise.com/storage/logo.png' },
   ],
   link: [
     { rel: 'canonical', href: 'https://beatexpertise.com/blogs' }

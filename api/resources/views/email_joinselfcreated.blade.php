@@ -121,7 +121,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
   <tr>
     <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
     <a href="https://beatexpertise.com" target="_blank">
-      <img align="center" border="0" src="https://storage.everlytools.com/beatexpertise.jpg" alt="Logo" title="Logo" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 29%;max-width: 160.2px;" width="160.2"/>
+      <img align="center" border="0" src="https://api.beatexpertise.com/storage/logo.png" alt="Logo" title="Logo" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 29%;max-width: 160.2px;" width="160.2"/>
       </a>
     </td>
   </tr>

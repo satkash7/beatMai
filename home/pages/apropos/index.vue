@@ -152,17 +152,17 @@ useHead({
   title: 'À propos | Beat Expertise - Cabinet d\'expertise technique à Goma, RDC',
   meta: [
     { name: 'description', content: 'BEAT Expertise est un cabinet technique basé à Goma, en République Démocratique du Congo. Découvrez notre mission, nos valeurs d\'innovation et d\'excellence, et nos services d\'accompagnement technique.' },
-    { name: 'keywords', content: 'Beat Expertise, Bureau d\'Expertise et d\'Accompagnement Technique, cabinet d\'expertise à Goma, accompagnement technique, expertise technique, Goma, RDC, Nord-Kivu, région des grands lacs, plan stratégique, stratégie de communication, motivation des groupes, changement de comportement, renforcement des capacités, développement durable, protection de l\'environnement, innovation technologique, intelligence artificielle, pensée design, catastrophes naturelles, gestion des risques, éruption volcanique Nyiragongo, OVG, CAFOD, CARITAS, CAJED, Centre OLAME, BIFERD, UNIGOM, bien-être humanitaire, culture environnementale, appui à la résilience, stabilisation socioéconomique, plaidoyer humanitaire' },
+    { name: 'keywords', content: 'Beat Expertise, Bureau d\'Expertise et d\'Accompagnement Technique, cabinet d\'expertise à Goma, cabinet d\'expertise technique, cabinet d\'expertise environnementale, cabinet de conseil en développement, accompagnement technique, expertise technique, Goma, RDC, Nord-Kivu, région des Grands Lacs, Grands Lacs africains, plan stratégique, élaboration des plans stratégiques, stratégie de communication, plan de communication, motivation des groupes, changement de comportement, renforcement des capacités, développement durable, objectifs de développement durable, protection de l\'environnement, gestion durable de l\'environnement, éducation environnementale, culture environnementale, pratiques environnementales durables, innovation technologique, révolution technologique, intelligence artificielle, utilisation éthique de l\'IA, pensée design, catastrophes naturelles, gestion des risques, gestion des catastrophes, prévention des catastrophes, réduction des risques de catastrophes, éruption volcanique Nyiragongo, volcan Nyamulagira, OVG, Observatoire volcanologique de Goma, CAFOD, CARITAS, CAJED, Centre OLAME, BIFERD, UNIGOM, Université de Goma, bien-être humanitaire, plaidoyer humanitaire, défis humanitaires, appui à la résilience, résilience communautaire, stabilisation socioéconomique, protection civile, accompagnement des entreprises, accompagnement des organisations, accompagnement des ONG, études techniques, études environnementales, audit environnemental, solutions technologiques innovantes, surveillance environnementale, monitoring environnemental' },
     { property: 'og:title', content: 'À propos | Beat Expertise' },
     { property: 'og:description', content: 'BEAT Expertise - Cabinet technique basé à Goma, RDC. Découvrez notre mission, nos valeurs et nos services.' },
-    { property: 'og:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { property: 'og:image', content: 'https://api.beatexpertise.com/storage/logo.png' },
     { property: 'og:url', content: 'https://beatexpertise.com/apropos' },
     { property: 'og:type', content: 'website' },
     { property: 'og:locale', content: 'fr_FR' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'À propos | Beat Expertise' },
     { name: 'twitter:description', content: 'Cabinet technique basé à Goma, RDC. Innovation et excellence au service du développement.' },
-    { name: 'twitter:image', content: 'https://storage.everlytools.com/beatexpertise.jpg' },
+    { name: 'twitter:image', content: 'https://api.beatexpertise.com/storage/logo.png' },
   ]
 })
 </script>

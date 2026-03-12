@@ -422,7 +422,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-B3SfwX23.js")
+    component: () => import("./_nuxt/index-B_3z0-yf.js")
   },
   {
     name: "u",
@@ -443,7 +443,7 @@ const _routes = [
     name: "blogs",
     path: "/blogs",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import("./_nuxt/index-BfbTFqAC.js")
+    component: () => import("./_nuxt/index-0mVPPWzp.js")
   },
   {
     name: "create",
@@ -454,13 +454,13 @@ const _routes = [
     name: "projet",
     path: "/projet",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import("./_nuxt/index-BiPG54V-.js")
+    component: () => import("./_nuxt/index-DEVqjpZ8.js")
   },
   {
     name: "apropos",
     path: "/apropos",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import("./_nuxt/index-1N6hYILS.js")
+    component: () => import("./_nuxt/index-jNDvF9Jn.js")
   },
   {
     name: "anonymous",
@@ -471,18 +471,18 @@ const _routes = [
     name: "blogs-blogRoute",
     path: "/blogs/:blogRoute()",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import("./_nuxt/_blogRoute_-BS9MhQi-.js")
+    component: () => import("./_nuxt/_blogRoute_-BAkpJSK9.js")
   },
   {
     name: "opportunities",
     path: "/opportunities",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import("./_nuxt/index-L0wMTKE3.js")
+    component: () => import("./_nuxt/index-ztjzxj8U.js")
   },
   {
     name: "profile-admin",
     path: "/profile/admin",
-    component: () => import("./_nuxt/index-7wB7aMlf.js")
+    component: () => import("./_nuxt/index-CYS2Wj05.js")
   },
   {
     name: "password-reset",
@@ -493,7 +493,7 @@ const _routes = [
     name: "opportunities-blogRoute",
     path: "/opportunities/:blogRoute()",
     meta: __nuxt_page_meta || {},
-    component: () => import("./_nuxt/_blogRoute_-KslMwT5P.js")
+    component: () => import("./_nuxt/_blogRoute_-BXWrt8uQ.js")
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -1992,14 +1992,14 @@ const plugins = [
   mdi_Mb4fkLjvcT_r_KrAHhAyeUPOEPX0RzsTkMcgKJl5_JI
 ];
 const layouts = {
-  anonymous: defineAsyncComponent(() => import("./_nuxt/anonymous-gyIUEjTl.js").then((m) => m.default || m)),
-  blog: defineAsyncComponent(() => import("./_nuxt/blog-DndF9c90.js").then((m) => m.default || m)),
-  create: defineAsyncComponent(() => import("./_nuxt/create-ChyPmShs.js").then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import("./_nuxt/default-BNSysfac.js").then((m) => m.default || m)),
-  doc: defineAsyncComponent(() => import("./_nuxt/doc-DFMERWUa.js").then((m) => m.default || m)),
-  tips: defineAsyncComponent(() => import("./_nuxt/tips-CYEE5VW1.js").then((m) => m.default || m)),
-  trend: defineAsyncComponent(() => import("./_nuxt/trend-BHk0W-zN.js").then((m) => m.default || m)),
-  user: defineAsyncComponent(() => import("./_nuxt/user-BztPhFHg.js").then((m) => m.default || m))
+  anonymous: defineAsyncComponent(() => import("./_nuxt/anonymous-Dzi85hya.js").then((m) => m.default || m)),
+  blog: defineAsyncComponent(() => import("./_nuxt/blog-DZzco22e.js").then((m) => m.default || m)),
+  create: defineAsyncComponent(() => import("./_nuxt/create-DQEq8dFh.js").then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import("./_nuxt/default-BdskdNMa.js").then((m) => m.default || m)),
+  doc: defineAsyncComponent(() => import("./_nuxt/doc-Cg_BUcem.js").then((m) => m.default || m)),
+  tips: defineAsyncComponent(() => import("./_nuxt/tips-CDrOIEDf.js").then((m) => m.default || m)),
+  trend: defineAsyncComponent(() => import("./_nuxt/trend-BgDofrkl.js").then((m) => m.default || m)),
+  user: defineAsyncComponent(() => import("./_nuxt/user-p51rGTDH.js").then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({

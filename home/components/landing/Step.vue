@@ -23,7 +23,7 @@
         <div class="mt-auto pt-3 border-t border-gray-100 dark:border-dark-border">
           <a 
             :href="'/blogs/' + blog.blogRoute" 
-            class="text-blue-600 hover:text-blue-800 font-medium flex items-center justify-center transition-colors duration-300 group"
+            class="text-blue-600 dark:text-sky-400 hover:text-blue-800 dark:hover:text-sky-300 font-medium flex items-center justify-center transition-colors duration-300 group"
           >
             Lire la suite
             <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
