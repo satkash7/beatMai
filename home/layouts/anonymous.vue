@@ -8,6 +8,7 @@
       </main>
 
       <BaseFooter :is-homepage="false"/>
+      <BaseLiveChat />
     </div>
   </div>
 </template>

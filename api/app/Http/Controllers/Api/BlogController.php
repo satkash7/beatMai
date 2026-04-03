@@ -119,9 +119,12 @@ class BlogController extends Controller
             $blog->status = 'published';
 
             $imageUrl = null;
-            // Handle blog image upload
-            // Handle blog image upload
-            if ($request->hasFile('imageUrl')) {
+            // Handle blog image: either a URL string or file upload
+            if ($request->input('imageIsUrl') == '1' && $request->input('imageUrl')) {
+                // Direct URL provided — save as-is
+                $imageUrl = $request->input('imageUrl');
+                $blog->blogImage = null;
+            } elseif ($request->hasFile('imageUrl')) {
                 try { 
                     // Validate the image or pdf
                     $request->validate([
@@ -202,8 +205,15 @@ class BlogController extends Controller
             if ($request->blogCategory && $request->blogCategory != "skip") {
                 $blog->blogCategory = $request->blogCategory;
             }
-            // Handle image upload if provided
-            if ($request->hasFile('imageUrl')) {
+            // Handle image: either a URL string or file upload
+            if ($request->input('imageIsUrl') == '1' && $request->input('imageUrl')) {
+                // Direct URL provided — save as-is, clean up old file
+                if ($blog->blogImage && Storage::exists('public/blogs/' . $blog->blogImage)) {
+                    Storage::delete('public/blogs/' . $blog->blogImage);
+                }
+                $blog->blogImage = null;
+                $blog->imageUrl = $request->input('imageUrl');
+            } elseif ($request->hasFile('imageUrl')) {
                 // Delete old image if exists
                 if ($blog->blogImage && Storage::exists('public/blogs/' . $blog->blogImage)) {
                     Storage::delete('public/blogs/' . $blog->blogImage);

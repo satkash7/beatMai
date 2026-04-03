@@ -196,7 +196,7 @@
         <!-- Logo and description -->
         <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-md mx-auto md:mx-0">
           <a href="/" class="mb-4">
-            <img :src="logoImg" class="w-28 md:w-32 object-contain" alt="Beat Expertise Logo"/>
+            <img :src="logoImg" class="w-28 md:w-32 object-contain transition-all duration-500" alt="Beat Expertise Logo"/>
           </a>
           <p class="text-gray-600 dark:text-gray-400 text-sm md:text-base">
             BEAT est un bureau d'expertise et accompagnement technique basé à Goma, dédié à offrir des solutions innovantes pour le développement technologique de la région.
@@ -274,7 +274,8 @@ import ClockOutlineIcon from 'vue-material-design-icons/ClockOutline.vue'
 import PlayIcon from 'vue-material-design-icons/Play.vue'
 import PauseIcon from 'vue-material-design-icons/Pause.vue'
 
-import logoImg from '~/assets/img/logo/logo.png'
+import logoLight from '~/assets/img/logo/logo.png'
+import logoDark from '~/assets/img/logo/logoblackmode.png'
 import logoOlame from '~/assets/img/olame.jpeg'
 import logoUnigom from '~/assets/img/unigom.png'
 import logoEsvUnigom from '~/assets/img/esv-unigom.png'
@@ -312,7 +313,7 @@ export default {
   },
   data() {
     return {
-      logoImg,
+      logoImg: logoLight,
       year: `${new Date().toLocaleString('en-us', { year: 'numeric' })}`,
       blogs: [],
       visitorname: '',
@@ -354,6 +355,11 @@ export default {
     }
   },
   mounted() {
+    // Dark mode logo switching
+    this.updateLogo()
+    this._darkObserver = new MutationObserver(() => this.updateLogo())
+    this._darkObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+
     this.$nextTick(() => {
       setTimeout(() => {
         this.startAutoScroll()
@@ -365,8 +371,15 @@ export default {
   },
   beforeUnmount() {
     this.stopAutoScroll()
+    if (this._darkObserver) {
+      this._darkObserver.disconnect()
+    }
   },
   methods: {
+    updateLogo() {
+      const isDark = document.documentElement.classList.contains('dark')
+      this.logoImg = isDark ? logoDark : logoLight
+    },
     async fetchBlogs() {
       try {
         const data = await $fetch(`${this.baseURL}/blog/getall`)

@@ -21,7 +21,9 @@ export const BaseButton: typeof import("../components/base/Button.vue")['default
 export const BaseDarkModeToggle: typeof import("../components/base/DarkModeToggle.vue")['default']
 export const BaseFooter: typeof import("../components/base/Footer.vue")['default']
 export const BaseHeader: typeof import("../components/base/Header.vue")['default']
+export const BaseLiveChat: typeof import("../components/base/LiveChat.vue")['default']
 export const BaseNavbar: typeof import("../components/base/Navbar.vue")['default']
+export const BaseRichTextEditor: typeof import("../components/base/RichTextEditor.vue")['default']
 export const BaseSection: typeof import("../components/base/Section.vue")['default']
 export const LandingAiTrend: typeof import("../components/landing/AiTrend.vue")['default']
 export const LandingAihistory: typeof import("../components/landing/Aihistory.vue")['default']
@@ -64,7 +66,9 @@ export const LazyBaseButton: LazyComponent<typeof import("../components/base/But
 export const LazyBaseDarkModeToggle: LazyComponent<typeof import("../components/base/DarkModeToggle.vue")['default']>
 export const LazyBaseFooter: LazyComponent<typeof import("../components/base/Footer.vue")['default']>
 export const LazyBaseHeader: LazyComponent<typeof import("../components/base/Header.vue")['default']>
+export const LazyBaseLiveChat: LazyComponent<typeof import("../components/base/LiveChat.vue")['default']>
 export const LazyBaseNavbar: LazyComponent<typeof import("../components/base/Navbar.vue")['default']>
+export const LazyBaseRichTextEditor: LazyComponent<typeof import("../components/base/RichTextEditor.vue")['default']>
 export const LazyBaseSection: LazyComponent<typeof import("../components/base/Section.vue")['default']>
 export const LazyLandingAiTrend: LazyComponent<typeof import("../components/landing/AiTrend.vue")['default']>
 export const LazyLandingAihistory: LazyComponent<typeof import("../components/landing/Aihistory.vue")['default']>

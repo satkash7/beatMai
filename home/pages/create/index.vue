@@ -1,98 +1,84 @@
 <template>
   <client-only>
-  <div class="w-full container mx-auto px-6">
-    <!-- AI Top trend section -->
-    <section class="bg-partner relative max-w-full sm:mx-6 my-0 shadow sm:rounded-2xl overflow-hidden">
-      <!-- Display all blogs -->
-      <div class="w-full px-8 sm:px-0 py-0 flex flex-col justify-end space-y-4">
-        <br></br><br></br><br></br>
-        <h2 class="text-2xl text-neutral-800 font-semibold text-center">
-          <span class="text-header-gradient-big">{{ title }}</span>
-        </h2>
-         
-            <!-- Image Upload Modal -->
-            <div v-if="isModalOpen" class="modal-overlay">
-              <div class="modal-content">
-                <h3>Inserer une image au milieu du contenu</h3>
-                <input
-                  type="file"
-                  @change="handleImageUpload"
-                  class="border p-2 rounded-md"
-                />
-                <div v-if="successMessage" class="bg-green-200 text-green-800 py-4 px-8 rounded my-6 text-center">
-                    <p v-html="successMessage"></p>  
-                </div>
-                  <div v-if="errorMessage" class="bg-red-200 text-green-800 py-4 px-8 rounded my-6 text-center">
-                    <p v-html="errorMessage"></p>
-                </div>
-                <div v-if="imagePreview" class="mt-4">
-                  <img :src="imagePreview" alt="Preview" class="w-32 h-32 object-cover rounded-md" />
-                </div>
-                <button @click="submitImage" class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">Charger l'image</button>
-                <button @click="closeImageUploadModal" class="bg-red-500 text-white px-4 py-2 rounded-md mt-2">Annuler</button>
+    <div class="min-h-screen bg-gray-50 dark:bg-dark-bg">
+      <!-- Top Bar -->
+      <div class="bg-white dark:bg-dark-card shadow-sm border-b border-gray-200 dark:border-dark-border px-6 py-4">
+        <div class="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-3">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Nouvelle publication</h1>
+            <p class="text-sm text-gray-500 dark:text-gray-400">{{ title }}</p>
+          </div>
+          <button @click="$router.push('/admin')" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            Retour au tableau de bord
+          </button>
+        </div>
+      </div>
+
+      <div class="max-w-5xl mx-auto px-6 py-8">
+        <!-- Alerts -->
+        <div v-if="success" class="mb-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-300 px-4 py-3 rounded-lg flex items-center justify-between">
+          <span>Publication créée avec succès ! <a :href="publicPost == false ? '/blogs/' + routeColumn : '/opportunities/' + routeColumn" class="font-semibold underline">Voir ici</a></span>
+          <button @click="success = false" class="text-green-600 hover:text-green-800">&times;</button>
+        </div>
+        <div v-if="failure" class="mb-6 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-300 px-4 py-3 rounded-lg flex items-center justify-between">
+          <span>Une erreur est survenue. Vérifiez vos médias et réessayez.</span>
+          <button @click="failure = false" class="text-red-600 hover:text-red-800">&times;</button>
+        </div>
+
+        <!-- Image Upload Modal -->
+        <div v-if="isModalOpen" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 w-full max-w-md mx-4">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Insérer une image dans le contenu</h3>
+            <input type="file" @change="handleImageUpload" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+            <div v-if="successMessage" class="mt-3 bg-green-50 text-green-700 p-3 rounded-lg text-sm"><p v-html="successMessage"></p></div>
+            <div v-if="errorMessage" class="mt-3 bg-red-50 text-red-700 p-3 rounded-lg text-sm"><p v-html="errorMessage"></p></div>
+            <div v-if="imagePreview" class="mt-3">
+              <img :src="imagePreview" alt="Preview" class="w-28 h-28 object-cover rounded-lg" />
+            </div>
+            <div class="flex gap-3 mt-4">
+              <button @click="submitImage" class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Charger</button>
+              <button @click="closeImageUploadModal" class="flex-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">Annuler</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <form @submit.prevent="submitAndPublish" class="bg-white dark:bg-dark-card rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
+          <div class="p-6 space-y-6">
+            <!-- Title -->
+            <div>
+              <label for="titleInput" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Titre de votre publication</label>
+              <input id="titleInput" type="text" v-model="titleColumn" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Entrez le titre..." />
+            </div>
+
+            <!-- Cover Image -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Photo de couverture</label>
+              <div class="flex items-center gap-3 mb-2">
+                <button type="button" @click="coverMode = 'file'" :class="coverMode === 'file' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'" class="px-3 py-1.5 text-xs font-medium rounded-lg transition-colors">Charger un fichier</button>
+                <button type="button" @click="coverMode = 'url'" :class="coverMode === 'url' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'" class="px-3 py-1.5 text-xs font-medium rounded-lg transition-colors">Coller une URL</button>
+              </div>
+              <input v-if="coverMode === 'file'" id="imageInput" type="file" @change="handleFileChange" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 dark:file:bg-blue-900/30 dark:file:text-blue-400" />
+              <input v-else type="url" v-model="imageUrlText" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="https://exemple.com/image.jpg" />
+              <div v-if="coverMode === 'url' && imageUrlText" class="mt-2">
+                <img :src="imageUrlText" class="h-32 object-cover rounded-lg border border-gray-200 dark:border-gray-600" @error="$event.target.style.display='none'" />
               </div>
             </div>
-         
-  
-        <form @submit.prevent="submitAndPublish" class="w-full max-w-6xl ml-6">
-            <!-- Input Field with Label -->
-          <div class="mb-8">
-            <label for="titleInput" class="block text-md font-medium text-blue-700">
-            Titre de votre publication</label>
-            <input
-              id="titleInput"
-              type="text"
-              v-model="titleColumn"
-              class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-              placeholder="Enter le titre..."
-            />
-          </div>
 
-
-          <!-- Inside your template -->
-          <div class="mb-8">
-            <label for="imageInput" class="block text-md font-medium text-blue-700">
-              Photo de couverture de votre publication
-            </label>
-            <input
-              id="imageInput"
-              type="file"
-              @change="handleFileChange"
-              class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-              placeholder="Enter the title here..."
-            />
-          </div>
-
-            <!-- Textarea Field with Label -->
-            <div class="mb-8">
-              <label for="descriptionTextarea" class="block text-md font-medium text-blue-700">
-                Ajoutez un petit texte d'accroche (caption)... <small>[<span class="text-sm text-gray-600 mt-2">{{ captionColumn.length }} / 200 </span>]</small>
+            <!-- Caption -->
+            <div>
+              <label for="descriptionTextarea" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                Texte d'accroche (caption) <span class="text-xs text-gray-400 ml-1">{{ captionColumn.length }} / 200</span>
               </label>
-
-              <textarea
-                id="descriptionTextarea"
-                rows="3"
-                v-model="captionColumn"
-                @input="limitCaptionLength"
-                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                placeholder="caption..."
-              ></textarea>
-
-              <p >
-               
-              </p>
+              <textarea id="descriptionTextarea" rows="3" v-model="captionColumn" @input="limitCaptionLength" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Votre caption ici..."></textarea>
             </div>
 
-            <!-- Inside your form -->
-            <div class="mb-8">
-              <label for="categorySelect" class="block text-md font-medium text-blue-700">Catégorie</label>
-              <select
-                id="categorySelect"
-                v-model="categoryColumn"
-                class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-              >
-                <option value="" disabled selected>Selectionner une catégorie...</option>
-                <!-- Add your category options here -->
+            <!-- Category -->
+            <div>
+              <label for="categorySelect" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Catégorie</label>
+              <select id="categorySelect" v-model="categoryColumn" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                <option value="" disabled selected>Sélectionner une catégorie...</option>
                 <option value="Actualité">Actualité</option>
                 <option value="Projet">Projet</option>
                 <option value="Evenement">Evenement</option>
@@ -101,78 +87,53 @@
               </select>
             </div>
 
-            <!-- Editor Field with Label -->
-            <div class="mb-8">
-              <label for="editor" class="block text-md font-medium text-blue-700">Contenu de la publication</label>
-                <div class="mb-8">
-              <small>
-                Si vous voulez uploader des images,
-                <a href="#" @click="openImageUploadModal" class="text-blue-900">Cliquez ici</a>
-              </small>
+            <!-- Editor -->
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Contenu de la publication</label>
+                <button type="button" @click="openImageUploadModal" class="text-xs text-blue-600 dark:text-blue-400 hover:underline">+ Insérer une image</button>
+              </div>
+              <client-only placeholder="Chargement de l'éditeur...">
+                <BaseRichTextEditor v-model="dataColumn" />
+              </client-only>
+            </div>
 
-              <client-only placeholder="loading...">
-                <main id="sample">
-                  <tinymce
-                    id="editor"
-                    v-model="dataColumn"
-                    :other_options="options"
-                  ></tinymce>
-                </main>
-              </client-only> 
+            <!-- Opportunity checkbox -->
+            <div v-if="titleAction == 'blog'">
+              <label class="flex items-center space-x-3 cursor-pointer">
+                <input type="checkbox" v-model="publicPost" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <span class="text-sm text-gray-700 dark:text-gray-300">Cochez s'il s'agit d'une opportunité ou offre d'emploi</span>
+              </label>
             </div>
           </div>
 
-            <div v-if="loading" class="bg-blue-500 text-white px-4 py-2 rounded-md mb-4 flex justify-center items-center">
-              <svg class="animate-spin h-5 w-5 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 4.418 3.582 8 8 8v-4c-2.291 0-4.417-.784-6.087-2.209l2.122-2.122zM20 12a8 8 0 01-8 8v4c4.418 0 8-3.582 8-8h-4zm-6.209 2.791A7.963 7.963 0 0116 12h4c0 4.418-3.582 8-8 8v-4c2.209 0 4.417-.784 6.087-2.209l-2.122-2.122z"></path>
-              </svg>
-              Loading...
-            </div>
-            <div v-if="success" class="bg-green-400 text-white px-4 py-2 rounded-md mb-4">
-              Votre publication a été actualisé avec succès. 
-              Vous pouvez le <a :href="publicPost == false ? '/blogs/' + routeColumn : '/opportunities/' + routeColumn" class="text-blue"><b>voir ici </b></a> 
-            </div>
-            <div v-if="failure" class="bg-red-400 text-white px-4 py-2 rounded-md mb-4">
-              Something unexpected happened, Please check your embedded media or file type and size and try again later. Avoid videos/large images inside the text
-            </div>
-             
-            <div v-if="titleAction == 'blog'" class="mb-8">
-              <label class="flex items-center space-x-2">
-              <input type="checkbox" v-model="publicPost" class="w-4 h-4">
-              <h3>Cochez s'il s'agit d'une opportunité ou Offre d'emploi</h3>
-            </label>
+          <!-- Form Footer -->
+          <div class="px-6 py-4 bg-gray-50 dark:bg-gray-800/50 border-t border-gray-200 dark:border-dark-border rounded-b-xl flex items-center justify-between">
+            <button type="button" @click="$router.push('/admin')" class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors">
+              Annuler
+            </button>
+            <button type="submit" :disabled="loading" class="inline-flex items-center px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed">
+              <svg v-if="loading" class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
+              {{ loading ? 'Publication...' : 'Enregistrer et publier' }}
+            </button>
           </div>
-
-
-            <!-- Submit Button -->
-            <div class="flex justify-center">
-              <BaseButton class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base" type="submit">
-                <b>Enregistrer et publier </b>
-              </BaseButton>
-            </div>
-          </form>
-        </div> 
-    </section>
-  </div>
-</client-only>
+        </form>
+      </div>
+    </div>
+  </client-only>
 </template>
 
   
   <script setup>
-  definePageMeta({ layout: 'create' })
+  definePageMeta({ layout: 'user' })
   </script>
 
   <script>
-  import { defineAsyncComponent } from 'vue';
   import aosMixin from '@/mixins/aos'; 
 
   export default {
     name: 'create-component',
     mixins: [aosMixin],
-    components: {
-      tinymce: defineAsyncComponent(() => import('@tinymce/tinymce-vue')),
-    }, 
     data() {
       return {
         loading: false,
@@ -197,49 +158,10 @@
         categoryColumn: "",
         dataColumn: "",
         imageColumn: null,
+        imageUrlText: "",
+        coverMode: "file",
         creatorColumn: "",
         creator: "",
-
-        titleColumn_: "",
-        captionColumn_: "",
-        routeColumn_: "",
-        categoryColumn_: "",
-        dataColumn_: "",
-        imageColumn_: "",
-        creatorColumn_: "",
-
-        toolName: "",
-        toolDescriptions: "",
-        toolLink: "",
-        toolImage: null,
-        toolCategory: "",
-        toolValidation: "0",
-        toolEmail: "",
-
-        docTechnology: "",
-        docTechVersion: "",
-
-        options: {
-              plugins: [
-                  'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-                  'searchreplace wordcount visualblocks visualchars code fullscreen',
-                  'insertdatetime media nonbreaking save table contextmenu directionality',
-                  'template paste textcolor colorpicker textpattern imagetools toc help emoticons hr codesample'
-              ],
-              toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | media | help',
-              
-              // Ensure media plugin is configured properly
-              media_live_embeds: true, // Allows embedded videos to play live
-              media_filter_html: false, // Disables XSS sanitization for video embeds
-              
-              // Optional: Language file URL
-              // language_url: '/path-to-your-language-file.js',
-
-              // Add valid elements to allow iframe and video tags
-              valid_elements: '*[*]', // Allows all elements and attributes
-              extended_valid_elements: 'iframe[src|width|height|frameborder|allow|allowfullscreen],video[src|controls],source[src|type]'
-          }
-
         }
     },
     
@@ -290,23 +212,13 @@
             this.errorMessage = "Image/file upload failed! Please try again.";
           }
       },
-        updateDataColumn(content) {
-          this.dataColumn = content;
-        },
         handleFileChange(event) {
           const file = event.target.files[0];
           this.imageColumn = file;
         },
-        handleLogoFileChange(event) {
-          const file = event.target.files[0];
-          this.toolImage = file;
-        },
         getSourceAction () {
             const action = this.$route.query.v;
             this.titleAction = action;
-            console.log("titleaction :", this.titleAction); 
-
-            console.log(action);
             if (action == "blog") {
                 this.title = "Créer et publier une publication / opportunité";
                 this.request = "/blog/store"
@@ -333,7 +245,12 @@
             formData.append('blogCategory', this.categoryColumn || '');
             formData.append('blogData', this.dataColumn || '');
             formData.append('publicPost', this.publicPost === true ? 1 : 0);
-            formData.append('imageUrl', this.imageColumn || '');
+            if (this.coverMode === 'url' && this.imageUrlText) {
+              formData.append('imageUrl', this.imageUrlText);
+              formData.append('imageIsUrl', '1');
+            } else {
+              formData.append('imageUrl', this.imageColumn || '');
+            }
             formData.append('creator', this.creator || '');
 
             const response = await this.$axios.post('/blog/store', formData, {
@@ -343,53 +260,12 @@
               },
             });
 
-            console.log("Response:", JSON.stringify(response.data));
             if (response.data.status_code === 200) {
               this.success = true;
             } else {
               this.failure = true;
             }
             this.loading = false;
-        },
-
-        async saveNewTool() {
-            try {
-                this.loading = true;
-                console.log('we tryna submit something');
-                const storedBarrierDetails = sessionStorage.getItem('token');
-                console.log("token : ", storedBarrierDetails);
-
-                const formData = new FormData();
-                formData.append('name', this.toolName);
-                formData.append('descriptions', this.toolDescriptions);
-                formData.append('link', this.toolLink);
-                formData.append('ownerEmail', this.toolEmail);
-                formData.append('imageUrl', this.toolImage);
-                formData.append('category', this.toolCategory);
-                formData.append('validated', this.toolValidation);
- 
-                
-                const response = await this.$axios.post(this.request, formData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data',
-                        Authorization: `Bearer ${storedBarrierDetails}`,  
-                    },
-                }); 
-
-                console.log("Response:", JSON.stringify(response.data));
-                if (response.data.status_code === 200) {
-                    this.success = true;
-                }
-                else {
-                    this.failure = true;
-                }
-            } catch (error) {
-                console.error(error);
-            }
-            finally {
-              this.loading = false;  
-            }
-
         },
     },
     mounted() {
@@ -398,33 +274,5 @@
     },
   };
   </script>
-
-  <style scoped>
-  @media (min-width: 1024px) {
-  #sample {
-    width: 100%;
-  }
-}
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
-}
-  </style>
  
   

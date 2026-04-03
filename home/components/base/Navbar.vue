@@ -5,7 +5,7 @@
       <div class="flex flex-row items-center justify-between w-full py-2 lg:py-4">
         <!-- Logo -->
         <div class="logo flex items-center">
-          <a href="/"><img :src="logoImg" class="w-12 h-12 lg:w-16 lg:h-16 xl:w-24 xl:h-24 object-contain transition-transform duration-300 hover:scale-105" /></a>
+          <a href="/"><img :src="logoImg" class="w-12 h-12 lg:w-16 lg:h-16 xl:w-24 xl:h-24 object-contain transition-all duration-500 hover:scale-105" /></a>
         </div>
         
         <!-- Desktop navigation -->
@@ -61,7 +61,7 @@
             <!-- Mobile menu header -->
             <div class="flex justify-between items-center mb-6 border-b border-blue-100 pb-4">
               <div class="flex items-center">
-                <img :src="logoImg" class="w-10 h-10 object-contain" />
+                <img :src="logoImg" class="w-10 h-10 object-contain transition-all duration-500" />
               </div>
               <button @click="closeMobileMenu" class="p-2 rounded-full transition-colors duration-300 hover:bg-blue-100 focus:outline-none">
                 <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -166,13 +166,14 @@
 </template>
 
 <script>
-import logoImg from '~/assets/img/logo/logo.png'
+import logoLight from '~/assets/img/logo/logo.png'
+import logoDark from '~/assets/img/logo/logoblackmode.png'
 
 export default {
   name: 'BaseNavbar',
   data() {
     return {
-      logoImg,
+      logoImg: logoLight,
       open: false,
       dropdownNavbar: false,
       destinationLink: '/blogs',
@@ -214,6 +215,10 @@ export default {
     closeMobileMenu() {
       this.mobileMenuOpen = false
     },
+    updateLogo() {
+      const isDark = document.documentElement.classList.contains('dark')
+      this.logoImg = isDark ? logoDark : logoLight
+    },
     defineDestination() {
       if (this.from) {
         if (this.from === 'blog') {
@@ -229,6 +234,11 @@ export default {
   },
   mounted() {
     this.defineDestination()
+    
+    // Dark mode logo switching
+    this.updateLogo()
+    this._darkObserver = new MutationObserver(() => this.updateLogo())
+    this._darkObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
     
     this.isMobile = window.innerWidth < 1024
     window.addEventListener('resize', () => {
@@ -264,7 +274,12 @@ export default {
       this.accesshash = sessionStorage.getItem('accesshash') || localStorage.getItem('accesshash')
       if (token) {
         this.userLogged = true
-      } 
+      }
+    }
+  },
+  beforeUnmount() {
+    if (this._darkObserver) {
+      this._darkObserver.disconnect()
     }
   }
 }

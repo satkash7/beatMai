@@ -15,6 +15,7 @@
       </main>
 
       <BaseFooter :is-homepage="isHomepage"/>
+      <BaseLiveChat />
     </div>
   </div>
 </template>

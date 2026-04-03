@@ -12,10 +12,10 @@
     </div>
     
     <!-- Dark overlay for better text readability -->
-    <div class="absolute inset-0 bg-black bg-opacity-40 dark:bg-opacity-60 z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30 z-10"></div>
     
     <BaseSection class="nospace relative z-20">
-      <div class="col-span-12 lg:col-span-8 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left nospace">
+      <div class="col-span-12 lg:col-span-8 mt-12 xl:mt-10 space-y-4 sm:space-y-6 pl-16 sm:pl-20 lg:pl-24 pr-6 text-center sm:text-left nospace">
         <h1
           class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight sm:pr-8 xl:pr-10 mobile"
           style="color:white;"
@@ -24,7 +24,7 @@
         Bienvenu au "Bureau d'Expertise et Accompagnement Technique" BEAT
         </h1>
         <p class="text-white extramobile">
-          BEAT est un bureau d'expertise et accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé.
+          BEAT est un bureau d’expertise et accompagnement technique basé à Goma, en République Démocratique du Congo, dédié à offrir des solutions innovantes et d’un appui technique de qualité.
         </p>
         <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2"> 
           <a href="#contact">
@@ -69,6 +69,10 @@ import heroPic1 from '~/assets/img/pic1.jpg'
 import heroPic2 from '~/assets/img/pic2.jpg'
 import heroAa from '~/assets/img/aa.jpeg'
 import heroCc from '~/assets/img/cc.jpeg'
+import heroRenforcement from '~/assets/img/beat-img/RENFORCEMENT DES CAPACITES INSTITUTIONNELLES, COMMUNICATION POUR LE CHANGEMENT DES COMPORTEMENTS.jpg'
+import heroEntrepreneuriat from '~/assets/img/beat-img/ENTREPRENEURIAT ET INNOVATION SOCIALE.jpg'
+import heroReduction from '~/assets/img/beat-img/REDUCTION DES RISQUES ET CATASTROPHES.jpg'
+import heroInnovation from '~/assets/img/beat-img/IINNOVATION ET TECHNOLOGIE.jpg'
 
 export default {
   name: 'BaseHeader',
@@ -76,7 +80,7 @@ export default {
     return {
       currentSlide: 0,
       autoplayInterval: null,
-      heroImages: [heroPic1, heroPic2, heroAa, heroCc]
+      heroImages: [heroPic1, heroRenforcement, heroEntrepreneuriat, heroReduction, heroInnovation, heroPic2, heroAa, heroCc]
     }
   },
   mounted() {

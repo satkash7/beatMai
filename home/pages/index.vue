@@ -50,11 +50,11 @@
 import { ref, onMounted } from 'vue'
 import pic1 from '~/assets/img/pic1.jpg'
 import pic2 from '~/assets/img/pic2.jpg'
-import entre from '~/assets/img/entre.jpg'
+import entre from '~/assets/img/beat-img/ENTREPRENEURIAT ET INNOVATION SOCIALE.jpg'
 import gestionEnv from '~/assets/img/gestionEnv.jpg'
-import reduc from '~/assets/img/reduc.jpg'
-import bg1 from '~/assets/img/bg1.jpg'
-import renforcement from '~/assets/img/renforcement.jpeg'
+import reduc from '~/assets/img/beat-img/REDUCTION DES RISQUES ET CATASTROPHES.jpg'
+import bg1 from '~/assets/img/beat-img/IINNOVATION ET TECHNOLOGIE.jpg'
+import renforcement from '~/assets/img/beat-img/RENFORCEMENT DES CAPACITES INSTITUTIONNELLES, COMMUNICATION POUR LE CHANGEMENT DES COMPORTEMENTS.jpg'
 import commImg from '~/assets/img/Comm.jpg'
 
 useHead({
