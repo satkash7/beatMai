@@ -20,7 +20,7 @@
           class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight sm:pr-8 xl:pr-10 mobile"
           style="color:white;"
         > 
-        <br /><br />
+        <br /><br /><br /><br /><br /><br />
         Bienvenu au "Bureau d'Expertise et Accompagnement Technique" BEAT
         </h1>
         <p class="text-white extramobile">
@@ -33,6 +33,7 @@
             </base-button>
           </a>
         </div>
+        
       </div>
     </BaseSection>
     

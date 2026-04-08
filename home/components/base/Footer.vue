@@ -378,7 +378,7 @@ export default {
   methods: {
     updateLogo() {
       const isDark = document.documentElement.classList.contains('dark')
-      this.logoImg = isDark ? logoDark : logoLight
+      this.logoImg = isDark ? logoLight : logoLight
     },
     async fetchBlogs() {
       try {

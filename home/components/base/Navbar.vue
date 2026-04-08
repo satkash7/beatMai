@@ -217,7 +217,7 @@ export default {
     },
     updateLogo() {
       const isDark = document.documentElement.classList.contains('dark')
-      this.logoImg = isDark ? logoDark : logoLight
+      this.logoImg = isDark ? logoLight : logoLight
     },
     defineDestination() {
       if (this.from) {
