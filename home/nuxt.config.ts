@@ -1,11 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const APP_STATUS = "production" // production
-let baseURL = "https://api.beatexpertise.com/api"
-let storageUrl = "https://api.beatexpertise.com/storage/"
+const APP_STATUS = process.env.APP_STATUS || (process.env.NODE_ENV === 'production' ? 'production' : 'development')
+let baseURL = process.env.BASE_URL || "https://api.beatexpertise.com/api"
+let storageUrl = process.env.STORAGE_URL || "https://api.beatexpertise.com/storage/"
 
-if (APP_STATUS == "development") {
-  baseURL = "http://127.0.0.1:8000/api"
-  storageUrl = "http://127.0.0.1:8000/storage/"
+if (APP_STATUS === "development") {
+  baseURL = process.env.BASE_URL || "http://127.0.0.1:8000/api"
+  storageUrl = process.env.STORAGE_URL || "http://127.0.0.1:8000/storage/"
 }
 
 export default defineNuxtConfig({
@@ -151,7 +151,8 @@ export default defineNuxtConfig({
           ...opportunityRoutes,
         ];
       } catch (error) {
-        console.error('Sitemap generation error:', error);
+        // Fallback to the core static sitemap routes when the remote API is unavailable.
+        // This prevents build-time sitemap failures when the API host cannot be reached.
         return [
           { loc: '/', changefreq: 'daily' as const, priority: 1.0 },
           { loc: '/apropos', changefreq: 'monthly' as const, priority: 0.8 },

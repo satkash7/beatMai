@@ -275,8 +275,8 @@ import PlayIcon from 'vue-material-design-icons/Play.vue'
 import PauseIcon from 'vue-material-design-icons/Pause.vue'
 
 import logoLight from '~/assets/img/logo/logo.png'
-import logoDark from '~/assets/img/logo/logoblackmode.png'
 import logoOlame from '~/assets/img/olame.jpeg'
+import logoTearFund from '~/assets/img/tearfund.jpg'
 import logoUnigom from '~/assets/img/unigom.png'
 import logoEsvUnigom from '~/assets/img/esv-unigom.png'
 import logoCaritasGoma from '~/assets/img/caritasgoma.png'
@@ -332,6 +332,7 @@ export default {
         { name: 'Caritas Goma', logo: logoCaritasGoma, link: 'https://www.caritas.org/' },
         { name: 'Australia', logo: logoAustralia, link: 'https://www.caritas.org.au/' },
         { name: 'CaritasKindu', logo: logoKindu, link: 'https://caritasdev.cd/' },
+        { name: 'LogoTearFund', logo: logoTearFund, link: 'https://www.tearfund.org/' },
         { name: 'Cafodd', logo: logoCafod, link: 'https://cafod.org.uk/' },
         { name: 'Start', logo: logoStart, link: 'https://startnetwork.org/' },
         { name: 'Cajed', logo: logoCajed, link: 'https://www.cajed.org/' },
