@@ -1,0 +1,136 @@
+import { o as oppImg } from "./opp-DdyB0j_B.js";
+import { mergeProps, useSSRContext } from "vue";
+import { _ as _export_sfc, d as useHead, g as useRoute, b as useRuntimeConfig } from "../server.mjs";
+import { ssrRenderAttrs, ssrInterpolate, ssrRenderAttr } from "vue/server-renderer";
+import "/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/ofetch/dist/node.mjs";
+import "#internal/nuxt/paths";
+import "/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/hookable/dist/index.mjs";
+import "/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/unctx/dist/index.mjs";
+import "/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/h3/dist/index.mjs";
+import "vue-router";
+import "/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/defu/dist/defu.mjs";
+import "/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/ufo/dist/index.mjs";
+import "/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/klona/dist/index.mjs";
+import "/Applications/XAMPP/xamppfiles/htdocs/beatMai/home/node_modules/@unhead/vue/dist/index.mjs";
+const _sfc_main = {
+  setup() {
+    const route = useRoute();
+    return { route, oppImg };
+  },
+  data() {
+    return {
+      details: null,
+      isLoading: true,
+      currentUrl: "",
+      pdfLoadError: false
+    };
+  },
+  mounted() {
+    this.currentUrl = (void 0).location.href;
+    this.loadData();
+  },
+  methods: {
+    async loadData() {
+      const config = useRuntimeConfig();
+      const blogRoute = this.route.params.blogRoute;
+      try {
+        const response = await $fetch(config.public.baseURL + "/blog/getall", {
+          params: { route: blogRoute }
+        });
+        const blogArray = response.blogs || response.blog;
+        if (blogArray && blogArray.length > 0) {
+          this.details = blogArray[0];
+          useHead({
+            title: this.details.blogTitle + " | Beat Expertise",
+            meta: [
+              { name: "description", content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
+              { name: "author", content: this.details.realnames || "Beat Expertise" },
+              { property: "og:title", content: this.details.blogTitle },
+              { property: "og:description", content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
+              { property: "og:image", content: this.details.imageUrl || "https://api.beatexpertise.com/storage/logo.png" },
+              { property: "og:url", content: this.currentUrl },
+              { property: "og:type", content: "article" },
+              { property: "og:locale", content: "fr_FR" },
+              { property: "og:site_name", content: "Beat Expertise" },
+              { property: "article:published_time", content: this.details.creation_date },
+              { name: "twitter:card", content: "summary_large_image" },
+              { name: "twitter:title", content: this.details.blogTitle },
+              { name: "twitter:description", content: this.getExcerpt(this.details.blogCaption || this.details.blogData) },
+              { name: "twitter:image", content: this.details.imageUrl || "https://api.beatexpertise.com/storage/logo.png" }
+            ],
+            link: [
+              { rel: "canonical", href: "https://beatexpertise.com/opportunities/" + this.route.params.blogRoute }
+            ]
+          });
+        }
+      } catch (error) {
+        console.error("Error loading opportunity:", error);
+      } finally {
+        this.isLoading = false;
+      }
+    },
+    isPdf(url) {
+      return url && url.toLowerCase().endsWith(".pdf");
+    },
+    getExcerpt(content) {
+      if (!content) return "";
+      const plainText = content.replace(/<[^>]*>/g, "");
+      return plainText.length > 160 ? plainText.substring(0, 160) + "..." : plainText;
+    },
+    formatDate(dateString) {
+      if (!dateString) return "";
+      return new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" }).format(new Date(dateString));
+    },
+    getYoutubeEmbed(url) {
+      if (!url) return "";
+      const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?#]+)/);
+      return match ? "https://www.youtube.com/embed/" + match[1] : url;
+    }
+  }
+};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "w-full pt-16" }, _attrs))} data-v-7b27ac90><div class="container mx-auto px-4 md:px-6" data-v-7b27ac90>`);
+  if ($data.isLoading) {
+    _push(`<div class="flex justify-center py-20" data-v-7b27ac90><div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500" data-v-7b27ac90></div></div>`);
+  } else if ($data.details) {
+    _push(`<div class="max-w-4xl mx-auto" data-v-7b27ac90><div class="mb-6" data-v-7b27ac90><a href="/opportunities" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors" data-v-7b27ac90><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-v-7b27ac90><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" data-v-7b27ac90></path></svg> Retour aux opportunités </a></div><div class="flex flex-wrap items-center gap-3 mb-4" data-v-7b27ac90><span class="bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-semibold" data-v-7b27ac90>${ssrInterpolate($data.details.blogCategory)}</span><span class="text-gray-500 dark:text-gray-400 text-sm" data-v-7b27ac90>${ssrInterpolate($options.formatDate($data.details.creation_date))}</span>`);
+    if ($data.details.realnames) {
+      _push(`<span class="text-gray-500 dark:text-gray-400 text-sm" data-v-7b27ac90> par ${ssrInterpolate($data.details.realnames)}</span>`);
+    } else {
+      _push(`<!---->`);
+    }
+    _push(`</div><h1 class="text-2xl md:text-4xl font-bold text-gray-900 dark:text-dark-text mb-6 leading-tight" data-v-7b27ac90>${ssrInterpolate($data.details.blogTitle)}</h1><div class="mb-8 rounded-xl overflow-hidden shadow-lg" data-v-7b27ac90>`);
+    if ($data.details.imageUrl && $options.isPdf($data.details.imageUrl)) {
+      _push(`<div data-v-7b27ac90><iframe${ssrRenderAttr("src", $data.details.imageUrl)} class="w-full h-[600px] md:h-[800px] border-0" data-v-7b27ac90></iframe>`);
+      if ($data.pdfLoadError) {
+        _push(`<div class="p-6 bg-gray-50 dark:bg-dark-surface text-center" data-v-7b27ac90><p class="text-gray-600 dark:text-gray-400 mb-3" data-v-7b27ac90>Le PDF n&#39;a pas pu être chargé.</p><a${ssrRenderAttr("href", $data.details.imageUrl)} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium" data-v-7b27ac90> Télécharger le PDF </a></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div>`);
+    } else {
+      _push(`<img${ssrRenderAttr("src", $data.details.imageUrl || $setup.oppImg)}${ssrRenderAttr("alt", $data.details.blogTitle)} class="w-full max-h-[500px] object-cover" data-v-7b27ac90>`);
+    }
+    _push(`</div>`);
+    if ($data.details.youtubeLink) {
+      _push(`<div class="mb-8" data-v-7b27ac90><div class="aspect-video rounded-xl overflow-hidden shadow-lg" data-v-7b27ac90><iframe${ssrRenderAttr("src", $options.getYoutubeEmbed($data.details.youtubeLink))} class="w-full h-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-v-7b27ac90></iframe></div></div>`);
+    } else {
+      _push(`<!---->`);
+    }
+    _push(`<div class="prose prose-lg max-w-none dark:prose-invert mb-10 text-gray-800 dark:text-gray-200" data-v-7b27ac90>${$data.details.blogData ?? ""}</div><div class="border-t border-gray-200 dark:border-dark-border pt-6 mb-10" data-v-7b27ac90><h3 class="text-lg font-semibold text-gray-800 dark:text-dark-text mb-4" data-v-7b27ac90>Partager cette opportunité</h3><div class="flex gap-3" data-v-7b27ac90><a${ssrRenderAttr("href", "https://wa.me/?text=" + encodeURIComponent($data.details.blogTitle + " " + $data.currentUrl))} target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white hover:bg-green-600 transition-colors" data-v-7b27ac90><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" data-v-7b27ac90><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" data-v-7b27ac90></path></svg></a><a${ssrRenderAttr("href", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent($data.currentUrl))} target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors" data-v-7b27ac90><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" data-v-7b27ac90><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" data-v-7b27ac90></path></svg></a><a${ssrRenderAttr("href", "https://twitter.com/intent/tweet?url=" + encodeURIComponent($data.currentUrl) + "&text=" + encodeURIComponent($data.details.blogTitle))} target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-sky-500 rounded-full flex items-center justify-center text-white hover:bg-sky-600 transition-colors" data-v-7b27ac90><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" data-v-7b27ac90><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" data-v-7b27ac90></path></svg></a><a${ssrRenderAttr("href", "https://www.linkedin.com/shareArticle?mini=true&url=" + encodeURIComponent($data.currentUrl) + "&title=" + encodeURIComponent($data.details.blogTitle))} target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition-colors" data-v-7b27ac90><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" data-v-7b27ac90><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" data-v-7b27ac90></path></svg></a></div></div></div>`);
+  } else {
+    _push(`<div class="text-center py-20" data-v-7b27ac90><h2 class="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-4" data-v-7b27ac90>Opportunité introuvable</h2><p class="text-gray-500 dark:text-gray-400 mb-6" data-v-7b27ac90>Cette opportunité n&#39;existe pas ou a été supprimée.</p><a href="/opportunities" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" data-v-7b27ac90> Voir toutes les opportunités </a></div>`);
+  }
+  _push(`</div></div>`);
+}
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/opportunities/[blogRoute].vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const _blogRoute_ = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-7b27ac90"]]);
+export {
+  _blogRoute_ as default
+};
+//# sourceMappingURL=_blogRoute_-8npUILQk.js.map

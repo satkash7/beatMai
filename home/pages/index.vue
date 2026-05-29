@@ -53,7 +53,7 @@ import pic2 from '~/assets/img/pic2.jpg'
 import entre from '~/assets/img/beat-img/ENTREPRENEURIAT ET INNOVATION SOCIALE.jpg'
 import gestionEnv from '~/assets/img/gestionEnv.jpg'
 import reduc from '~/assets/img/beat-img/REDUCTION DES RISQUES ET CATASTROPHES.jpg'
-import bg1 from '~/assets/img/beat-img/IINNOVATION ET TECHNOLOGIE.jpg'
+import bg1 from '~/assets/img/beat-img/Outil5.png'
 import renforcement from '~/assets/img/beat-img/RENFORCEMENT DES CAPACITES INSTITUTIONNELLES, COMMUNICATION POUR LE CHANGEMENT DES COMPORTEMENTS.jpg'
 import commImg from '~/assets/img/Comm.jpg'
 
